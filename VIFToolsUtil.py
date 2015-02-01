@@ -5,6 +5,7 @@ import pandas as pd
 #import pudb;pu.db
 
 # Global scope
+
 #MorningStar URL
 #original: "http://financials.morningstar.com/ajax/ReportProcess4CSV.html?t=XNAS:"&Ticker&"&region=usa&culture=en-US&productcode=MLE&cur=&reportType=is&period=12&dataType=A&order=asc&columnYear=10&curYearPart=1st5year&rounding=3&view=raw&r=337816&denominatorView=raw&number=3"
 #BalanceSheet reportType = bs
@@ -17,10 +18,10 @@ MSURL3="&period=12&dataType=A&order=asc&columnYear=10&curYearPart=1st5year&round
 
 
 
-def csvMS(ticker, reportType):
+def csvMS(ticker, reportType,outCSVFile):
     # local scope
     urlCSV = MSURL1+ticker+MSURL2+reportType+MSURL3
-    outCSVFile = ticker+reportType+".csv"
+    #outCSVFile = ticker+reportType+".csv"
     urllib.urlretrieve(urlCSV, outCSVFile)
 
 def normalizeMSCSV(sRawMSCSVFile, sNormalizedCSVFile):
