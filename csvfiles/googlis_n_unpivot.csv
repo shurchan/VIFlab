@@ -1,0 +1,265 @@
+FieldName,year,data_value
+Basic,2012-12,645.0
+Basic,2010-12,637.0
+Basic,TTM,673.0
+Basic,2008-12,627.0
+Basic,2011-12,15.1
+Basic,2009-12,10.32
+Basic,2011-12,645.0
+Basic,2007-12,6.77
+Basic,2005-12,2.66
+Basic,TTM,19.41
+Basic,2013-12,665.0
+Basic,2004-12,1.04
+Basic,2005-12,551.0
+Basic,2010-12,13.36
+Basic,2009-12,632.0
+Basic,2012-12,16.42
+Basic,2007-12,621.0
+Basic,2013-12,19.43
+Basic,2008-12,6.74
+Basic,2004-12,386.0
+Basic,2006-12,602.0
+Basic,2006-12,5.11
+Cost of revenue,2006-12,4225.0
+Cost of revenue,2004-12,1458.0
+Cost of revenue,2008-12,8622.0
+Cost of revenue,2013-12,25858.0
+Cost of revenue,2012-12,20634.0
+Cost of revenue,2009-12,8844.0
+Cost of revenue,2007-12,6649.0
+Cost of revenue,2005-12,2572.0
+Cost of revenue,TTM,28888.0
+Cost of revenue,2010-12,10417.0
+Cost of revenue,2011-12,13188.0
+Diluted,2011-12,654.0
+Diluted,2009-12,10.21
+Diluted,2012-12,645.0
+Diluted,TTM,19.08
+Diluted,2010-12,13.17
+Diluted,2010-12,646.0
+Diluted,2008-12,634.0
+Diluted,2008-12,6.66
+Diluted,2004-12,0.73
+Diluted,2004-12,545.0
+Diluted,2009-12,788.0
+Diluted,2011-12,14.89
+Diluted,2013-12,677.0
+Diluted,2006-12,4.97
+Diluted,2013-12,19.08
+Diluted,2007-12,632.0
+Diluted,2007-12,6.65
+Diluted,2005-12,2.51
+Diluted,TTM,685.0
+Diluted,2005-12,583.0
+Diluted,2012-12,16.17
+Diluted,2006-12,618.0
+EBITDA,2009-12,9836.0
+EBITDA,2004-12,789.0
+EBITDA,2013-12,18518.0
+EBITDA,2005-12,2311.0
+EBITDA,2012-12,16432.0
+EBITDA,TTM,20718.0
+EBITDA,2006-12,4583.0
+EBITDA,2007-12,6643.0
+EBITDA,2011-12,14235.0
+EBITDA,2008-12,8132.0
+EBITDA,2010-12,11777.0
+Earnings per share,2004-12,
+Earnings per share,2005-12,
+Earnings per share,2011-12,
+Earnings per share,2008-12,
+Earnings per share,TTM,
+Earnings per share,2006-12,
+Earnings per share,2009-12,
+Earnings per share,2012-12,
+Earnings per share,2010-12,
+Earnings per share,2013-12,
+Earnings per share,2007-12,
+Gross profit,2009-12,14806.0
+Gross profit,2004-12,1732.0
+Gross profit,2008-12,13174.0
+Gross profit,2006-12,6380.0
+Gross profit,2007-12,9945.0
+Gross profit,2013-12,33967.0
+Gross profit,2011-12,24717.0
+Gross profit,2005-12,3567.0
+Gross profit,TTM,39023.0
+Gross profit,2010-12,18904.0
+Gross profit,2012-12,29541.0
+Income before taxes,2009-12,8381.0
+Income before taxes,2011-12,12326.0
+Income before taxes,2006-12,4011.0
+Income before taxes,2012-12,13386.0
+Income before taxes,2007-12,5674.0
+Income before taxes,2013-12,14496.0
+Income before taxes,TTM,15870.0
+Income before taxes,2004-12,650.0
+Income before taxes,2005-12,2142.0
+Income before taxes,2010-12,10796.0
+Income before taxes,2008-12,5854.0
+Interest Expense,2009-12,
+Interest Expense,2012-12,84.0
+Interest Expense,TTM,100.0
+Interest Expense,2007-12,1.0
+Interest Expense,2010-12,
+Interest Expense,2006-12,0.0
+Interest Expense,2008-12,
+Interest Expense,2004-12,
+Interest Expense,2013-12,83.0
+Interest Expense,2011-12,58.0
+Interest Expense,2005-12,
+Net income,TTM,13063.0
+Net income,2013-12,12920.0
+Net income,2012-12,10737.0
+Net income,2007-12,4204.0
+Net income,2005-12,1465.0
+Net income,2011-12,9737.0
+Net income,2008-12,4227.0
+Net income,2004-12,399.0
+Net income,2010-12,8505.0
+Net income,2009-12,6520.0
+Net income,2006-12,3077.0
+Net income available to common shareholders,2008-12,4227.0
+Net income available to common shareholders,2011-12,9737.0
+Net income available to common shareholders,2010-12,8505.0
+Net income available to common shareholders,2006-12,3077.0
+Net income available to common shareholders,2009-12,6520.0
+Net income available to common shareholders,2012-12,10737.0
+Net income available to common shareholders,2005-12,1465.0
+Net income available to common shareholders,2004-12,399.0
+Net income available to common shareholders,2013-12,12920.0
+Net income available to common shareholders,2007-12,4204.0
+Net income available to common shareholders,TTM,13063.0
+Net income from continuing operations,2007-12,4204.0
+Net income from continuing operations,2008-12,4227.0
+Net income from continuing operations,2011-12,9737.0
+Net income from continuing operations,2013-12,12214.0
+Net income from continuing operations,2010-12,8505.0
+Net income from continuing operations,2005-12,1465.0
+Net income from continuing operations,2004-12,399.0
+Net income from continuing operations,2009-12,6520.0
+Net income from continuing operations,2012-12,10788.0
+Net income from continuing operations,2006-12,3077.0
+Net income from continuing operations,TTM,12887.0
+Net income from discontinuing ops,2013-12,706.0
+Net income from discontinuing ops,2004-12,
+Net income from discontinuing ops,2005-12,
+Net income from discontinuing ops,2006-12,
+Net income from discontinuing ops,2007-12,
+Net income from discontinuing ops,2008-12,
+Net income from discontinuing ops,2009-12,
+Net income from discontinuing ops,2010-12,
+Net income from discontinuing ops,2011-12,
+Net income from discontinuing ops,2012-12,-51.0
+Net income from discontinuing ops,TTM,176.0
+Operating expenses,TTM,
+Operating expenses,2013-12,
+Operating expenses,2011-12,
+Operating expenses,2005-12,
+Operating expenses,2006-12,
+Operating expenses,2009-12,
+Operating expenses,2010-12,
+Operating expenses,2008-12,
+Operating expenses,2012-12,
+Operating expenses,2007-12,
+Operating expenses,2004-12,
+Operating income,2004-12,640.0
+Operating income,2013-12,13966.0
+Operating income,2006-12,3550.0
+Operating income,2009-12,8312.0
+Operating income,2012-12,12760.0
+Operating income,TTM,15089.0
+Operating income,2007-12,5084.0
+Operating income,2011-12,11742.0
+Operating income,2005-12,2017.0
+Operating income,2008-12,6632.0
+Operating income,2010-12,10381.0
+Other income (expense),2009-12,69.0
+Other income (expense),2013-12,613.0
+Other income (expense),2011-12,642.0
+Other income (expense),2005-12,124.0
+Other income (expense),2010-12,415.0
+Other income (expense),2006-12,461.0
+Other income (expense),TTM,881.0
+Other income (expense),2007-12,591.0
+Other income (expense),2004-12,10.0
+Other income (expense),2012-12,710.0
+Other income (expense),2008-12,-778.0
+Other operating expenses,2007-12,
+Other operating expenses,2004-12,201.0
+Other operating expenses,2009-12,
+Other operating expenses,TTM,
+Other operating expenses,2011-12,500.0
+Other operating expenses,2005-12,90.0
+Other operating expenses,2008-12,
+Other operating expenses,2006-12,
+Other operating expenses,2013-12,
+Other operating expenses,2010-12,
+Other operating expenses,2012-12,
+Provision for income taxes,2011-12,2589.0
+Provision for income taxes,2010-12,2291.0
+Provision for income taxes,2009-12,1861.0
+Provision for income taxes,2008-12,1627.0
+Provision for income taxes,2007-12,1470.0
+Provision for income taxes,2012-12,2598.0
+Provision for income taxes,2006-12,934.0
+Provision for income taxes,2013-12,2282.0
+Provision for income taxes,2005-12,676.0
+Provision for income taxes,TTM,2983.0
+Provision for income taxes,2004-12,251.0
+Research and development,2004-12,226.0
+Research and development,2005-12,484.0
+Research and development,2010-12,3762.0
+Research and development,2013-12,7952.0
+Research and development,2012-12,6793.0
+Research and development,2008-12,2793.0
+Research and development,2009-12,2843.0
+Research and development,2011-12,5162.0
+Research and development,2007-12,2120.0
+Research and development,TTM,9767.0
+Research and development,2006-12,1229.0
+Revenue,2008-12,21796.0
+Revenue,2006-12,10605.0
+Revenue,2004-12,3189.0
+Revenue,TTM,67911.0
+Revenue,2009-12,23651.0
+Revenue,2010-12,29321.0
+Revenue,2007-12,16594.0
+Revenue,2013-12,59825.0
+Revenue,2012-12,50175.0
+Revenue,2005-12,6139.0
+Revenue,2011-12,37905.0
+"Sales, General and administrative",2007-12,2741.0
+"Sales, General and administrative",2013-12,12049.0
+"Sales, General and administrative",2008-12,3749.0
+"Sales, General and administrative",2006-12,1601.0
+"Sales, General and administrative",2004-12,665.0
+"Sales, General and administrative",2005-12,976.0
+"Sales, General and administrative",2011-12,7313.0
+"Sales, General and administrative",TTM,14167.0
+"Sales, General and administrative",2009-12,3651.0
+"Sales, General and administrative",2010-12,4761.0
+"Sales, General and administrative",2012-12,9988.0
+Total operating expenses,2012-12,16781.0
+Total operating expenses,2009-12,6494.0
+Total operating expenses,2004-12,1091.0
+Total operating expenses,2013-12,20001.0
+Total operating expenses,2007-12,4861.0
+Total operating expenses,2006-12,2830.0
+Total operating expenses,2008-12,6542.0
+Total operating expenses,2005-12,1550.0
+Total operating expenses,2011-12,12975.0
+Total operating expenses,2010-12,8523.0
+Total operating expenses,TTM,23934.0
+Weighted average shares outstanding,2004-12,
+Weighted average shares outstanding,TTM,
+Weighted average shares outstanding,2011-12,
+Weighted average shares outstanding,2006-12,
+Weighted average shares outstanding,2007-12,
+Weighted average shares outstanding,2005-12,
+Weighted average shares outstanding,2012-12,
+Weighted average shares outstanding,2010-12,
+Weighted average shares outstanding,2009-12,
+Weighted average shares outstanding,2013-12,
+Weighted average shares outstanding,2008-12,

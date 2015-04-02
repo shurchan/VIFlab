@@ -1,0 +1,39 @@
+FieldName,2005-08,2006-08,2007-08,2008-08,2009-08,2010-08,2011-08,2012-08,2013-08,2014-08,TTM
+Cash Flows From Operating Activities
+Net income,188,408,-320,-1619,-1835,1900,190,-1031,1194,3079,3700
+Depreciation & amortization,1264,1281,1718,2060,2139,2005,2105,2141,1804,2103,2255
+Amortization of debt discount/premium and issuance costs,,,,,,,57,81,122,167,155
+Investment/asset impairment charges,,,,,58,,,,,-17,
+Investments losses (gains),,,,,,,,,,-119,
+Deferred income taxes,-10,-24,-11,,,,,,,,
+Stock based compensation,,,,,,93,76,87,91,115,128
+Inventory,-193,-12,-591,-40,-356,-121,-357,258,83,194,11
+Prepaid expenses,,,-4,-38,,,,254,,,
+Income taxes payable,,,,,,,103,3,-7,68,
+Other working capital,2,317,4,-118,251,-378,116,99,-396,396,52
+Other non-cash items,-14,49,141,773,949,-403,194,222,-1080,-287,-517
+Net cash provided by operating activities,1238,2019,937,1018,1206,3096,2484,2114,1811,5699,5784
+Cash Flows From Investing Activities
+"Investments in property, plant, and equipment",-1065,-1365,-3603,-2529,-488,-616,-2550,-1699,-1244,-2658,-2658
+"Property, plant, and equipment reductions",47,55,124,187,26,94,127,67,28,,
+"Acquisitions, net",,416,-73,,,518,-159,,69,,
+Purchases of investments,-1849,-3080,-1466,-367,-414,-408,-31,-751,-924,-1063,-1535
+Sales/Maturities of investments,1836,2222,2696,571,171,,,152,678,662,830
+Other investing activities,-54,-4,-69,46,31,-36,412,-81,-319,606,-44
+Net cash used for investing activities,-1084,-1756,-2391,-2092,-674,-448,-2201,-2312,-1712,-2453,-3407
+Cash Flows From Financing Activities
+Debt issued,,,,,716,200,690,1065,1121,2212,
+Debt repayment,,,,,-429,-840,-1215,-203,-743,-3843,-3892
+Common stock issued,41,113,69,4,276,8,28,,150,265,139
+Common stock repurchased,,,,,,,-163,-6,-5,-76,-60
+Dividend paid,,,,,,,-225,-857,-37,,
+Other financing activities,-156,531,2146,121,-853,-588,-151,498,-164,-506,1651
+Net cash provided by (used for) financing activities,-116,644,2215,125,-290,-1220,-1036,497,322,-1948,-2162
+Effect of exchange rate changes,,,,,,,,,,-28,-105
+Net change in cash,38,907,761,-949,242,1428,-753,299,421,1270,110
+Cash at beginning of period,486,524,1431,2192,1243,1485,2913,2160,2459,2880,3654
+Cash at end of period,524,1431,2192,1243,1485,2913,2160,2459,2880,4150,3764
+Free Cash Flow
+Operating cash flow,1238,2019,937,1018,1206,3096,2484,2114,1811,5699,5784
+Capital expenditure,-1065,-1365,-3603,-2529,-488,-616,-2550,-1699,-1244,-2658,-2658
+Free cash flow,173,654,-2666,-1511,718,2480,-66,415,567,3041,3126

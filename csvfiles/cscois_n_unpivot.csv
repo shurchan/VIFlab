@@ -1,0 +1,265 @@
+FieldName,year,data_value
+Basic,2005-07,6487.0
+Basic,2009-07,1.05
+Basic,2014-07,1.5
+Basic,2008-07,1.35
+Basic,2014-07,5234.0
+Basic,2007-07,1.21
+Basic,2012-07,1.5
+Basic,TTM,1.49
+Basic,2008-07,5986.0
+Basic,2013-07,1.87
+Basic,2010-07,1.36
+Basic,2007-07,6055.0
+Basic,2013-07,5329.0
+Basic,2006-07,6158.0
+Basic,2012-07,5370.0
+Basic,2009-07,5828.0
+Basic,2006-07,0.91
+Basic,2011-07,5529.0
+Basic,2005-07,0.88
+Basic,2010-07,5732.0
+Basic,2011-07,1.17
+Basic,TTM,5168.0
+Cost of revenue,2013-07,19167.0
+Cost of revenue,2011-07,16682.0
+Cost of revenue,2010-07,14397.0
+Cost of revenue,2005-07,8130.0
+Cost of revenue,2006-07,9737.0
+Cost of revenue,TTM,19607.0
+Cost of revenue,2007-07,12586.0
+Cost of revenue,2012-07,17852.0
+Cost of revenue,2014-07,19373.0
+Cost of revenue,2009-07,13023.0
+Cost of revenue,2008-07,14056.0
+Diluted,2013-07,5380.0
+Diluted,2013-07,1.86
+Diluted,2014-07,1.49
+Diluted,TTM,5212.0
+Diluted,2012-07,1.49
+Diluted,TTM,1.47
+Diluted,2008-07,6163.0
+Diluted,2014-07,5281.0
+Diluted,2007-07,1.17
+Diluted,2008-07,1.31
+Diluted,2006-07,0.89
+Diluted,2011-07,5563.0
+Diluted,2009-07,5857.0
+Diluted,2006-07,6272.0
+Diluted,2010-07,1.33
+Diluted,2005-07,6612.0
+Diluted,2007-07,6265.0
+Diluted,2009-07,1.05
+Diluted,2010-07,5848.0
+Diluted,2012-07,5404.0
+Diluted,2005-07,0.87
+Diluted,2011-07,1.17
+EBITDA,2007-07,11251.0
+EBITDA,2005-07,8425.0
+EBITDA,2006-07,8289.0
+EBITDA,2011-07,10939.0
+EBITDA,2012-07,13357.0
+EBITDA,2013-07,14161.0
+EBITDA,2009-07,9807.0
+EBITDA,2010-07,12068.0
+EBITDA,2008-07,12318.0
+EBITDA,TTM,12535.0
+EBITDA,2014-07,12711.0
+Earnings per share,2007-07,
+Earnings per share,TTM,
+Earnings per share,2013-07,
+Earnings per share,2010-07,
+Earnings per share,2008-07,
+Earnings per share,2014-07,
+Earnings per share,2009-07,
+Earnings per share,2011-07,
+Earnings per share,2006-07,
+Earnings per share,2005-07,
+Earnings per share,2012-07,
+Gross profit,2007-07,22336.0
+Gross profit,TTM,27695.0
+Gross profit,2006-07,18747.0
+Gross profit,2005-07,16671.0
+Gross profit,2014-07,27769.0
+Gross profit,2008-07,25484.0
+Gross profit,2013-07,29440.0
+Gross profit,2009-07,23094.0
+Gross profit,2012-07,28209.0
+Gross profit,2010-07,25643.0
+Gross profit,2011-07,26536.0
+Income before taxes,2013-07,11227.0
+Income before taxes,2008-07,10255.0
+Income before taxes,2005-07,8036.0
+Income before taxes,TTM,9535.0
+Income before taxes,2007-07,9461.0
+Income before taxes,2012-07,10159.0
+Income before taxes,2010-07,9415.0
+Income before taxes,2014-07,9715.0
+Income before taxes,2011-07,7825.0
+Income before taxes,2009-07,7693.0
+Income before taxes,2006-07,7633.0
+Interest Expense,2005-07,
+Interest Expense,2012-07,596.0
+Interest Expense,2010-07,623.0
+Interest Expense,2011-07,628.0
+Interest Expense,2006-07,
+Interest Expense,TTM,563.0
+Interest Expense,2008-07,319.0
+Interest Expense,2014-07,564.0
+Interest Expense,2013-07,583.0
+Interest Expense,2007-07,377.0
+Interest Expense,2009-07,346.0
+Net income,2008-07,8052.0
+Net income,2013-07,9983.0
+Net income,2007-07,7333.0
+Net income,2012-07,8041.0
+Net income,2006-07,5580.0
+Net income,2014-07,7853.0
+Net income,2009-07,6134.0
+Net income,2005-07,5741.0
+Net income,TTM,7685.0
+Net income,2011-07,6490.0
+Net income,2010-07,7767.0
+Net income available to common shareholders,2011-07,6490.0
+Net income available to common shareholders,2009-07,6134.0
+Net income available to common shareholders,2007-07,7333.0
+Net income available to common shareholders,2006-07,5580.0
+Net income available to common shareholders,2010-07,7767.0
+Net income available to common shareholders,2008-07,8052.0
+Net income available to common shareholders,TTM,7685.0
+Net income available to common shareholders,2013-07,9983.0
+Net income available to common shareholders,2005-07,5741.0
+Net income available to common shareholders,2014-07,7853.0
+Net income available to common shareholders,2012-07,8041.0
+Net income from continuing operations,2014-07,7853.0
+Net income from continuing operations,2005-07,5741.0
+Net income from continuing operations,2006-07,5580.0
+Net income from continuing operations,2007-07,7333.0
+Net income from continuing operations,2008-07,8052.0
+Net income from continuing operations,2009-07,6134.0
+Net income from continuing operations,2010-07,7767.0
+Net income from continuing operations,2011-07,6490.0
+Net income from continuing operations,2012-07,8041.0
+Net income from continuing operations,2013-07,9983.0
+Net income from continuing operations,TTM,7685.0
+Operating expenses,2009-07,
+Operating expenses,2012-07,
+Operating expenses,2005-07,
+Operating expenses,2011-07,
+Operating expenses,TTM,
+Operating expenses,2006-07,
+Operating expenses,2014-07,
+Operating expenses,2007-07,
+Operating expenses,2008-07,
+Operating expenses,2010-07,
+Operating expenses,2013-07,
+Operating income,2011-07,7674.0
+Operating income,2012-07,10065.0
+Operating income,2010-07,9164.0
+Operating income,2009-07,7322.0
+Operating income,2007-07,8621.0
+Operating income,TTM,9232.0
+Operating income,2008-07,9442.0
+Operating income,2005-07,7416.0
+Operating income,2006-07,6996.0
+Operating income,2014-07,9345.0
+Operating income,2013-07,11196.0
+Other income (expense),2013-07,614.0
+Other income (expense),2011-07,779.0
+Other income (expense),2009-07,717.0
+Other income (expense),2012-07,690.0
+Other income (expense),2008-07,1132.0
+Other income (expense),2007-07,1217.0
+Other income (expense),2014-07,934.0
+Other income (expense),2006-07,637.0
+Other income (expense),TTM,866.0
+Other income (expense),2005-07,620.0
+Other income (expense),2010-07,874.0
+Other operating expenses,2007-07,488.0
+Other operating expenses,2005-07,253.0
+Other operating expenses,2013-07,395.0
+Other operating expenses,2008-07,502.0
+Other operating expenses,TTM,281.0
+Other operating expenses,2012-07,383.0
+Other operating expenses,2006-07,484.0
+Other operating expenses,2011-07,520.0
+Other operating expenses,2014-07,275.0
+Other operating expenses,2009-07,596.0
+Other operating expenses,2010-07,491.0
+Provision for income taxes,2005-07,2295.0
+Provision for income taxes,2012-07,2118.0
+Provision for income taxes,2008-07,2203.0
+Provision for income taxes,2009-07,1559.0
+Provision for income taxes,2013-07,1244.0
+Provision for income taxes,2007-07,2128.0
+Provision for income taxes,2011-07,1335.0
+Provision for income taxes,2014-07,1862.0
+Provision for income taxes,2006-07,2053.0
+Provision for income taxes,2010-07,1648.0
+Provision for income taxes,TTM,1850.0
+Research and development,2014-07,6294.0
+Research and development,2009-07,5208.0
+Research and development,2006-07,4067.0
+Research and development,2005-07,3322.0
+Research and development,2011-07,5823.0
+Research and development,2012-07,5488.0
+Research and development,2013-07,5942.0
+Research and development,2008-07,5153.0
+Research and development,2007-07,4499.0
+Research and development,2010-07,5273.0
+Research and development,TTM,6153.0
+"Restructuring, merger and acquisition",2009-07,
+"Restructuring, merger and acquisition",2014-07,418.0
+"Restructuring, merger and acquisition",TTM,499.0
+"Restructuring, merger and acquisition",2008-07,
+"Restructuring, merger and acquisition",2005-07,
+"Restructuring, merger and acquisition",2011-07,799.0
+"Restructuring, merger and acquisition",2013-07,105.0
+"Restructuring, merger and acquisition",2012-07,304.0
+"Restructuring, merger and acquisition",2010-07,
+"Restructuring, merger and acquisition",2007-07,
+"Restructuring, merger and acquisition",2006-07,
+Revenue,2005-07,24801.0
+Revenue,2009-07,36117.0
+Revenue,TTM,47302.0
+Revenue,2008-07,39540.0
+Revenue,2012-07,46061.0
+Revenue,2011-07,43218.0
+Revenue,2014-07,47142.0
+Revenue,2010-07,40040.0
+Revenue,2006-07,28484.0
+Revenue,2007-07,34922.0
+Revenue,2013-07,48607.0
+"Sales, General and administrative",2013-07,11802.0
+"Sales, General and administrative",2009-07,9968.0
+"Sales, General and administrative",2007-07,8728.0
+"Sales, General and administrative",2010-07,10715.0
+"Sales, General and administrative",2014-07,11437.0
+"Sales, General and administrative",2012-07,11969.0
+"Sales, General and administrative",2005-07,5680.0
+"Sales, General and administrative",2006-07,7200.0
+"Sales, General and administrative",2011-07,11720.0
+"Sales, General and administrative",TTM,11530.0
+"Sales, General and administrative",2008-07,10387.0
+Total operating expenses,2011-07,18862.0
+Total operating expenses,2014-07,18424.0
+Total operating expenses,2013-07,18244.0
+Total operating expenses,TTM,18463.0
+Total operating expenses,2005-07,9255.0
+Total operating expenses,2012-07,18144.0
+Total operating expenses,2009-07,15772.0
+Total operating expenses,2007-07,13715.0
+Total operating expenses,2010-07,16479.0
+Total operating expenses,2008-07,16042.0
+Total operating expenses,2006-07,11751.0
+Weighted average shares outstanding,2014-07,
+Weighted average shares outstanding,2009-07,
+Weighted average shares outstanding,2013-07,
+Weighted average shares outstanding,TTM,
+Weighted average shares outstanding,2008-07,
+Weighted average shares outstanding,2011-07,
+Weighted average shares outstanding,2012-07,
+Weighted average shares outstanding,2007-07,
+Weighted average shares outstanding,2005-07,
+Weighted average shares outstanding,2010-07,
+Weighted average shares outstanding,2006-07,

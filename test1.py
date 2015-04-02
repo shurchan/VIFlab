@@ -17,3 +17,5 @@ def func(Y):          # Y and Z assigned in function: locals
 print func(1)               # func in module: result=100
 print func(3)
 
+print 2**8
+print 'test string1' + 'test string2'

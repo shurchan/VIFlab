@@ -1,0 +1,481 @@
+FieldName,year,data_value
+Accounts payable,2012-08,818.0
+Accounts payable,2009-08,526.0
+Accounts payable,2013-08,1048.0
+Accounts payable,2006-08,854.0
+Accounts payable,2005-08,752.0
+Accounts payable,2014-08,1119.0
+Accounts payable,2008-08,597.0
+Accounts payable,2011-08,
+Accounts payable,2010-08,799.0
+Accounts payable,2007-08,856.0
+Accrued liabilities,2005-08,
+Accrued liabilities,2012-08,290.0
+Accrued liabilities,2006-08,465.0
+Accrued liabilities,2014-08,737.0
+Accrued liabilities,2010-08,465.0
+Accrued liabilities,2013-08,267.0
+Accrued liabilities,2011-08,
+Accrued liabilities,2008-08,514.0
+Accrued liabilities,2007-08,444.0
+Accrued liabilities,2009-08,396.0
+Accumulated Depreciation,2014-08,-14750.0
+Accumulated Depreciation,2008-08,-9602.0
+Accumulated Depreciation,2012-08,-13722.0
+Accumulated Depreciation,2009-08,-9628.0
+Accumulated Depreciation,2005-08,-6345.0
+Accumulated Depreciation,2011-08,-12201.0
+Accumulated Depreciation,2007-08,-8319.0
+Accumulated Depreciation,2013-08,-13294.0
+Accumulated Depreciation,2006-08,-7245.0
+Accumulated Depreciation,2010-08,-11212.0
+Accumulated other comprehensive income,2005-08,61.0
+Accumulated other comprehensive income,2014-08,56.0
+Accumulated other comprehensive income,2006-08,73.0
+Accumulated other comprehensive income,2011-08,132.0
+Accumulated other comprehensive income,2009-08,82.0
+Accumulated other comprehensive income,2008-08,68.0
+Accumulated other comprehensive income,2013-08,63.0
+Accumulated other comprehensive income,2010-08,110.0
+Accumulated other comprehensive income,2007-08,69.0
+Accumulated other comprehensive income,2012-08,80.0
+Additional paid-in capital,2007-08,6519.0
+Additional paid-in capital,2005-08,4707.0
+Additional paid-in capital,2012-08,8920.0
+Additional paid-in capital,2006-08,6555.0
+Additional paid-in capital,2010-08,8446.0
+Additional paid-in capital,2014-08,7879.0
+Additional paid-in capital,2013-08,9187.0
+Additional paid-in capital,2009-08,6863.0
+Additional paid-in capital,2008-08,6566.0
+Additional paid-in capital,2011-08,8610.0
+Assets,2005-08,
+Assets,2013-08,
+Assets,2009-08,
+Assets,2008-08,
+Assets,2007-08,
+Assets,2012-08,
+Assets,2010-08,
+Assets,2014-08,
+Assets,2006-08,
+Assets,2011-08,
+Cash,2009-08,
+Cash,2006-08,
+Cash,2011-08,
+Cash,2008-08,
+Cash,2010-08,
+Cash,2012-08,
+Cash,2005-08,
+Cash,2013-08,
+Cash,2007-08,
+Cash,2014-08,
+Cash and cash equivalents,2012-08,2459.0
+Cash and cash equivalents,2006-08,1431.0
+Cash and cash equivalents,2005-08,524.0
+Cash and cash equivalents,2007-08,2192.0
+Cash and cash equivalents,2009-08,1485.0
+Cash and cash equivalents,2010-08,2913.0
+Cash and cash equivalents,2014-08,4150.0
+Cash and cash equivalents,2008-08,1243.0
+Cash and cash equivalents,2011-08,2160.0
+Cash and cash equivalents,2013-08,2880.0
+Common stock,2007-08,
+Common stock,2014-08,107.0
+Common stock,2010-08,
+Common stock,2005-08,
+Common stock,2011-08,98.0
+Common stock,2008-08,
+Common stock,2006-08,
+Common stock,2013-08,104.0
+Common stock,2009-08,
+Common stock,2012-08,102.0
+Current assets,2008-08,
+Current assets,2009-08,
+Current assets,2010-08,
+Current assets,2005-08,
+Current assets,2014-08,
+Current assets,2006-08,
+Current assets,2011-08,
+Current assets,2012-08,
+Current assets,2013-08,
+Current assets,2007-08,
+Current liabilities,2005-08,
+Current liabilities,2014-08,
+Current liabilities,2013-08,
+Current liabilities,2006-08,
+Current liabilities,2012-08,
+Current liabilities,2007-08,
+Current liabilities,2011-08,
+Current liabilities,2008-08,
+Current liabilities,2010-08,
+Current liabilities,2009-08,
+Deferred income taxes,2006-08,26.0
+Deferred income taxes,2013-08,861.0
+Deferred income taxes,2008-08,
+Deferred income taxes,2014-08,816.0
+Deferred income taxes,2005-08,30.0
+Deferred income taxes,2011-08,
+Deferred income taxes,2010-08,
+Deferred income taxes,2007-08,25.0
+Deferred income taxes,2012-08,
+Deferred income taxes,2009-08,
+Deferred income taxes,2008-08,
+Deferred income taxes,2009-08,
+Deferred income taxes,2014-08,
+Deferred income taxes,2005-08,32.0
+Deferred income taxes,2013-08,
+Deferred income taxes,2012-08,
+Deferred income taxes,2011-08,
+Deferred income taxes,2010-08,
+Deferred income taxes,2006-08,49.0
+Deferred income taxes,2007-08,65.0
+Deferred revenues,2014-08,407.0
+Deferred revenues,2012-08,389.0
+Deferred revenues,2011-08,443.0
+Deferred revenues,2008-08,114.0
+Deferred revenues,2005-08,30.0
+Deferred revenues,2013-08,383.0
+Deferred revenues,2006-08,53.0
+Deferred revenues,2010-08,298.0
+Deferred revenues,2007-08,169.0
+Deferred revenues,2009-08,209.0
+Deferred taxes liabilities,2006-08,28.0
+Deferred taxes liabilities,2009-08,
+Deferred taxes liabilities,2012-08,
+Deferred taxes liabilities,2011-08,
+Deferred taxes liabilities,2007-08,25.0
+Deferred taxes liabilities,2014-08,
+Deferred taxes liabilities,2013-08,
+Deferred taxes liabilities,2005-08,35.0
+Deferred taxes liabilities,2010-08,
+Deferred taxes liabilities,2008-08,
+Equity and other investments,2006-08,
+Equity and other investments,2007-08,
+Equity and other investments,2005-08,
+Equity and other investments,2011-08,483.0
+Equity and other investments,2012-08,763.0
+Equity and other investments,2014-08,1790.0
+Equity and other investments,2010-08,582.0
+Equity and other investments,2008-08,
+Equity and other investments,2009-08,315.0
+Equity and other investments,2013-08,895.0
+Goodwill,2007-08,515.0
+Goodwill,2013-08,
+Goodwill,2006-08,502.0
+Goodwill,2008-08,58.0
+Goodwill,2014-08,
+Goodwill,2009-08,
+Goodwill,2012-08,
+Goodwill,2011-08,
+Goodwill,2010-08,
+Goodwill,2005-08,
+"Gross property, plant and equipment",2007-08,16598.0
+"Gross property, plant and equipment",2009-08,16709.0
+"Gross property, plant and equipment",2013-08,20920.0
+"Gross property, plant and equipment",2011-08,19756.0
+"Gross property, plant and equipment",2006-08,13133.0
+"Gross property, plant and equipment",2008-08,18413.0
+"Gross property, plant and equipment",2014-08,23432.0
+"Gross property, plant and equipment",2010-08,17813.0
+"Gross property, plant and equipment",2005-08,11029.0
+"Gross property, plant and equipment",2012-08,20825.0
+Intangible assets,2008-08,364.0
+Intangible assets,2005-08,260.0
+Intangible assets,2007-08,401.0
+Intangible assets,2006-08,388.0
+Intangible assets,2012-08,371.0
+Intangible assets,2011-08,414.0
+Intangible assets,2009-08,344.0
+Intangible assets,2010-08,323.0
+Intangible assets,2014-08,468.0
+Intangible assets,2013-08,386.0
+Inventories,2012-08,1812.0
+Inventories,2014-08,2455.0
+Inventories,2006-08,963.0
+Inventories,2010-08,1770.0
+Inventories,2008-08,1291.0
+Inventories,2011-08,2080.0
+Inventories,2013-08,2649.0
+Inventories,2009-08,987.0
+Inventories,2005-08,772.0
+Inventories,2007-08,1532.0
+Liabilities,2010-08,
+Liabilities,2013-08,
+Liabilities,2007-08,
+Liabilities,2012-08,
+Liabilities,2009-08,
+Liabilities,2014-08,
+Liabilities,2008-08,
+Liabilities,2011-08,
+Liabilities,2005-08,
+Liabilities,2006-08,
+Liabilities and stockholders' equity,2007-08,
+Liabilities and stockholders' equity,2005-08,
+Liabilities and stockholders' equity,2006-08,
+Liabilities and stockholders' equity,2008-08,
+Liabilities and stockholders' equity,2009-08,
+Liabilities and stockholders' equity,2010-08,
+Liabilities and stockholders' equity,2011-08,
+Liabilities and stockholders' equity,2012-08,
+Liabilities and stockholders' equity,2013-08,
+Liabilities and stockholders' equity,2014-08,
+Long-term debt,2005-08,1020.0
+Long-term debt,2012-08,3038.0
+Long-term debt,2007-08,1987.0
+Long-term debt,2014-08,4955.0
+Long-term debt,2010-08,1648.0
+Long-term debt,2013-08,4452.0
+Long-term debt,2009-08,2674.0
+Long-term debt,2008-08,2451.0
+Long-term debt,2011-08,1861.0
+Long-term debt,2006-08,405.0
+Minority interest,2011-08,1382.0
+Minority interest,2007-08,2607.0
+Minority interest,2012-08,717.0
+Minority interest,2006-08,1568.0
+Minority interest,2009-08,1986.0
+Minority interest,2014-08,802.0
+Minority interest,2010-08,1796.0
+Minority interest,2013-08,864.0
+Minority interest,2008-08,2865.0
+Minority interest,2005-08,
+"Net property, plant and equipment",2008-08,8811.0
+"Net property, plant and equipment",2005-08,4684.0
+"Net property, plant and equipment",2014-08,8682.0
+"Net property, plant and equipment",2009-08,7081.0
+"Net property, plant and equipment",2010-08,6601.0
+"Net property, plant and equipment",2013-08,7626.0
+"Net property, plant and equipment",2006-08,5888.0
+"Net property, plant and equipment",2012-08,7103.0
+"Net property, plant and equipment",2011-08,7555.0
+"Net property, plant and equipment",2007-08,8279.0
+Non-current assets,2010-08,
+Non-current assets,2014-08,
+Non-current assets,2007-08,
+Non-current assets,2012-08,
+Non-current assets,2005-08,
+Non-current assets,2011-08,
+Non-current assets,2008-08,
+Non-current assets,2009-08,
+Non-current assets,2013-08,
+Non-current assets,2006-08,
+Non-current liabilities,2008-08,
+Non-current liabilities,2010-08,
+Non-current liabilities,2011-08,
+Non-current liabilities,2012-08,
+Non-current liabilities,2009-08,
+Non-current liabilities,2014-08,
+Non-current liabilities,2007-08,
+Non-current liabilities,2013-08,
+Non-current liabilities,2005-08,
+Non-current liabilities,2006-08,
+Other current assets,2010-08,119.0
+Other current assets,2005-08,
+Other current assets,2006-08,149.0
+Other current assets,2013-08,1092.0
+Other current assets,2008-08,385.0
+Other current assets,2009-08,74.0
+Other current assets,2011-08,487.0
+Other current assets,2007-08,255.0
+Other current assets,2012-08,454.0
+Other current assets,2014-08,732.0
+Other current liabilities,2012-08,497.0
+Other current liabilities,2005-08,49.0
+Other current liabilities,2011-08,1897.0
+Other current liabilities,2010-08,377.0
+Other current liabilities,2007-08,134.0
+Other current liabilities,2013-08,795.0
+Other current liabilities,2006-08,123.0
+Other current liabilities,2008-08,98.0
+Other current liabilities,2009-08,305.0
+Other current liabilities,2014-08,839.0
+Other long-term assets,2013-08,439.0
+Other long-term assets,2010-08,854.0
+Other long-term assets,2009-08,371.0
+Other long-term assets,2012-08,333.0
+Other long-term assets,2014-08,497.0
+Other long-term assets,2005-08,107.0
+Other long-term assets,2011-08,468.0
+Other long-term assets,2007-08,324.0
+Other long-term assets,2008-08,418.0
+Other long-term assets,2006-08,293.0
+Other long-term liabilities,2013-08,535.0
+Other long-term liabilities,2011-08,559.0
+Other long-term liabilities,2009-08,249.0
+Other long-term liabilities,2008-08,338.0
+Other long-term liabilities,2010-08,527.0
+Other long-term liabilities,2012-08,630.0
+Other long-term liabilities,2006-08,445.0
+Other long-term liabilities,2014-08,1159.0
+Other long-term liabilities,2005-08,126.0
+Other long-term liabilities,2007-08,421.0
+Prepaid expenses,2014-08,
+Prepaid expenses,2013-08,
+Prepaid expenses,2006-08,77.0
+Prepaid expenses,2010-08,
+Prepaid expenses,2011-08,
+Prepaid expenses,2007-08,67.0
+Prepaid expenses,2005-08,38.0
+Prepaid expenses,2008-08,
+Prepaid expenses,2009-08,
+Prepaid expenses,2012-08,
+"Property, plant and equipment",2009-08,
+"Property, plant and equipment",2010-08,
+"Property, plant and equipment",2008-08,
+"Property, plant and equipment",2011-08,
+"Property, plant and equipment",2007-08,
+"Property, plant and equipment",2012-08,
+"Property, plant and equipment",2013-08,
+"Property, plant and equipment",2006-08,
+"Property, plant and equipment",2014-08,
+"Property, plant and equipment",2005-08,
+Receivables,2011-08,1105.0
+Receivables,2006-08,807.0
+Receivables,2012-08,933.0
+Receivables,2013-08,2069.0
+Receivables,2014-08,2524.0
+Receivables,2005-08,794.0
+Receivables,2007-08,739.0
+Receivables,2009-08,798.0
+Receivables,2010-08,1531.0
+Receivables,2008-08,741.0
+Retained earnings,2010-08,-536.0
+Retained earnings,2007-08,1164.0
+Retained earnings,2013-08,-212.0
+Retained earnings,2005-08,1078.0
+Retained earnings,2006-08,1486.0
+Retained earnings,2014-08,2729.0
+Retained earnings,2011-08,-370.0
+Retained earnings,2009-08,-2291.0
+Retained earnings,2008-08,-456.0
+Retained earnings,2012-08,-1402.0
+Short-term debt,2008-08,275.0
+Short-term debt,2011-08,140.0
+Short-term debt,2012-08,224.0
+Short-term debt,2010-08,712.0
+Short-term debt,2007-08,423.0
+Short-term debt,2013-08,1585.0
+Short-term debt,2006-08,166.0
+Short-term debt,2014-08,1638.0
+Short-term debt,2009-08,424.0
+Short-term debt,2005-08,147.0
+Short-term investments,2013-08,221.0
+Short-term investments,2012-08,100.0
+Short-term investments,2009-08,
+Short-term investments,2010-08,
+Short-term investments,2014-08,384.0
+Short-term investments,2007-08,424.0
+Short-term investments,2005-08,766.0
+Short-term investments,2006-08,1648.0
+Short-term investments,2008-08,119.0
+Short-term investments,2011-08,
+Stockholders' equity,2013-08,
+Stockholders' equity,2005-08,
+Stockholders' equity,2007-08,
+Stockholders' equity,2010-08,
+Stockholders' equity,2011-08,
+Stockholders' equity,2008-08,
+Stockholders' equity,2009-08,
+Stockholders' equity,2012-08,
+Stockholders' equity,2006-08,
+Stockholders' equity,2014-08,
+Taxes payable,2014-08,71.0
+Taxes payable,2012-08,25.0
+Taxes payable,2006-08,
+Taxes payable,2010-08,51.0
+Taxes payable,2013-08,47.0
+Taxes payable,2008-08,
+Taxes payable,2009-08,32.0
+Taxes payable,2005-08,
+Taxes payable,2007-08,
+Taxes payable,2011-08,
+Total assets,2010-08,14693.0
+Total assets,2011-08,14752.0
+Total assets,2008-08,13430.0
+Total assets,2013-08,19118.0
+Total assets,2012-08,14328.0
+Total assets,2007-08,14818.0
+Total assets,2006-08,12221.0
+Total assets,2009-08,11455.0
+Total assets,2005-08,8006.0
+Total assets,2014-08,22498.0
+Total cash,2011-08,2160.0
+Total cash,2014-08,4534.0
+Total cash,2007-08,2616.0
+Total cash,2008-08,1362.0
+Total cash,2009-08,1485.0
+Total cash,2012-08,2559.0
+Total cash,2013-08,3101.0
+Total cash,2006-08,3079.0
+Total cash,2005-08,1290.0
+Total cash,2010-08,2913.0
+Total current assets,2011-08,5832.0
+Total current assets,2012-08,5758.0
+Total current assets,2014-08,10245.0
+Total current assets,2009-08,3344.0
+Total current assets,2007-08,5234.0
+Total current assets,2013-08,8911.0
+Total current assets,2008-08,3779.0
+Total current assets,2006-08,5101.0
+Total current assets,2005-08,2926.0
+Total current assets,2010-08,6333.0
+Total current liabilities,2010-08,2702.0
+Total current liabilities,2006-08,1661.0
+Total current liabilities,2008-08,1598.0
+Total current liabilities,2011-08,2480.0
+Total current liabilities,2012-08,2243.0
+Total current liabilities,2009-08,1892.0
+Total current liabilities,2007-08,2026.0
+Total current liabilities,2013-08,4125.0
+Total current liabilities,2005-08,979.0
+Total current liabilities,2014-08,4811.0
+Total liabilities,2009-08,6801.0
+Total liabilities,2010-08,6673.0
+Total liabilities,2006-08,4107.0
+Total liabilities,2013-08,9976.0
+Total liabilities,2005-08,2160.0
+Total liabilities,2008-08,7252.0
+Total liabilities,2007-08,7066.0
+Total liabilities,2011-08,6282.0
+Total liabilities,2012-08,6628.0
+Total liabilities,2014-08,11727.0
+Total liabilities and stockholders' equity,2013-08,19118.0
+Total liabilities and stockholders' equity,2007-08,14818.0
+Total liabilities and stockholders' equity,2008-08,13430.0
+Total liabilities and stockholders' equity,2006-08,12221.0
+Total liabilities and stockholders' equity,2011-08,14752.0
+Total liabilities and stockholders' equity,2005-08,8006.0
+Total liabilities and stockholders' equity,2009-08,11455.0
+Total liabilities and stockholders' equity,2014-08,22498.0
+Total liabilities and stockholders' equity,2010-08,14693.0
+Total liabilities and stockholders' equity,2012-08,14328.0
+Total non-current assets,2008-08,9651.0
+Total non-current assets,2006-08,7120.0
+Total non-current assets,2011-08,8920.0
+Total non-current assets,2010-08,8360.0
+Total non-current assets,2005-08,5081.0
+Total non-current assets,2014-08,12253.0
+Total non-current assets,2012-08,8570.0
+Total non-current assets,2013-08,10207.0
+Total non-current assets,2009-08,8111.0
+Total non-current assets,2007-08,9584.0
+Total non-current liabilities,2006-08,2446.0
+Total non-current liabilities,2011-08,3802.0
+Total non-current liabilities,2013-08,5851.0
+Total non-current liabilities,2014-08,6916.0
+Total non-current liabilities,2012-08,4385.0
+Total non-current liabilities,2007-08,5040.0
+Total non-current liabilities,2005-08,1181.0
+Total non-current liabilities,2008-08,5654.0
+Total non-current liabilities,2010-08,3971.0
+Total non-current liabilities,2009-08,4909.0
+Total stockholders' equity,2009-08,4654.0
+Total stockholders' equity,2008-08,6178.0
+Total stockholders' equity,2005-08,5847.0
+Total stockholders' equity,2006-08,8114.0
+Total stockholders' equity,2013-08,9142.0
+Total stockholders' equity,2014-08,10771.0
+Total stockholders' equity,2011-08,8470.0
+Total stockholders' equity,2012-08,7700.0
+Total stockholders' equity,2010-08,8020.0
+Total stockholders' equity,2007-08,7752.0

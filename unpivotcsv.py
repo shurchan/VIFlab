@@ -2,6 +2,8 @@ import pandas as pd
  
 #read the normalized CSV file
 #df = pandas.read_csv('AAPL Income Statement.csv')
+
+
 df = pd.read_csv('AAPL Income Statement.csv')
 
 

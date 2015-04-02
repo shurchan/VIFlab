@@ -1,0 +1,364 @@
+FieldName,year,data_value
+Accounts payable,2011-09,2515.0
+Accounts payable,TTM,6750.0
+Accounts payable,2005-09,
+Accounts payable,2010-09,6307.0
+Accounts payable,2012-09,4467.0
+Accounts payable,2014-09,5938.0
+Accounts payable,2006-09,
+Accounts payable,2007-09,
+Accounts payable,2013-09,2340.0
+Accounts payable,2008-09,
+Accounts payable,2009-09,92.0
+Accounts receivable,2014-09,-4232.0
+Accounts receivable,TTM,-2432.0
+Accounts receivable,2006-09,
+Accounts receivable,2005-09,
+Accounts receivable,2007-09,
+Accounts receivable,2011-09,143.0
+Accounts receivable,2012-09,-5551.0
+Accounts receivable,2010-09,-2142.0
+Accounts receivable,2008-09,
+Accounts receivable,2009-09,-939.0
+Accounts receivable,2013-09,-2172.0
+"Acquisitions, net",2008-09,-220.0
+"Acquisitions, net",2005-09,
+"Acquisitions, net",TTM,-3263.0
+"Acquisitions, net",2013-09,-496.0
+"Acquisitions, net",2009-09,
+"Acquisitions, net",2014-09,-3765.0
+"Acquisitions, net",2006-09,
+"Acquisitions, net",2010-09,-638.0
+"Acquisitions, net",2011-09,-244.0
+"Acquisitions, net",2007-09,
+"Acquisitions, net",2012-09,-350.0
+Capital expenditure,2014-09,-9813.0
+Capital expenditure,2013-09,-9076.0
+Capital expenditure,2011-09,-7452.0
+Capital expenditure,TTM,-11034.0
+Capital expenditure,2008-09,-1199.0
+Capital expenditure,2012-09,-9402.0
+Capital expenditure,2005-09,-260.0
+Capital expenditure,2009-09,-1213.0
+Capital expenditure,2007-09,-986.0
+Capital expenditure,2006-09,-657.0
+Capital expenditure,2010-09,-2121.0
+Cash Flows From Financing Activities,2011-09,
+Cash Flows From Financing Activities,2012-09,
+Cash Flows From Financing Activities,2014-09,
+Cash Flows From Financing Activities,2005-09,
+Cash Flows From Financing Activities,2013-09,
+Cash Flows From Financing Activities,2008-09,
+Cash Flows From Financing Activities,2007-09,
+Cash Flows From Financing Activities,2009-09,
+Cash Flows From Financing Activities,2006-09,
+Cash Flows From Financing Activities,2010-09,
+Cash Flows From Financing Activities,TTM,
+Cash Flows From Investing Activities,2006-09,
+Cash Flows From Investing Activities,2007-09,
+Cash Flows From Investing Activities,2012-09,
+Cash Flows From Investing Activities,TTM,
+Cash Flows From Investing Activities,2009-09,
+Cash Flows From Investing Activities,2010-09,
+Cash Flows From Investing Activities,2005-09,
+Cash Flows From Investing Activities,2011-09,
+Cash Flows From Investing Activities,2014-09,
+Cash Flows From Investing Activities,2008-09,
+Cash Flows From Investing Activities,2013-09,
+Cash Flows From Operating Activities,2008-09,
+Cash Flows From Operating Activities,2006-09,
+Cash Flows From Operating Activities,TTM,
+Cash Flows From Operating Activities,2011-09,
+Cash Flows From Operating Activities,2012-09,
+Cash Flows From Operating Activities,2013-09,
+Cash Flows From Operating Activities,2005-09,
+Cash Flows From Operating Activities,2014-09,
+Cash Flows From Operating Activities,2010-09,
+Cash Flows From Operating Activities,2009-09,
+Cash Flows From Operating Activities,2007-09,
+Cash at beginning of period,2009-09,11875.0
+Cash at beginning of period,TTM,14077.0
+Cash at beginning of period,2010-09,5263.0
+Cash at beginning of period,2005-09,2969.0
+Cash at beginning of period,2014-09,14259.0
+Cash at beginning of period,2011-09,11261.0
+Cash at beginning of period,2006-09,3491.0
+Cash at beginning of period,2013-09,10746.0
+Cash at beginning of period,2007-09,6392.0
+Cash at beginning of period,2008-09,9352.0
+Cash at beginning of period,2012-09,9815.0
+Cash at end of period,2008-09,11875.0
+Cash at end of period,2005-09,3491.0
+Cash at end of period,2009-09,5263.0
+Cash at end of period,2007-09,9352.0
+Cash at end of period,2006-09,6392.0
+Cash at end of period,2013-09,14259.0
+Cash at end of period,2012-09,10746.0
+Cash at end of period,2010-09,11261.0
+Cash at end of period,2011-09,9815.0
+Cash at end of period,2014-09,13844.0
+Cash at end of period,TTM,19478.0
+Common stock issued,2013-09,530.0
+Common stock issued,2005-09,543.0
+Common stock issued,2012-09,665.0
+Common stock issued,2006-09,318.0
+Common stock issued,2010-09,912.0
+Common stock issued,2008-09,483.0
+Common stock issued,TTM,676.0
+Common stock issued,2007-09,365.0
+Common stock issued,2009-09,475.0
+Common stock issued,2014-09,730.0
+Common stock issued,2011-09,831.0
+Common stock repurchased,2013-09,-22860.0
+Common stock repurchased,2012-09,
+Common stock repurchased,2014-09,-45000.0
+Common stock repurchased,2006-09,-355.0
+Common stock repurchased,2007-09,-3.0
+Common stock repurchased,2011-09,
+Common stock repurchased,2010-09,
+Common stock repurchased,2008-09,-124.0
+Common stock repurchased,2005-09,
+Common stock repurchased,TTM,-45001.0
+Common stock repurchased,2009-09,
+Debt issued,2007-09,
+Debt issued,2014-09,18266.0
+Debt issued,2006-09,
+Debt issued,2010-09,
+Debt issued,2005-09,
+Debt issued,2012-09,
+Debt issued,TTM,21751.0
+Debt issued,2009-09,
+Debt issued,2011-09,
+Debt issued,2008-09,
+Debt issued,2013-09,16896.0
+Deferred income taxes,2012-09,4405.0
+Deferred income taxes,2006-09,53.0
+Deferred income taxes,TTM,3291.0
+Deferred income taxes,2007-09,78.0
+Deferred income taxes,2005-09,52.0
+Deferred income taxes,2011-09,2868.0
+Deferred income taxes,2009-09,1040.0
+Deferred income taxes,2008-09,-368.0
+Deferred income taxes,2010-09,1440.0
+Deferred income taxes,2013-09,1141.0
+Deferred income taxes,2014-09,2347.0
+Depreciation & amortization,2013-09,6757.0
+Depreciation & amortization,2011-09,1814.0
+Depreciation & amortization,2006-09,225.0
+Depreciation & amortization,TTM,8377.0
+Depreciation & amortization,2007-09,317.0
+Depreciation & amortization,2005-09,179.0
+Depreciation & amortization,2014-09,7946.0
+Depreciation & amortization,2008-09,473.0
+Depreciation & amortization,2009-09,734.0
+Depreciation & amortization,2012-09,3277.0
+Depreciation & amortization,2010-09,1027.0
+Dividend paid,TTM,-11158.0
+Dividend paid,2014-09,-11126.0
+Dividend paid,2008-09,
+Dividend paid,2013-09,-10564.0
+Dividend paid,2010-09,
+Dividend paid,2009-09,
+Dividend paid,2007-09,
+Dividend paid,2005-09,
+Dividend paid,2011-09,
+Dividend paid,2012-09,-2488.0
+Dividend paid,2006-09,
+Free Cash Flow,2013-09,
+Free Cash Flow,2005-09,
+Free Cash Flow,TTM,
+Free Cash Flow,2010-09,
+Free Cash Flow,2012-09,
+Free Cash Flow,2008-09,
+Free Cash Flow,2007-09,
+Free Cash Flow,2011-09,
+Free Cash Flow,2009-09,
+Free Cash Flow,2006-09,
+Free Cash Flow,2014-09,
+Free cash flow,2005-09,2275.0
+Free cash flow,2014-09,49900.0
+Free cash flow,2006-09,1563.0
+Free cash flow,2008-09,8397.0
+Free cash flow,2007-09,4484.0
+Free cash flow,2009-09,8946.0
+Free cash flow,TTM,59731.0
+Free cash flow,2012-09,41454.0
+Free cash flow,2011-09,30077.0
+Free cash flow,2013-09,44590.0
+Free cash flow,2010-09,16474.0
+Inventory,2009-09,54.0
+Inventory,2012-09,-15.0
+Inventory,2013-09,-973.0
+Inventory,2008-09,-163.0
+Inventory,2011-09,275.0
+Inventory,2010-09,-596.0
+Inventory,2014-09,-76.0
+Inventory,2007-09,-76.0
+Inventory,2006-09,-105.0
+Inventory,TTM,110.0
+Inventory,2005-09,-64.0
+"Investments in property, plant, and equipment",2006-09,-657.0
+"Investments in property, plant, and equipment",2005-09,-260.0
+"Investments in property, plant, and equipment",2007-09,-986.0
+"Investments in property, plant, and equipment",2008-09,-1199.0
+"Investments in property, plant, and equipment",2009-09,-1144.0
+"Investments in property, plant, and equipment",2010-09,-2005.0
+"Investments in property, plant, and equipment",2011-09,-4260.0
+"Investments in property, plant, and equipment",2012-09,-8295.0
+"Investments in property, plant, and equipment",2013-09,-8165.0
+"Investments in property, plant, and equipment",2014-09,-9571.0
+"Investments in property, plant, and equipment",TTM,-10803.0
+Net cash provided by (used for) financing activities,2013-09,-16379.0
+Net cash provided by (used for) financing activities,2007-09,739.0
+Net cash provided by (used for) financing activities,2005-09,543.0
+Net cash provided by (used for) financing activities,2011-09,1444.0
+Net cash provided by (used for) financing activities,2006-09,324.0
+Net cash provided by (used for) financing activities,2014-09,-37549.0
+Net cash provided by (used for) financing activities,2009-09,663.0
+Net cash provided by (used for) financing activities,TTM,-36723.0
+Net cash provided by (used for) financing activities,2010-09,1257.0
+Net cash provided by (used for) financing activities,2008-09,1116.0
+Net cash provided by (used for) financing activities,2012-09,-1698.0
+Net cash provided by operating activities,2012-09,50856.0
+Net cash provided by operating activities,2014-09,59713.0
+Net cash provided by operating activities,2007-09,5470.0
+Net cash provided by operating activities,2005-09,2535.0
+Net cash provided by operating activities,2008-09,9596.0
+Net cash provided by operating activities,TTM,70765.0
+Net cash provided by operating activities,2010-09,18595.0
+Net cash provided by operating activities,2011-09,37529.0
+Net cash provided by operating activities,2006-09,2220.0
+Net cash provided by operating activities,2009-09,10159.0
+Net cash provided by operating activities,2013-09,53666.0
+Net cash used for investing activities,TTM,-28641.0
+Net cash used for investing activities,2010-09,-13854.0
+Net cash used for investing activities,2011-09,-40419.0
+Net cash used for investing activities,2009-09,-17434.0
+Net cash used for investing activities,2005-09,-2556.0
+Net cash used for investing activities,2012-09,-48227.0
+Net cash used for investing activities,2008-09,-8189.0
+Net cash used for investing activities,2007-09,-3249.0
+Net cash used for investing activities,2014-09,-22579.0
+Net cash used for investing activities,2013-09,-33774.0
+Net cash used for investing activities,2006-09,357.0
+Net change in cash,2008-09,2523.0
+Net change in cash,TTM,5401.0
+Net change in cash,2011-09,-1446.0
+Net change in cash,2005-09,522.0
+Net change in cash,2010-09,5998.0
+Net change in cash,2014-09,-415.0
+Net change in cash,2009-09,-6612.0
+Net change in cash,2006-09,2901.0
+Net change in cash,2007-09,2960.0
+Net change in cash,2013-09,3513.0
+Net change in cash,2012-09,931.0
+Net income,2011-09,25922.0
+Net income,2005-09,1335.0
+Net income,2012-09,41733.0
+Net income,TTM,44462.0
+Net income,2013-09,37037.0
+Net income,2008-09,4834.0
+Net income,2006-09,1989.0
+Net income,2009-09,8235.0
+Net income,2014-09,39510.0
+Net income,2007-09,3496.0
+Net income,2010-09,14013.0
+Operating cash flow,2010-09,18595.0
+Operating cash flow,2011-09,37529.0
+Operating cash flow,2009-09,10159.0
+Operating cash flow,2012-09,50856.0
+Operating cash flow,2008-09,9596.0
+Operating cash flow,TTM,70765.0
+Operating cash flow,2007-09,5470.0
+Operating cash flow,2013-09,53666.0
+Operating cash flow,2006-09,2220.0
+Operating cash flow,2014-09,59713.0
+Operating cash flow,2005-09,2535.0
+Other financing activities,TTM,-2991.0
+Other financing activities,2011-09,613.0
+Other financing activities,2013-09,-381.0
+Other financing activities,2012-09,125.0
+Other financing activities,2010-09,345.0
+Other financing activities,2005-09,
+Other financing activities,2014-09,-419.0
+Other financing activities,2009-09,188.0
+Other financing activities,2008-09,757.0
+Other financing activities,2007-09,377.0
+Other financing activities,2006-09,361.0
+Other investing activities,2010-09,-2.0
+Other investing activities,2006-09,-18.0
+Other investing activities,2013-09,-160.0
+Other investing activities,2011-09,-259.0
+Other investing activities,2005-09,-21.0
+Other investing activities,TTM,76.0
+Other investing activities,2007-09,49.0
+Other investing activities,2012-09,-48.0
+Other investing activities,2008-09,-10.0
+Other investing activities,2014-09,16.0
+Other investing activities,2009-09,-74.0
+Other non-cash items,2013-09,
+Other non-cash items,2012-09,
+Other non-cash items,TTM,
+Other non-cash items,2007-09,254.0
+Other non-cash items,2014-09,
+Other non-cash items,2005-09,504.0
+Other non-cash items,2010-09,24.0
+Other non-cash items,2006-09,174.0
+Other non-cash items,2011-09,
+Other non-cash items,2009-09,26.0
+Other non-cash items,2008-09,538.0
+Other working capital,2005-09,529.0
+Other working capital,2006-09,-116.0
+Other working capital,2012-09,800.0
+Other working capital,2010-09,-2357.0
+Other working capital,TTM,7137.0
+Other working capital,2013-09,7283.0
+Other working capital,2008-09,4282.0
+Other working capital,2007-09,1401.0
+Other working capital,2014-09,5417.0
+Other working capital,2011-09,2824.0
+Other working capital,2009-09,207.0
+Purchases of intangibles,2007-09,
+Purchases of intangibles,2013-09,-911.0
+Purchases of intangibles,2009-09,-69.0
+Purchases of intangibles,2012-09,-1107.0
+Purchases of intangibles,2014-09,-242.0
+Purchases of intangibles,2006-09,
+Purchases of intangibles,2010-09,-116.0
+Purchases of intangibles,TTM,-231.0
+Purchases of intangibles,2005-09,
+Purchases of intangibles,2011-09,-3192.0
+Purchases of intangibles,2008-09,
+Purchases of investments,2006-09,-7280.0
+Purchases of investments,2014-09,-217128.0
+Purchases of investments,2008-09,-23003.0
+Purchases of investments,TTM,-213646.0
+Purchases of investments,2013-09,-148489.0
+Purchases of investments,2009-09,-46825.0
+Purchases of investments,2012-09,-151232.0
+Purchases of investments,2010-09,-57811.0
+Purchases of investments,2011-09,-102317.0
+Purchases of investments,2007-09,-11736.0
+Purchases of investments,2005-09,-11470.0
+Sales/Maturities of investments,2008-09,16243.0
+Sales/Maturities of investments,2012-09,112805.0
+Sales/Maturities of investments,2010-09,46718.0
+Sales/Maturities of investments,2007-09,9424.0
+Sales/Maturities of investments,TTM,199226.0
+Sales/Maturities of investments,2009-09,30678.0
+Sales/Maturities of investments,2005-09,9195.0
+Sales/Maturities of investments,2011-09,69853.0
+Sales/Maturities of investments,2013-09,124447.0
+Sales/Maturities of investments,2006-09,8312.0
+Sales/Maturities of investments,2014-09,208111.0
+Stock based compensation,TTM,3070.0
+Stock based compensation,2006-09,
+Stock based compensation,2008-09,
+Stock based compensation,2009-09,710.0
+Stock based compensation,2005-09,
+Stock based compensation,2013-09,2253.0
+Stock based compensation,2014-09,2863.0
+Stock based compensation,2012-09,1740.0
+Stock based compensation,2007-09,
+Stock based compensation,2011-09,1168.0
+Stock based compensation,2010-09,879.0

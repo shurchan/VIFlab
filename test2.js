@@ -1,0 +1,1 @@
+{"Data_Vale": {}, "ticker": "aapl", "report_type": "is"}
