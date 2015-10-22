@@ -5,5 +5,4 @@ import VIFToolsUtil
 ticker = 'aapl'
 
 VIFToolsUtil.Sql2AnnualJson(ticker, "is")
-
 #test comments again
