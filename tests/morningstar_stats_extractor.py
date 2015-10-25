@@ -9,10 +9,13 @@ class MS_StatsExtract(object):
     """
     def __init__(self):
         """ List of url parameters -- for url formation """
-        self.com_data_start_url = 'http://financials.morningstar.com/ajax/exportKR2CSV.html?&callback=?&t=XSES:'
+## http://financials.morningstar.com/ajax/exportKR2CSV.html?t=XNAS:AAPL&region=usa&culture=en-US&productcode=MLE&cur=&order=desc&r=448121
+        #self.com_data_start_url = 'http://financials.morningstar.com/ajax/exportKR2CSV.html?&callback=?&t=XSES:'
+        self.com_data_start_url = 'http://financials.morningstar.com/ajax/exportKR2CSV.html?t=XNAS:'
         self.com_data_stock_portion_url = ''
         self.com_data_stock_portion_additional_url = ''# for adding additonal str to the stock url.
-        self.com_data_end_url = '&region=sgp&culture=en-US&cur=&order=asc'
+        #self.com_data_end_url = '&region=sgp&culture=en-US&cur=&order=asc'
+        self.com_data_end_url = '&region=usa&culture=en-US&productcode=MLE&cur=&order=desc&r=448121'
         self.com_data_full_url = ''
         self.stock_list = ''#list of stock to parse.
 
@@ -20,8 +23,8 @@ class MS_StatsExtract(object):
         self.__print_url = 0
 
         ## temp csv storage path
-        self.ms_stats_extract_temp_csv = r'c:\data\temp\ms_stats.csv'
-        self.ms_stats_extract_temp_csv_transpose = r'c:\data\temp\ms_stats_t.csv'
+        self.ms_stats_extract_temp_csv = r'/Users/misc/code/viflab/data/temp/ms_stats.csv'
+        self.ms_stats_extract_temp_csv_transpose = r'/Users/misc/code/viflab/data/temp/ms_stats_t.csv'
 
         ## Temp Results storage
         self.target_stock_data_df = object()
