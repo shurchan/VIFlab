@@ -109,6 +109,7 @@ class MS_StatsExtract(object):
         self.target_stock_data_df.to_csv(self.ms_stats_extract_temp_csv_transpose, index =False)
         self.target_stock_data_df =  pandas.read_csv(self.ms_stats_extract_temp_csv_transpose)
         #rename columns
+        #TODO: There is a bug here. CSV and DF columns do not match.
         self.target_stock_data_df.rename(columns={'Year over Year':'Revenue yoy','3-Year Average':'Revenue 3yr avg',
                                                 '5-Year Average':'Revenue 5yr avg','10-Year Average':'Revenue 10yr avg',
 
@@ -137,7 +138,7 @@ class MS_StatsExtract(object):
             self.set_target_stock_url(stock)
             self.get_com_data()
             self.downloading_csv()
-            self.process_dataset()
+            self.process_dataset() #TODO: There is a bug here
 
     ## process the data, group by each symbol and take the last 3-5 years EPS year on year??
     def get_trend_data(self):
