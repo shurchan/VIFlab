@@ -11,7 +11,7 @@ class MS_StatsExtract(object):
         """ List of url parameters -- for url formation """
 ## http://financials.morningstar.com/ajax/exportKR2CSV.html?t=XNAS:AAPL&region=usa&culture=en-US&productcode=MLE&cur=&order=desc&r=448121
         #self.com_data_start_url = 'http://financials.morningstar.com/ajax/exportKR2CSV.html?&callback=?&t=XSES:'
-        self.com_data_start_url = 'http://financials.morningstar.com/ajax/exportKR2CSV.html?t=XNAS:'
+        self.com_data_start_url = 'http://financials.morningstar.com/ajax/exportKR2CSV.html?t=X'
         self.com_data_stock_portion_url = ''
         self.com_data_stock_portion_additional_url = ''# for adding additonal str to the stock url.
         #self.com_data_end_url = '&region=sgp&culture=en-US&cur=&order=asc'
@@ -100,6 +100,7 @@ class MS_StatsExtract(object):
         ## Rows with additional headers are skipped
         try:
             self.target_stock_data_df =  pandas.read_csv(self.ms_stats_extract_temp_csv, header =2, index_col = 0, skiprows = [19,20,31,41,42,43,48,58,53,64,65,72,73,95,101,102])
+#            self.target_stock_data_df.info()
         except:
             print 'problem downloading files. '
         self.target_stock_data_df = self.target_stock_data_df.transpose().reset_index()
@@ -154,7 +155,7 @@ class MS_StatsExtract(object):
             for n in range(9,5,-1):
                 if n == 9:
                     prev_data = grouped_symbol.nth(n)[label]
-                    accel_growth_check = (prev_data == prev_data) #for EPS growht increase every eyar
+                    accel_growth_check = (prev_data == prev_data) #for EPS growth increase every year
                     normal_growth_check =  (prev_data >0) #for normal increase
                     continue
                 current_data = grouped_symbol.nth(n)[label]
