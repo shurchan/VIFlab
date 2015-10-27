@@ -1,1 +1,1 @@
-{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/misc/code/viflab","disabled":false}}}
+{"virtualbox":{"/vagrant":{"mount_options":["dmode=777","fmode=666"],"guestpath":"/vagrant","hostpath":"/Users/misc/code/viflab","disabled":false}}}
