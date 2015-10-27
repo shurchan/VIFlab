@@ -8,3 +8,10 @@ https://github.com/AlexDisler/mysql-vagrant
 Connect to SQL via http://www.sequelpro.com/download
 
 Import CSV files to mysql: http://stackoverflow.com/questions/20868845/python-loading-a-set-of-csv-files-into-mysql
+
+Install mysql python connector in Mac OS
+
+1. XCode and the command line tools (as suggested by @7stud, @kjti)
+2. Install homebrew
+3. brew install mysql-connector-c
+4. pip install mysql-python

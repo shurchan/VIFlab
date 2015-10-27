@@ -1,5 +1,10 @@
 #!/usr/bin/env python
-from morningstar_stats_extractor import MS_StatsExtract
+
+import sys
+sys.path.insert(0, r'/Users/misc/code/viflab')
+
+from utils.morningstar_stats_extractor import MS_StatsExtract
+#from utils.VIFToolsUtil import VIFToolsUtil
 
 #data_ext = YFinanceDataExtr()
 data_ext = MS_StatsExtract()

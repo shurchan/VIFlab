@@ -10,10 +10,12 @@ class MS_StatsExtract(object):
     def __init__(self):
         """ List of url parameters -- for url formation """
 ## http://financials.morningstar.com/ajax/exportKR2CSV.html?t=XNAS:AAPL&region=usa&culture=en-US&productcode=MLE&cur=&order=desc&r=448121
-        self.com_data_start_url = 'http://financials.morningstar.com/ajax/exportKR2CSV.html?&callback=?&t=XSES:'
+        #self.com_data_start_url = 'http://financials.morningstar.com/ajax/exportKR2CSV.html?&callback=?&t=XSES:'
+        self.com_data_start_url = 'http://financials.morningstar.com/ajax/exportKR2CSV.html?t=X'
         self.com_data_stock_portion_url = ''
         self.com_data_stock_portion_additional_url = ''# for adding additonal str to the stock url.
-        self.com_data_end_url = '&region=sgp&culture=en-US&cur=&order=asc'
+        #self.com_data_end_url = '&region=sgp&culture=en-US&cur=&order=asc'
+        self.com_data_end_url = '&region=usa&culture=en-US&productcode=MLE&cur=&order=desc&r=448121'
         self.com_data_full_url = ''
         self.stock_list = ''#list of stock to parse.
 
@@ -21,8 +23,8 @@ class MS_StatsExtract(object):
         self.__print_url = 0
 
         ## temp csv storage path
-        self.ms_stats_extract_temp_csv = r'c:\data\temp\ms_stats.csv'
-        self.ms_stats_extract_temp_csv_transpose = r'c:\data\temp\ms_stats_t.csv'
+        self.ms_stats_extract_temp_csv = r'/Users/misc/code/viflab/data/temp/ms_stats.csv'
+        self.ms_stats_extract_temp_csv_transpose = r'/Users/misc/code/viflab/data/temp/ms_stats_t.csv'
 
         ## Temp Results storage
         self.target_stock_data_df = object()
@@ -90,6 +92,7 @@ class MS_StatsExtract(object):
             self.download_fault =1
         f.close()
 
+
     def process_dataset(self):
         """ Processed the data set by converting the csv to dataframe and attached the information for various stocks.
 
@@ -98,14 +101,19 @@ class MS_StatsExtract(object):
         ## Rows with additional headers are skipped
         try:
             self.target_stock_data_df =  pandas.read_csv(self.ms_stats_extract_temp_csv, header =2, index_col = 0, skiprows = [19,20,31,41,42,43,48,58,53,64,65,72,73,95,101,102])
+#            self.target_stock_data_df.info()
         except:
             print 'problem downloading files. '
         self.target_stock_data_df = self.target_stock_data_df.transpose().reset_index()
         self.target_stock_data_df["SYMBOL"] = self.com_data_stock_portion_url
         #after transpose save back to same file and call again for column duplication problem
+
         self.target_stock_data_df.to_csv(self.ms_stats_extract_temp_csv_transpose, index =False)
+        #self.target_stock_data_df.to_csv(self.ms_stats_extract_temp_csv_transpose+self.com_data_stock_portion_url, index =False)
+
         self.target_stock_data_df =  pandas.read_csv(self.ms_stats_extract_temp_csv_transpose)
         #rename columns
+        #TODO: There is a bug here. CSV and DF columns do not match.
         self.target_stock_data_df.rename(columns={'Year over Year':'Revenue yoy','3-Year Average':'Revenue 3yr avg',
                                                 '5-Year Average':'Revenue 5yr avg','10-Year Average':'Revenue 10yr avg',
 
@@ -124,6 +132,9 @@ class MS_StatsExtract(object):
         else:
             self.com_data_allstock_df = pandas.concat([self.com_data_allstock_df,self.target_stock_data_df],ignore_index =True)
 
+    def save2mysql(self): #TODO: Port data from csv to mysql
+        print 'Processing stock:', self.stock_list
+
     def get_com_data_fr_all_stocks(self):
         """ Cater for all stocks. Each stock is parse one at a time.
         """
@@ -135,6 +146,7 @@ class MS_StatsExtract(object):
             self.get_com_data()
             self.downloading_csv()
             self.process_dataset()
+
 
     ## process the data, group by each symbol and take the last 3-5 years EPS year on year??
     def get_trend_data(self):
@@ -152,7 +164,7 @@ class MS_StatsExtract(object):
             for n in range(9,5,-1):
                 if n == 9:
                     prev_data = grouped_symbol.nth(n)[label]
-                    accel_growth_check = (prev_data == prev_data) #for EPS growht increase every eyar
+                    accel_growth_check = (prev_data == prev_data) #for EPS growth increase every year
                     normal_growth_check =  (prev_data >0) #for normal increase
                     continue
                 current_data = grouped_symbol.nth(n)[label]

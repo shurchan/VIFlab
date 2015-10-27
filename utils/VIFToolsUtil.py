@@ -2,9 +2,8 @@ import urllib
 import csv
 import MySQLdb
 import pandas as pd
-import MySQLdb
 import json
-import jsonpickle
+#import jsonpickle
 import collections
 
 #import pudb;pu.db #for debugging
