@@ -8,4 +8,3 @@ https://github.com/AlexDisler/mysql-vagrant
 Connect to SQL via http://www.sequelpro.com/download
 
 Import CSV files to mysql: http://stackoverflow.com/questions/20868845/python-loading-a-set-of-csv-files-into-mysql
-s
