@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>testdb</string>
+			<key>host</key>
+			<string>88.88.88.10</string>
+			<key>name</key>
+			<string>88.88.88.10</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>latin1</string>
+			<key>contentFilter</key>
+			<dict/>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGJCVYJHZlcnNpb25YJG9iamVjdHNZJGFy
+			Y2hpdmVyVCR0b3ASAAGGoKgHCBMUFRYaIVUkbnVsbNMJCgsMDxJX
+			TlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6INDoACgAOiEBGABIAF
+			gAdUdHlwZVRyb3dzXxAdU2VsZWN0aW9uRGV0YWlsVHlwZU5TSW5k
+			ZXhTZXTSFwsYGVxOU1JhbmdlQ291bnQQAIAG0hscHR5aJGNsYXNz
+			bmFtZVgkY2xhc3Nlc1pOU0luZGV4U2V0oh8gWk5TSW5kZXhTZXRY
+			TlNPYmplY3TSGxwiI1xOU0RpY3Rpb25hcnmiIiBfEA9OU0tleWVk
+			QXJjaGl2ZXLRJidUZGF0YYABAAgAEQAaACMALQAyADcAQABGAE0A
+			VQBgAGcAagBsAG4AcQBzAHUAdwB8AIEAoQCmALMAtQC3ALwAxwDQ
+			ANsA3gDpAPIA9wEEAQcBGQEcASEAAAAAAAACAQAAAAAAAAAoAAAA
+			AAAAAAAAAAAAAAABIw==
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{1, 0}, {988, 481}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>table</key>
+			<string>AnnualData</string>
+			<key>view</key>
+			<string>SP_VIEW_CONTENT</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>200</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>select * from AnnualData</string>
+		<string>CREATE TABLE IF NOT EXISTS `testdb`.`AnnualData` (
+  `idAnnualData` INT NOT NULL AUTO_INCREMENT,
+  `index` VARCHAR(20) NULL,
+  `Revenue USD Mil` VARCHAR(20) NULL,
+  `Gross Margin percent` VARCHAR(20) NULL,
+  `Operating Income USD Mil` VARCHAR(20) NULL,
+  `Operating Margin percent` VARCHAR(20) NULL,
+  `Net Income USD Mil` VARCHAR(20) NULL,
+  `Earnings Per Share USD` VARCHAR(20) NULL,
+  `Dividends USD` VARCHAR(20) NULL,
+  `Payout Ratio percent` VARCHAR(20) NULL,
+  `Shares Mil` VARCHAR(20) NULL,
+  `Book Value Per Share USD` VARCHAR(20) NULL,
+  `Operating Cash Flow USD Mil` VARCHAR(20) NULL,
+  `Cap Spending USD Mil` VARCHAR(20) NULL,
+  `Free Cash Flow USD Mil` VARCHAR(20) NULL,
+  `Free Cash Flow Per Share USD` VARCHAR(20) NULL,
+  `Working Capital USD Mil` VARCHAR(20) NULL,
+  `Revenue` VARCHAR(20) NULL,
+  `COGS``Gross Margin` VARCHAR(20) NULL,
+  `SG&amp;A``R&amp;D``Other` VARCHAR(20) NULL,
+  `Operating Margin` VARCHAR(20) NULL,
+  `Net Int Inc &amp; Other` VARCHAR(20) NULL,
+  `EBT Margin` VARCHAR(20) NULL,
+  `Tax Rate percent` VARCHAR(20) NULL,
+  `Net Margin percent` VARCHAR(20) NULL,
+  `Asset Turnover (Average)` VARCHAR(20) NULL,
+  `Return on Assets percent` VARCHAR(20) NULL,
+  `Financial Leverage (Average)` VARCHAR(20) NULL,
+  `Return on Equity percent` VARCHAR(20) NULL,
+  `Return on Invested Capital percent` VARCHAR(20) NULL,
+  `Interest Coverage` VARCHAR(20) NULL,
+  `Revenue YOY` VARCHAR(20) NULL,
+  `Revenue 3yr avg` VARCHAR(20) NULL,
+  `Revenue 5yr avg` VARCHAR(20) NULL,
+  `Revenue 10yr avg` VARCHAR(20) NULL,
+  `Operating income yoy` VARCHAR(20) NULL,
+  `Operating income 3yr avg` VARCHAR(20) NULL,
+  `Operating income 5yr avg` VARCHAR(20) NULL,
+  `Operating income 10yr avg` VARCHAR(20) NULL,
+  `Net income yoy` VARCHAR(20) NULL,
+  `Net income 3yr avg` VARCHAR(20) NULL,
+  `Net income 5yr avg` VARCHAR(20) NULL,
+  `Net income 10yr avg` VARCHAR(20) NULL,
+  `EPS YOY` VARCHAR(20) NULL,
+  `EPS 3yr avg` VARCHAR(20) NULL,
+  `EPS 5yr avg` VARCHAR(20) NULL,
+  `EPS 10yr avg` VARCHAR(20) NULL,
+  `Operating Cash Flow Growth percent YOY` VARCHAR(20) NULL,
+  `Free Cash Flow Growth percent YOY` VARCHAR(20) NULL,
+  `Cap Ex as a percent of Sales` VARCHAR(20) NULL,
+  `Free Cash Flow/Sales percent` VARCHAR(20) NULL,
+  `Free Cash Flow/Net Income` VARCHAR(20) NULL,
+  `Cash &amp; Short-Term Investments` VARCHAR(20) NULL,
+  `Accounts Receivable` VARCHAR(20) NULL,
+  `Inventory` VARCHAR(20) NULL,
+  `Other Current Assets` VARCHAR(20) NULL,
+  `Total Current Assets` VARCHAR(20) NULL,
+  `Net PP&amp;E` VARCHAR(20) NULL,
+  `Intangibles` VARCHAR(20) NULL,
+  `Other Long-Term Assets` VARCHAR(20) NULL,
+  `Total Assets` VARCHAR(20) NULL,
+  `Accounts Payable` VARCHAR(20) NULL,
+  `Short-Term Debt` VARCHAR(20) NULL,
+  `Taxes Payable` VARCHAR(20) NULL,
+  `Accrued Liabilities` VARCHAR(20) NULL,
+  `Other Short-Term Liabilities` VARCHAR(20) NULL,
+  `Total Current Liabilities` VARCHAR(20) NULL,
+  `Long-Term Debt` VARCHAR(20) NULL,
+  `Other Long-Term Liabilities` VARCHAR(20) NULL,
+  `Total Liabilities` VARCHAR(20) NULL,
+  `Total Stockholders Equity` VARCHAR(20) NULL,
+  `Total Liabilities &amp; Equity` VARCHAR(20) NULL,
+  `Current Ratio` VARCHAR(20) NULL,
+  `Quick Ratio` VARCHAR(20) NULL,
+  `Financial Leverage` VARCHAR(20) NULL,
+  `Debt/Equity` VARCHAR(20) NULL,
+  `Days Sales Outstanding` VARCHAR(20) NULL,
+  `Days Inventory` VARCHAR(20) NULL,
+  `Payables Period` VARCHAR(20) NULL,
+  `Cash Conversion Cycle` VARCHAR(20) NULL,
+  `Receivables Turnover` VARCHAR(20) NULL,
+  `Inventory Turnover` VARCHAR(20) NULL,
+  `Fixed Assets Turnover` VARCHAR(20) NULL,
+  `Asset Turnover` VARCHAR(20) NULL,
+  `SYMBOL` VARCHAR(20) NULL,
+
+  PRIMARY KEY (`idAnnualData`))
+ENGINE = InnoDB</string>
+		<string>/*create database testdb;
+use testdb;
+CREATE TABLE books (
+     book_id INT,
+     title VARCHAR(50),
+     author VARCHAR(50));
+*/
+use testdb;
+'describe books;'
+
+CREATE TABLE IF NOT EXISTS `testdb`.`AnnualData` (
+  `idAnnualData` INT NOT NULL AUTO_INCREMENT,
+  `index` VARCHAR(20) NULL,
+  `Revenue USD Mil` VARCHAR(20) NULL,
+  `Gross Margin %` VARCHAR(20) NULL,
+  'Operating Income USD Mil' VARCHAR(20) NULL,
+  'Operating Margin %' VARCHAR(20) NULL,
+  'Net Income USD Mil' VARCHAR(20) NULL,
+  'Earnings Per Share USD' VARCHAR(20) NULL,
+  'Dividends USD' VARCHAR(20) NULL,
+  'Payout Ratio %' VARCHAR(20) NULL,
+  'Shares Mil' VARCHAR(20) NULL,
+  'Book Value Per Share USD' VARCHAR(20) NULL,
+  'Operating Cash Flow USD Mil' VARCHAR(20) NULL,
+  'Cap Spending USD Mil' VARCHAR(20) NULL,
+  'Free Cash Flow USD Mil' VARCHAR(20) NULL,
+  'Free Cash Flow Per Share USD' VARCHAR(20) NULL,
+  'Working Capital USD Mil' VARCHAR(20) NULL,
+  'Revenue' VARCHAR(20) NULL,
+  'COGS''Gross Margin' VARCHAR(20) NULL,
+  'SG&amp;A''R&amp;D''Other' VARCHAR(20) NULL,
+  'Operating Margin' VARCHAR(20) NULL,
+  'Net Int Inc &amp; Other' VARCHAR(20) NULL,
+  'EBT Margin' VARCHAR(20) NULL,
+  'Tax Rate %' VARCHAR(20) NULL,
+  'Net Margin %' VARCHAR(20) NULL,
+  'Asset Turnover (Average)' VARCHAR(20) NULL,
+  'Return on Assets %' VARCHAR(20) NULL,
+  'Financial Leverage (Average)' VARCHAR(20) NULL,
+  'Return on Equity %' VARCHAR(20) NULL,
+  'Return on Invested Capital %' VARCHAR(20) NULL,
+  'Interest Coverage' VARCHAR(20) NULL,
+  'Year over Year' VARCHAR(20) NULL,
+  '3-Year Average' VARCHAR(20) NULL,
+  '5-Year Average' VARCHAR(20) NULL,
+  '10-Year Average' VARCHAR(20) NULL,
+  'Year over Year' VARCHAR(20) NULL,
+  '3-Year Average' VARCHAR(20) NULL,
+  '5-Year Average' VARCHAR(20) NULL,
+  '10-Year Average' VARCHAR(20) NULL,
+  'Year over Year' VARCHAR(20) NULL,
+  '3-Year Average' VARCHAR(20) NULL,
+  '5-Year Average' VARCHAR(20) NULL,
+  '10-Year Average' VARCHAR(20) NULL,
+  'Year over Year' VARCHAR(20) NULL,
+  '3-Year Average' VARCHAR(20) NULL,
+  '5-Year Average' VARCHAR(20) NULL,
+  '10-Year Average' VARCHAR(20) NULL,
+  'Operating Cash Flow Growth % YOY' VARCHAR(20) NULL,
+  'Free Cash Flow Growth % YOY' VARCHAR(20) NULL,
+  'Cap Ex as a % of Sales' VARCHAR(20) NULL,
+  'Free Cash Flow/Sales %' VARCHAR(20) NULL,
+  'Free Cash Flow/Net Income' VARCHAR(20) NULL,
+  'Cash &amp; Short-Term Investments' VARCHAR(20) NULL,
+  'Accounts Receivable' VARCHAR(20) NULL,
+  'Inventory' VARCHAR(20) NULL,
+  'Other Current Assets' VARCHAR(20) NULL,
+  'Total Current Assets' VARCHAR(20) NULL,
+  'Net PP&amp;E' VARCHAR(20) NULL,
+  'Intangibles' VARCHAR(20) NULL,
+  'Other Long-Term Assets' VARCHAR(20) NULL,
+  'Total Assets' VARCHAR(20) NULL,
+  'Accounts Payable' VARCHAR(20) NULL,
+  'Short-Term Debt' VARCHAR(20) NULL,
+  'Taxes Payable' VARCHAR(20) NULL,
+  'Accrued Liabilities' VARCHAR(20) NULL,
+  'Other Short-Term Liabilities' VARCHAR(20) NULL,
+  'Total Current Liabilities' VARCHAR(20) NULL,
+  'Long-Term Debt' VARCHAR(20) NULL,
+  'Other Long-Term Liabilities' VARCHAR(20) NULL,
+  'Total Liabilities' VARCHAR(20) NULL,
+  'Total Stockholders Equity' VARCHAR(20) NULL,
+  'Total Liabilities &amp; Equity' VARCHAR(20) NULL,
+  'Current Ratio' VARCHAR(20) NULL,
+  'Quick Ratio' VARCHAR(20) NULL,
+  'Financial Leverage' VARCHAR(20) NULL,
+  'Debt/Equity' VARCHAR(20) NULL,
+  'Days Sales Outstanding' VARCHAR(20) NULL,
+  'Days Inventory' VARCHAR(20) NULL,
+  'Payables Period' VARCHAR(20) NULL,
+  'Cash Conversion Cycle' VARCHAR(20) NULL,
+  'Receivables Turnover' VARCHAR(20) NULL,
+  'Inventory Turnover' VARCHAR(20) NULL,
+  'Fixed Assets Turnover' VARCHAR(20) NULL,
+  'Asset Turnover' VARCHAR(20) NULL,
+  'SYMBOL' VARCHAR(20) NULL,
+
+  PRIMARY KEY (`idtestcsv`))
+ENGINE = InnoDB
+
+
+'DROP TABLE IF EXISTS AnnualData;'
+
+select * from AnnualData</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.5.46-0ubuntu0.12.04.2</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

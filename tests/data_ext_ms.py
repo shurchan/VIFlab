@@ -19,11 +19,7 @@ cvsfilefolder = r'/Users/misc/code/viflab/data/temp'
 #data_ext.stock_list = 'AAPL' #special character need to be converted
 #data_ext.com_data_stock_portion_url = 'AAPL'
 #data_ext.set_target_stock_url('AAPL')
-data_ext.stock_list = ['NAS:AAPL','NAS:GOOG','NAS:yhoo','NAS:msft','NYS:gm','NYS:unp']
-#data_ext.stock_list = ['gm','unp']
-#data_ext.set_stocklist(['BN4','BS6','N4E','U96'])
-
-VIFToolsUtil.csvfiles2mysql()
+data_ext.stock_list = ['NAS:AAPL','NAS:GOOG','NAS:yhoo','NAS:msft','NYS:gm','NYS:unp','NAS:LBTYA','NYS:WFC','NYS:SAN','NYS:ARMH','NYS:ZINC','NYS:BP','NYS:CHK','NYS:NOV','NYS:CL','NYS:MMM']
 
 ## Get the url str
 #data_ext.form_url_str()
@@ -32,7 +28,12 @@ VIFToolsUtil.csvfiles2mysql()
 ## Go to url and download the csv.
 ## Stored the data as pandas.Dataframe.
 
-#data_ext.get_com_data_fr_all_stocks()
+data_ext.get_com_data_fr_all_stocks()
+
+
+# Dump all csv data to mysql
+#VIFToolsUtil.csvfiles2mysql()
+
 
 #data_ext.target_stock_data_df.info()
 #data_ext.get_trend_data()

@@ -86,7 +86,7 @@ def csvfiles2mysql():
 
     # Open database connection
     db = MySQLdb.connect (host="88.88.88.10",port=3306,user="root",\
-                          passwd="root",db="testdb")
+                          passwd="root",db="testdb",local_infile=1)
 
     cursor=db.cursor()
 
@@ -95,8 +95,8 @@ def csvfiles2mysql():
     INTO TABLE testdb.AnnualData
     FIELDS TERMINATED BY ','
     OPTIONALLY ENCLOSED BY '"'
-    LINES TERMINATED BY '\\r\\n'
-    IGNORE 1 LINES;;"""
+    LINES TERMINATED BY '\\n'
+    IGNORE 1 LINES"""
 
     csvfilefolder = os.listdir(r'/Users/misc/code/viflab/data/temp')
     for file_name in csvfilefolder:
@@ -109,7 +109,9 @@ def csvfiles2mysql():
                 cursor.execute(sqlcmd)
 #                cursor.execute(sql.format(file_name))
                 db.commit()
-            except Exception:
+#            except Exception:
+            except Exception, e:
+                print ('DB exception: %s' % e)
                 # Rollback in case there is any error
                 db.rollback()
                 print 'Failed to load data from csv file %s to mysql',file_name

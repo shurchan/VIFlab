@@ -1,4 +1,4 @@
-LOAD DATA local INFILE '/Users/misc/code/viflab/tests/aaa.csv'
+LOAD DATA local INFILE '/Users/misc/code/viflab/data/temp/aaa.csv'
 #LOAD DATA local INFILE "aaa.csv"
     INTO TABLE testdb.AnnualData
     FIELDS TERMINATED BY ','
