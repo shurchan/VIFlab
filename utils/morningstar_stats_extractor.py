@@ -24,7 +24,7 @@ class MS_StatsExtract(object):
 
         ## temp csv storage path
         self.ms_stats_extract_temp_csv = r'/Users/misc/code/viflab/data/temp/ms_stats.csv'
-        self.ms_stats_extract_temp_csv_transpose = r'/Users/misc/code/viflab/data/temp/ms_stats_t.csv'
+        self.ms_stats_extract_temp_csv_transpose = r'/Users/misc/code/viflab/data/temp/ms_stats_t'
 
         ## Temp Results storage
         self.target_stock_data_df = object()
@@ -108,10 +108,10 @@ class MS_StatsExtract(object):
         self.target_stock_data_df["SYMBOL"] = self.com_data_stock_portion_url
         #after transpose save back to same file and call again for column duplication problem
 
-        self.target_stock_data_df.to_csv(self.ms_stats_extract_temp_csv_transpose, index =False)
-        #self.target_stock_data_df.to_csv(self.ms_stats_extract_temp_csv_transpose+self.com_data_stock_portion_url, index =False)
+        #self.target_stock_data_df.to_csv(self.ms_stats_extract_temp_csv_transpose, index =False)
+        self.target_stock_data_df.to_csv(self.ms_stats_extract_temp_csv_transpose+self.com_data_stock_portion_url+'_t.csv', index =False)
 
-        self.target_stock_data_df =  pandas.read_csv(self.ms_stats_extract_temp_csv_transpose)
+        self.target_stock_data_df =  pandas.read_csv(self.ms_stats_extract_temp_csv_transpose+self.com_data_stock_portion_url+'_t.csv')
         #rename columns
         #TODO: There is a bug here. CSV and DF columns do not match.
         self.target_stock_data_df.rename(columns={'Year over Year':'Revenue yoy','3-Year Average':'Revenue 3yr avg',

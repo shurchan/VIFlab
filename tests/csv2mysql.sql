@@ -1,0 +1,7 @@
+LOAD DATA LOCAL INFILE 'ms_stats_tNYS:unp_t.csv'
+    INTO TABLE testdb.AnnualData
+    FIELDS TERMINATED BY ','
+    OPTIONALLY ENCLOSED BY '"'
+    LINES TERMINATED BY '\r\n'
+    IGNORE 1 LINES;;
+    

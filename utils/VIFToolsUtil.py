@@ -5,6 +5,8 @@ import pandas as pd
 import json
 #import jsonpickle
 import collections
+import os
+import string
 
 #import pudb;pu.db #for debugging
 
@@ -30,7 +32,7 @@ def csvMS(ticker, reportType,outCSVFile):
 
 def normalizeMSCSV(sRawMSCSVFile, sNormalizedCSVFile):
     raw_csvdata = csv.reader(file(sRawMSCSVFile))
-	
+
     #Store the first row as full company name with ticker
     fullCompanyName = raw_csvdata.next()
     print fullCompanyName
@@ -50,10 +52,10 @@ def unpivotcsv(sPivotCSVFileName,sOutputUnPivotFileName):
     df = pd.read_csv(sPivotCSVFileName)
     #melt the normalized file, hold the country name and code variables, rename the melted columns
     le = pd.melt(df, id_vars=['FieldName'], var_name="year", value_name="data_value")
- 
+
     #sort by country name for convenience
     le2 =  le.sort(['FieldName'])
- 
+
     #write out the csv without and index
     le2.to_csv(sOutputUnPivotFileName, sep=',', index=False)
 
@@ -80,21 +82,56 @@ def csv2mysql(sUnpivotCSVFileName,sTicker,sReportType,sReportFreq):
     cursor.close()
     print "Done - import to mysql"
 
+def csvfiles2mysql():
+
+    # Open database connection
+    db = MySQLdb.connect (host="88.88.88.10",port=3306,user="root",\
+                          passwd="root",db="testdb")
+
+    cursor=db.cursor()
+
+
+    sql = """LOAD DATA LOCAL INFILE '{}'
+    INTO TABLE testdb.AnnualData
+    FIELDS TERMINATED BY ','
+    OPTIONALLY ENCLOSED BY '"'
+    LINES TERMINATED BY '\\r\\n'
+    IGNORE 1 LINES;;"""
+
+    csvfilefolder = os.listdir(r'/Users/misc/code/viflab/data/temp')
+    for file_name in csvfilefolder:
+        print file_name
+        if file_name.endswith('_t.csv'):
+            try:
+                cursor = db.cursor()
+                sqlcmd = sql.format(r'/Users/misc/code/viflab/data/temp/'+file_name)
+                print sqlcmd
+                cursor.execute(sqlcmd)
+#                cursor.execute(sql.format(file_name))
+                db.commit()
+            except Exception:
+                # Rollback in case there is any error
+                db.rollback()
+                print 'Failed to load data from csv file %s to mysql',file_name
+
+    # disconnect from server
+    db.close()
+
 def Sql2Json(sStockSym, sReportType, jsonFile):
     mydb = MySQLdb.connect(host='localhost',
     user='root',
     passwd='',
     db='testdb')
     cursor = mydb.cursor()
-    
+
     sSQLCmd = "select FieldName,year,data_value,StockSymbol,ReportType,ReportFreq from testcsv \
               where StockSymbol = '%s' and ReportType = '%s'" % (sStockSym,sReportType)
     try:
         cursor.execute(sSQLCmd)
         rows = cursor.fetchall()
-  
+
     # Convert query to objects of key-value pairs
- 
+
         objects_list = []
         for row in rows:
             d = collections.OrderedDict()
@@ -105,7 +142,7 @@ def Sql2Json(sStockSym, sReportType, jsonFile):
             d['ReportType'] = row[4]
             d['ReportFreq'] = row[5]
             objects_list.append(d)
- 
+
         j = json.dumps(objects_list,f)
         #j = json.dumps(objects_list)
         #f = open(jsonFile,'w')
@@ -113,11 +150,11 @@ def Sql2Json(sStockSym, sReportType, jsonFile):
 	f.close()
     except:
         print "Error: Unable to fetch data"
-        
+
     mydb.close()
 
     print "Done - output to jason from db"
-    
+
 
 class AnnualReport(object):
     #def __init__(self, hello):
@@ -138,23 +175,23 @@ class AnnualReport(object):
         passwd='',
         db='testdb')
         cursor = mydb.cursor()
-    
+
         sSQLCmd = "select FieldName,year,data_value,StockSymbol,ReportType,ReportFreq from testcsv \
                   where StockSymbol = '%s' and ReportType = '%s'" % (sStockSym,sReportType)
 	try:
             cursor.execute(sSQLCmd)
             rows = cursor.fetchall()
-  
+
         # Convert query to objects of key-value pairs
- 
+
             #objects_list = []
             for row in rows:
                 #d = collections.OrderedDict()
                 #d['FieldName'] = row[0]
-		
+
 		arr.update({'Year':row[1]})
 		arr.update({row[0]:row[2]})
-		
+
 		#Year = row[1]
                 #d['year'] = row[1]
                 #d['data_value'] = row[2]
@@ -163,8 +200,8 @@ class AnnualReport(object):
                 #d['ReportFreq'] = row[5]
 		#self.ReportFreq = row[5]
                 #objects_list.append(d)
- 
-	
+
+
         #j = json.dumps(objects_list,f)
         #j = json.dumps(objects_list)
         #f = open(jsonFile,'w')
@@ -177,10 +214,10 @@ class AnnualReport(object):
 
         mydb.close()
 
-        print "Done - Create AnnualReport Object"	
-	
-  
-#TODO: bugs in the following function    
+        print "Done - Create AnnualReport Object"
+
+
+#TODO: bugs in the following function
 def Sql2AnnualJson(sStockSym, sReportType):
     try:
 	obj = AnnualReport(sStockSym, sReportType)
@@ -192,12 +229,7 @@ def Sql2AnnualJson(sStockSym, sReportType):
 
     except:
         print "Error: Unable to fetch data"
-        
+
     #mydb.close()
     f.close()
     print "Done - output to annual jason from db"
-    
-
-
-
-    

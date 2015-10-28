@@ -1,14 +1,17 @@
 #!/usr/bin/env python
 
 import sys
-sys.path.insert(0, r'/Users/misc/code/viflab')
+sys.path.insert(0, r'/Users/misc/code/viflab/utils')
 
 from utils.morningstar_stats_extractor import MS_StatsExtract
 #from utils.VIFToolsUtil import VIFToolsUtil
 
+import VIFToolsUtil
+
 #data_ext = YFinanceDataExtr()
 data_ext = MS_StatsExtract()
 
+cvsfilefolder = r'/Users/misc/code/viflab/data/temp'
 
 ## Specify the stocks to be retrieved. Each url constuct max up to 50 stocks.
 #data_ext.target_stocks = ['AAPL','GOOG'] #special character need to be converted
@@ -20,6 +23,8 @@ data_ext.stock_list = ['NAS:AAPL','NAS:GOOG','NAS:yhoo','NAS:msft','NYS:gm','NYS
 #data_ext.stock_list = ['gm','unp']
 #data_ext.set_stocklist(['BN4','BS6','N4E','U96'])
 
+VIFToolsUtil.csvfiles2mysql()
+
 ## Get the url str
 #data_ext.form_url_str()
 #print data_ext.com_data_full_url
@@ -27,11 +32,15 @@ data_ext.stock_list = ['NAS:AAPL','NAS:GOOG','NAS:yhoo','NAS:msft','NYS:gm','NYS
 ## Go to url and download the csv.
 ## Stored the data as pandas.Dataframe.
 
-data_ext.get_com_data_fr_all_stocks()
+#data_ext.get_com_data_fr_all_stocks()
+
 #data_ext.target_stock_data_df.info()
-data_ext.get_trend_data()
+#data_ext.get_trend_data()
+
 #data_ext.modify_stock_sym_in_df()
-print data_ext.hist_company_data_trends_df
+
+#print data_ext.hist_company_data_trends_df
+
 #print data_ext.com_data_allstock_df
 
 
