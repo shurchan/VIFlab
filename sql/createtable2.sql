@@ -1,7 +1,7 @@
 use testdb;
 
 CREATE TABLE IF NOT EXISTS `testdb`.`AnnualData` (
-  `idAnnualData` INT NOT NULL AUTO_INCREMENT,
+#  `idAnnualData` INT NOT NULL AUTO_INCREMENT,
   `index` VARCHAR(20) NULL,
   `Revenue USD Mil` VARCHAR(20) NULL,
   `Gross Margin percent` VARCHAR(20) NULL,
@@ -19,8 +19,11 @@ CREATE TABLE IF NOT EXISTS `testdb`.`AnnualData` (
   `Free Cash Flow Per Share USD` VARCHAR(20) NULL,
   `Working Capital USD Mil` VARCHAR(20) NULL,
   `Revenue` VARCHAR(20) NULL,
-  `COGS``Gross Margin` VARCHAR(20) NULL,
-  `SG&A``R&D``Other` VARCHAR(20) NULL,
+  `COGS` VARCHAR(20) NULL,
+  `Gross Margin` VARCHAR(20) NULL,
+  `SG&A` VARCHAR(20) NULL,
+  `R&D` VARCHAR(20) NULL,
+  `Other` VARCHAR(20) NULL,
   `Operating Margin` VARCHAR(20) NULL,
   `Net Int Inc & Other` VARCHAR(20) NULL,
   `EBT Margin` VARCHAR(20) NULL,
@@ -85,9 +88,10 @@ CREATE TABLE IF NOT EXISTS `testdb`.`AnnualData` (
   `Inventory Turnover` VARCHAR(20) NULL,
   `Fixed Assets Turnover` VARCHAR(20) NULL,
   `Asset Turnover` VARCHAR(20) NULL,
-  `SYMBOL` VARCHAR(20) NULL,
+  `SYMBOL` VARCHAR(20) NULL
 
-  PRIMARY KEY (`idAnnualData`))
+#  PRIMARY KEY (`idAnnualData`)
+)
 ENGINE = InnoDB
 
 #select * from AnnualData

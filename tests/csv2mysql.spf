@@ -47,21 +47,17 @@
 			<integer>1</integer>
 			<key>contentSelection</key>
 			<data>
-			YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFy
-			Y2hpdmVyVCR0b3ASAAGGoK0HCBUWFxgZHSQoLDA0VSRudWxs0wkK
-			CwwQFFdOUy5rZXlzWk5TLm9iamVjdHNWJGNsYXNzow0OD4ACgAOA
-			BKMREhOABYAGgAiADFR0eXBlVHJvd3NUa2V5c18QJlNlbGVjdGlv
-			bkRldGFpbFR5cGVQcmltYXJ5S2V5ZWREZXRhaWxz0wkKCxobHKCg
-			gAfSHh8gIVokY2xhc3NuYW1lWCRjbGFzc2VzXxATTlNNdXRhYmxl
-			RGljdGlvbmFyeaMgIiNcTlNEaWN0aW9uYXJ5WE5TT2JqZWN00goL
-			JSehJoAJgAvSCykqK1lOUy5zdHJpbmeAClxpZEFubnVhbERhdGHS
-			Hh8tLl8QD05TTXV0YWJsZVN0cmluZ6MtLyNYTlNTdHJpbmfSHh8x
-			Ml5OU011dGFibGVBcnJheaMxMyNXTlNBcnJhedIeHyI1oiIjXxAP
-			TlNLZXllZEFyY2hpdmVy0Tg5VGRhdGGAAQAIABEAGgAjAC0AMgA3
-			AEUASwBSAFoAZQBsAHAAcgB0AHYAegB8AH4AgACCAIcAjACRALoA
-			wQDCAMMAxQDKANUA3gD0APgBBQEOARMBFQEXARkBHgEoASoBNwE8
-			AU4BUgFbAWABbwFzAXsBgAGDAZUBmAGdAAAAAAAAAgEAAAAAAAAA
-			OgAAAAAAAAAAAAAAAAAAAZ8=
+			YnBsaXN0MDDUAQIDBAUGJCVYJHZlcnNpb25YJG9iamVjdHNZJGFy
+			Y2hpdmVyVCR0b3ASAAGGoKgHCBMUFRYaIVUkbnVsbNMJCgsMDxJX
+			TlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6INDoACgAOiEBGABIAF
+			gAdUdHlwZVRyb3dzXxAdU2VsZWN0aW9uRGV0YWlsVHlwZU5TSW5k
+			ZXhTZXTSFwsYGVxOU1JhbmdlQ291bnQQAIAG0hscHR5aJGNsYXNz
+			bmFtZVgkY2xhc3Nlc1pOU0luZGV4U2V0oh8gWk5TSW5kZXhTZXRY
+			TlNPYmplY3TSGxwiI1xOU0RpY3Rpb25hcnmiIiBfEA9OU0tleWVk
+			QXJjaGl2ZXLRJidUZGF0YYABAAgAEQAaACMALQAyADcAQABGAE0A
+			VQBgAGcAagBsAG4AcQBzAHUAdwB8AIEAoQCmALMAtQC3ALwAxwDQ
+			ANsA3gDpAPIA9wEEAQcBGQEcASEAAAAAAAACAQAAAAAAAAAoAAAA
+			AAAAAAAAAAAAAAABIw==
 			</data>
 			<key>contentSortColIsAsc</key>
 			<true/>
@@ -70,14 +66,110 @@
 			<key>isToolbarVisible</key>
 			<true/>
 			<key>queries</key>
-			<string>LOAD DATA local INFILE "/Users/misc/code/viflab/tests/aaa.csv" 
+			<string>LOAD DATA local INFILE '/Users/misc/code/viflab/tests/aaa.csv'
+#LOAD DATA local INFILE "aaa.csv"
     INTO TABLE testdb.AnnualData
     FIELDS TERMINATED BY ','
-#    OPTIONALLY ENCLOSED BY '"'
-    LINES TERMINATED BY '\r'
+    OPTIONALLY ENCLOSED BY '"'
+    LINES TERMINATED BY N'\r'
 #    IGNORE 1 LINES
-    
+ 
 
+
+use testdb;
+
+CREATE TABLE IF NOT EXISTS `testdb`.`AnnualData` (
+#  `idAnnualData` INT NOT NULL AUTO_INCREMENT,
+  `index` VARCHAR(20) NULL,
+  `Revenue USD Mil` VARCHAR(20) NULL,
+  `Gross Margin percent` VARCHAR(20) NULL,
+  `Operating Income USD Mil` VARCHAR(20) NULL,
+  `Operating Margin percent` VARCHAR(20) NULL,
+  `Net Income USD Mil` VARCHAR(20) NULL,
+  `Earnings Per Share USD` VARCHAR(20) NULL,
+  `Dividends USD` VARCHAR(20) NULL,
+  `Payout Ratio percent` VARCHAR(20) NULL,
+  `Shares Mil` VARCHAR(20) NULL,
+  `Book Value Per Share USD` VARCHAR(20) NULL,
+  `Operating Cash Flow USD Mil` VARCHAR(20) NULL,
+  `Cap Spending USD Mil` VARCHAR(20) NULL,
+  `Free Cash Flow USD Mil` VARCHAR(20) NULL,
+  `Free Cash Flow Per Share USD` VARCHAR(20) NULL,
+  `Working Capital USD Mil` VARCHAR(20) NULL,
+  `Revenue` VARCHAR(20) NULL,
+  `COGS``Gross Margin` VARCHAR(20) NULL,
+  `SG&amp;A``R&amp;D``Other` VARCHAR(20) NULL,
+  `Operating Margin` VARCHAR(20) NULL,
+  `Net Int Inc &amp; Other` VARCHAR(20) NULL,
+  `EBT Margin` VARCHAR(20) NULL,
+  `Tax Rate percent` VARCHAR(20) NULL,
+  `Net Margin percent` VARCHAR(20) NULL,
+  `Asset Turnover (Average)` VARCHAR(20) NULL,
+  `Return on Assets percent` VARCHAR(20) NULL,
+  `Financial Leverage (Average)` VARCHAR(20) NULL,
+  `Return on Equity percent` VARCHAR(20) NULL,
+  `Return on Invested Capital percent` VARCHAR(20) NULL,
+  `Interest Coverage` VARCHAR(20) NULL,
+  `Revenue YOY` VARCHAR(20) NULL,
+  `Revenue 3yr avg` VARCHAR(20) NULL,
+  `Revenue 5yr avg` VARCHAR(20) NULL,
+  `Revenue 10yr avg` VARCHAR(20) NULL,
+  `Operating income yoy` VARCHAR(20) NULL,
+  `Operating income 3yr avg` VARCHAR(20) NULL,
+  `Operating income 5yr avg` VARCHAR(20) NULL,
+  `Operating income 10yr avg` VARCHAR(20) NULL,
+  `Net income yoy` VARCHAR(20) NULL,
+  `Net income 3yr avg` VARCHAR(20) NULL,
+  `Net income 5yr avg` VARCHAR(20) NULL,
+  `Net income 10yr avg` VARCHAR(20) NULL,
+  `EPS YOY` VARCHAR(20) NULL,
+  `EPS 3yr avg` VARCHAR(20) NULL,
+  `EPS 5yr avg` VARCHAR(20) NULL,
+  `EPS 10yr avg` VARCHAR(20) NULL,
+  `Operating Cash Flow Growth percent YOY` VARCHAR(20) NULL,
+  `Free Cash Flow Growth percent YOY` VARCHAR(20) NULL,
+  `Cap Ex as a percent of Sales` VARCHAR(20) NULL,
+  `Free Cash Flow/Sales percent` VARCHAR(20) NULL,
+  `Free Cash Flow/Net Income` VARCHAR(20) NULL,
+  `Cash &amp; Short-Term Investments` VARCHAR(20) NULL,
+  `Accounts Receivable` VARCHAR(20) NULL,
+  `Inventory` VARCHAR(20) NULL,
+  `Other Current Assets` VARCHAR(20) NULL,
+  `Total Current Assets` VARCHAR(20) NULL,
+  `Net PP&amp;E` VARCHAR(20) NULL,
+  `Intangibles` VARCHAR(20) NULL,
+  `Other Long-Term Assets` VARCHAR(20) NULL,
+  `Total Assets` VARCHAR(20) NULL,
+  `Accounts Payable` VARCHAR(20) NULL,
+  `Short-Term Debt` VARCHAR(20) NULL,
+  `Taxes Payable` VARCHAR(20) NULL,
+  `Accrued Liabilities` VARCHAR(20) NULL,
+  `Other Short-Term Liabilities` VARCHAR(20) NULL,
+  `Total Current Liabilities` VARCHAR(20) NULL,
+  `Long-Term Debt` VARCHAR(20) NULL,
+  `Other Long-Term Liabilities` VARCHAR(20) NULL,
+  `Total Liabilities` VARCHAR(20) NULL,
+  `Total Stockholders Equity` VARCHAR(20) NULL,
+  `Total Liabilities &amp; Equity` VARCHAR(20) NULL,
+  `Current Ratio` VARCHAR(20) NULL,
+  `Quick Ratio` VARCHAR(20) NULL,
+  `Financial Leverage` VARCHAR(20) NULL,
+  `Debt/Equity` VARCHAR(20) NULL,
+  `Days Sales Outstanding` VARCHAR(20) NULL,
+  `Days Inventory` VARCHAR(20) NULL,
+  `Payables Period` VARCHAR(20) NULL,
+  `Cash Conversion Cycle` VARCHAR(20) NULL,
+  `Receivables Turnover` VARCHAR(20) NULL,
+  `Inventory Turnover` VARCHAR(20) NULL,
+  `Fixed Assets Turnover` VARCHAR(20) NULL,
+  `Asset Turnover` VARCHAR(20) NULL,
+  `SYMBOL` VARCHAR(20) NULL
+  )
+ENGINE = InnoDB
+
+#select * from AnnualData
+
+#DROP TABLE IF EXISTS AnnualData
 </string>
 			<key>table</key>
 			<string>AnnualData</string>
@@ -92,42 +184,927 @@
 	<key>format</key>
 	<string>connection</string>
 	<key>queryFavorites</key>
-	<array/>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>createTable</string>
+			<key>query</key>
+			<string>LOAD DATA local INFILE '/Users/misc/code/viflab/tests/aaa.csv'
+#LOAD DATA local INFILE "aaa.csv" 
+    INTO TABLE testdb.AnnualData
+    FIELDS TERMINATED BY ','
+    OPTIONALLY ENCLOSED BY '"'
+    LINES TERMINATED BY '\r'
+    IGNORE 1 LINES
+ 
+ 
+ use testdb
+ CREATE TABLE `AnnualData` (
+  `index` varchar(20) DEFAULT NULL,
+  `Revenue USD Mil` varchar(20) DEFAULT NULL,
+  `Gross Margin percent` varchar(20) DEFAULT NULL,
+  `Operating Income USD Mil` varchar(20) DEFAULT NULL,
+  `Operating Margin percent` varchar(20) DEFAULT NULL,
+  `Net Income USD Mil` varchar(20) DEFAULT NULL,
+  `Earnings Per Share USD` varchar(20) DEFAULT NULL,
+  `Dividends USD` varchar(20) DEFAULT NULL,
+  `Payout Ratio percent` varchar(20) DEFAULT NULL,
+  `Shares Mil` varchar(20) DEFAULT NULL,
+  `Book Value Per Share USD` varchar(20) DEFAULT NULL,
+  `Operating Cash Flow USD Mil` varchar(20) DEFAULT NULL,
+  `Cap Spending USD Mil` varchar(20) DEFAULT NULL,
+  `Free Cash Flow USD Mil` varchar(20) DEFAULT NULL,
+  `Free Cash Flow Per Share USD` varchar(20) DEFAULT NULL,
+  `Working Capital USD Mil` varchar(20) DEFAULT NULL,
+  `Revenue` varchar(20) DEFAULT NULL,
+  `COGS``Gross Margin` varchar(20) DEFAULT NULL,
+  `SG&amp;A``R&amp;D``Other` varchar(20) DEFAULT NULL,
+  `Operating Margin` varchar(20) DEFAULT NULL,
+  `Net Int Inc &amp; Other` varchar(20) DEFAULT NULL,
+  `EBT Margin` varchar(20) DEFAULT NULL,
+  `Tax Rate percent` varchar(20) DEFAULT NULL,
+  `Net Margin percent` varchar(20) DEFAULT NULL,
+  `Asset Turnover (Average)` varchar(20) DEFAULT NULL,
+  `Return on Assets percent` varchar(20) DEFAULT NULL,
+  `Financial Leverage (Average)` varchar(20) DEFAULT NULL,
+  `Return on Equity percent` varchar(20) DEFAULT NULL,
+  `Return on Invested Capital percent` varchar(20) DEFAULT NULL,
+  `Interest Coverage` varchar(20) DEFAULT NULL,
+  `Revenue YOY` varchar(20) DEFAULT NULL,
+  `Revenue 3yr avg` varchar(20) DEFAULT NULL,
+  `Revenue 5yr avg` varchar(20) DEFAULT NULL,
+  `Revenue 10yr avg` varchar(20) DEFAULT NULL,
+  `Operating income yoy` varchar(20) DEFAULT NULL,
+  `Operating income 3yr avg` varchar(20) DEFAULT NULL,
+  `Operating income 5yr avg` varchar(20) DEFAULT NULL,
+  `Operating income 10yr avg` varchar(20) DEFAULT NULL,
+  `Net income yoy` varchar(20) DEFAULT NULL,
+  `Net income 3yr avg` varchar(20) DEFAULT NULL,
+  `Net income 5yr avg` varchar(20) DEFAULT NULL,
+  `Net income 10yr avg` varchar(20) DEFAULT NULL,
+  `EPS YOY` varchar(20) DEFAULT NULL,
+  `EPS 3yr avg` varchar(20) DEFAULT NULL,
+  `EPS 5yr avg` varchar(20) DEFAULT NULL,
+  `EPS 10yr avg` varchar(20) DEFAULT NULL,
+  `Operating Cash Flow Growth percent YOY` varchar(20) DEFAULT NULL,
+  `Free Cash Flow Growth percent YOY` varchar(20) DEFAULT NULL,
+  `Cap Ex as a percent of Sales` varchar(20) DEFAULT NULL,
+  `Free Cash Flow/Sales percent` varchar(20) DEFAULT NULL,
+  `Free Cash Flow/Net Income` varchar(20) DEFAULT NULL,
+  `Cash &amp; Short-Term Investments` varchar(20) DEFAULT NULL,
+  `Accounts Receivable` varchar(20) DEFAULT NULL,
+  `Inventory` varchar(20) DEFAULT NULL,
+  `Other Current Assets` varchar(20) DEFAULT NULL,
+  `Total Current Assets` varchar(20) DEFAULT NULL,
+  `Net PP&amp;E` varchar(20) DEFAULT NULL,
+  `Intangibles` varchar(20) DEFAULT NULL,
+  `Other Long-Term Assets` varchar(20) DEFAULT NULL,
+  `Total Assets` varchar(20) DEFAULT NULL,
+  `Accounts Payable` varchar(20) DEFAULT NULL,
+  `Short-Term Debt` varchar(20) DEFAULT NULL,
+  `Taxes Payable` varchar(20) DEFAULT NULL,
+  `Accrued Liabilities` varchar(20) DEFAULT NULL,
+  `Other Short-Term Liabilities` varchar(20) DEFAULT NULL,
+  `Total Current Liabilities` varchar(20) DEFAULT NULL,
+  `Long-Term Debt` varchar(20) DEFAULT NULL,
+  `Other Long-Term Liabilities` varchar(20) DEFAULT NULL,
+  `Total Liabilities` varchar(20) DEFAULT NULL,
+  `Total Stockholders Equity` varchar(20) DEFAULT NULL,
+  `Total Liabilities &amp; Equity` varchar(20) DEFAULT NULL,
+  `Current Ratio` varchar(20) DEFAULT NULL,
+  `Quick Ratio` varchar(20) DEFAULT NULL,
+  `Financial Leverage` varchar(20) DEFAULT NULL,
+  `Debt/Equity` varchar(20) DEFAULT NULL,
+  `Days Sales Outstanding` varchar(20) DEFAULT NULL,
+  `Days Inventory` varchar(20) DEFAULT NULL,
+  `Payables Period` varchar(20) DEFAULT NULL,
+  `Cash Conversion Cycle` varchar(20) DEFAULT NULL,
+  `Receivables Turnover` varchar(20) DEFAULT NULL,
+  `Inventory Turnover` varchar(20) DEFAULT NULL,
+  `Fixed Assets Turnover` varchar(20) DEFAULT NULL,
+  `Asset Turnover` varchar(20) DEFAULT NULL,
+  `SYMBOL` varchar(20) DEFAULT NULL,
+#  PRIMARY KEY (`idAnnualData`)
+) ENGINE=CSV DEFAULT CHARSET=latin1;</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Loadcsvfiles</string>
+			<key>query</key>
+			<string>LOAD DATA local INFILE '/Users/misc/code/viflab/tests/aaa.csv'
+#LOAD DATA local INFILE "aaa.csv"
+    INTO TABLE testdb.AnnualData
+    FIELDS TERMINATED BY ','
+    OPTIONALLY ENCLOSED BY '"'
+    LINES TERMINATED BY '\r'
+    IGNORE 1 LINES
+ 
+
+
+use testdb;
+
+CREATE TABLE IF NOT EXISTS `testdb`.`AnnualData` (
+#  `idAnnualData` INT NOT NULL AUTO_INCREMENT,
+  `index` VARCHAR(20) NULL,
+  `Revenue USD Mil` VARCHAR(20) NULL,
+  `Gross Margin percent` VARCHAR(20) NULL,
+  `Operating Income USD Mil` VARCHAR(20) NULL,
+  `Operating Margin percent` VARCHAR(20) NULL,
+  `Net Income USD Mil` VARCHAR(20) NULL,
+  `Earnings Per Share USD` VARCHAR(20) NULL,
+  `Dividends USD` VARCHAR(20) NULL,
+  `Payout Ratio percent` VARCHAR(20) NULL,
+  `Shares Mil` VARCHAR(20) NULL,
+  `Book Value Per Share USD` VARCHAR(20) NULL,
+  `Operating Cash Flow USD Mil` VARCHAR(20) NULL,
+  `Cap Spending USD Mil` VARCHAR(20) NULL,
+  `Free Cash Flow USD Mil` VARCHAR(20) NULL,
+  `Free Cash Flow Per Share USD` VARCHAR(20) NULL,
+  `Working Capital USD Mil` VARCHAR(20) NULL,
+  `Revenue` VARCHAR(20) NULL,
+  `COGS``Gross Margin` VARCHAR(20) NULL,
+  `SG&amp;A``R&amp;D``Other` VARCHAR(20) NULL,
+  `Operating Margin` VARCHAR(20) NULL,
+  `Net Int Inc &amp; Other` VARCHAR(20) NULL,
+  `EBT Margin` VARCHAR(20) NULL,
+  `Tax Rate percent` VARCHAR(20) NULL,
+  `Net Margin percent` VARCHAR(20) NULL,
+  `Asset Turnover (Average)` VARCHAR(20) NULL,
+  `Return on Assets percent` VARCHAR(20) NULL,
+  `Financial Leverage (Average)` VARCHAR(20) NULL,
+  `Return on Equity percent` VARCHAR(20) NULL,
+  `Return on Invested Capital percent` VARCHAR(20) NULL,
+  `Interest Coverage` VARCHAR(20) NULL,
+  `Revenue YOY` VARCHAR(20) NULL,
+  `Revenue 3yr avg` VARCHAR(20) NULL,
+  `Revenue 5yr avg` VARCHAR(20) NULL,
+  `Revenue 10yr avg` VARCHAR(20) NULL,
+  `Operating income yoy` VARCHAR(20) NULL,
+  `Operating income 3yr avg` VARCHAR(20) NULL,
+  `Operating income 5yr avg` VARCHAR(20) NULL,
+  `Operating income 10yr avg` VARCHAR(20) NULL,
+  `Net income yoy` VARCHAR(20) NULL,
+  `Net income 3yr avg` VARCHAR(20) NULL,
+  `Net income 5yr avg` VARCHAR(20) NULL,
+  `Net income 10yr avg` VARCHAR(20) NULL,
+  `EPS YOY` VARCHAR(20) NULL,
+  `EPS 3yr avg` VARCHAR(20) NULL,
+  `EPS 5yr avg` VARCHAR(20) NULL,
+  `EPS 10yr avg` VARCHAR(20) NULL,
+  `Operating Cash Flow Growth percent YOY` VARCHAR(20) NULL,
+  `Free Cash Flow Growth percent YOY` VARCHAR(20) NULL,
+  `Cap Ex as a percent of Sales` VARCHAR(20) NULL,
+  `Free Cash Flow/Sales percent` VARCHAR(20) NULL,
+  `Free Cash Flow/Net Income` VARCHAR(20) NULL,
+  `Cash &amp; Short-Term Investments` VARCHAR(20) NULL,
+  `Accounts Receivable` VARCHAR(20) NULL,
+  `Inventory` VARCHAR(20) NULL,
+  `Other Current Assets` VARCHAR(20) NULL,
+  `Total Current Assets` VARCHAR(20) NULL,
+  `Net PP&amp;E` VARCHAR(20) NULL,
+  `Intangibles` VARCHAR(20) NULL,
+  `Other Long-Term Assets` VARCHAR(20) NULL,
+  `Total Assets` VARCHAR(20) NULL,
+  `Accounts Payable` VARCHAR(20) NULL,
+  `Short-Term Debt` VARCHAR(20) NULL,
+  `Taxes Payable` VARCHAR(20) NULL,
+  `Accrued Liabilities` VARCHAR(20) NULL,
+  `Other Short-Term Liabilities` VARCHAR(20) NULL,
+  `Total Current Liabilities` VARCHAR(20) NULL,
+  `Long-Term Debt` VARCHAR(20) NULL,
+  `Other Long-Term Liabilities` VARCHAR(20) NULL,
+  `Total Liabilities` VARCHAR(20) NULL,
+  `Total Stockholders Equity` VARCHAR(20) NULL,
+  `Total Liabilities &amp; Equity` VARCHAR(20) NULL,
+  `Current Ratio` VARCHAR(20) NULL,
+  `Quick Ratio` VARCHAR(20) NULL,
+  `Financial Leverage` VARCHAR(20) NULL,
+  `Debt/Equity` VARCHAR(20) NULL,
+  `Days Sales Outstanding` VARCHAR(20) NULL,
+  `Days Inventory` VARCHAR(20) NULL,
+  `Payables Period` VARCHAR(20) NULL,
+  `Cash Conversion Cycle` VARCHAR(20) NULL,
+  `Receivables Turnover` VARCHAR(20) NULL,
+  `Inventory Turnover` VARCHAR(20) NULL,
+  `Fixed Assets Turnover` VARCHAR(20) NULL,
+  `Asset Turnover` VARCHAR(20) NULL,
+  `SYMBOL` VARCHAR(20) NULL
+  )
+ENGINE = InnoDB
+
+#select * from AnnualData
+
+#DROP TABLE IF EXISTS AnnualData
+</string>
+		</dict>
+	</array>
 	<key>queryHistory</key>
 	<array>
-		<string>LOAD DATA local INFILE "/Users/misc/code/viflab/data/temp/aaa.csv" 
+		<string>LOAD DATA local INFILE '/Users/misc/code/viflab/tests/aaa.csv'
+#LOAD DATA local INFILE "aaa.csv"
     INTO TABLE testdb.AnnualData
     FIELDS TERMINATED BY ','
-#    OPTIONALLY ENCLOSED BY '"'
+    OPTIONALLY ENCLOSED BY '"'
+    LINES TERMINATED BY '\r\n'
+#    IGNORE 1 LINES</string>
+		<string>LOAD DATA local INFILE '/Users/misc/code/viflab/tests/aaa.csv'
+#LOAD DATA local INFILE "aaa.csv"
+    INTO TABLE testdb.AnnualData
+    FIELDS TERMINATED BY ','
+    OPTIONALLY ENCLOSED BY '"'
     LINES TERMINATED BY '\r'
 #    IGNORE 1 LINES</string>
-		<string>LOAD DATA local INFILE "/Users/misc/code/viflab/data/temp/aaa.csv" 
+		<string>LOAD DATA local INFILE '/Users/misc/code/viflab/tests/aaa2.csv'
+#LOAD DATA local INFILE "aaa.csv"
     INTO TABLE testdb.AnnualData
     FIELDS TERMINATED BY ','
-#    OPTIONALLY ENCLOSED BY '"'
+    OPTIONALLY ENCLOSED BY '"'
     LINES TERMINATED BY '\r'
-    IGNORE 1 LINES</string>
-		<string>LOAD DATA local INFILE "/Users/misc/code/viflab/data/temp/aaa.csv" 
+#    IGNORE 1 LINES</string>
+		<string>LOAD DATA local INFILE '/Users/misc/code/viflab/tests/aaa2.csv'
+#LOAD DATA local INFILE "aaa.csv"
     INTO TABLE testdb.AnnualData
     FIELDS TERMINATED BY ','
-#    OPTIONALLY ENCLOSED BY '"'
-    LINES TERMINATED BY '\r\n'
-    IGNORE 1 LINES</string>
-		<string>LOAD DATA local INFILE "/Users/misc/code/viflab/data/temp/aaa.csv" 
-    INTO TABLE testdb.AnnualData
-    FIELDS TERMINATED BY ','
-     ENCLOSED BY '"'
-    LINES TERMINATED BY '\r'
-    IGNORE 1 LINES</string>
-		<string>LOAD DATA local INFILE "/Users/misc/code/viflab/data/temp/aaa.csv" 
+    OPTIONALLY ENCLOSED BY '"'
+#    LINES TERMINATED BY '\r'
+#    IGNORE 1 LINES</string>
+		<string>LOAD DATA local INFILE '/Users/misc/code/viflab/tests/aaa2.csv'
+#LOAD DATA local INFILE "aaa.csv"
     INTO TABLE testdb.AnnualData
     FIELDS TERMINATED BY ','
     OPTIONALLY ENCLOSED BY '"'
     LINES TERMINATED BY '\r'
     IGNORE 1 LINES</string>
-		<string>use testdb;
-CREATE TABLE IF NOT EXISTS `testdb`.`AnnualData` (
-  `idAnnualData` VARCHAR(20),
+		<string>LOAD DATA local INFILE '/Users/misc/code/viflab/tests/aaa22.csv'
+#LOAD DATA local INFILE "aaa.csv"
+    INTO TABLE testdb.AnnualData
+    FIELDS TERMINATED BY ','
+    OPTIONALLY ENCLOSED BY '"'
+    LINES TERMINATED BY '\r'
+    IGNORE 1 LINES</string>
+		<string>LOAD DATA local INFILE '/Users/misc/code/viflab/tests/aaa.csv'
+#LOAD DATA local INFILE "aaa.csv"
+    INTO TABLE testdb.AnnualData
+    FIELDS TERMINATED BY ','
+    OPTIONALLY ENCLOSED BY '"'
+    LINES TERMINATED BY '\r'
+    IGNORE 1 LINES</string>
+		<string>CREATE TABLE IF NOT EXISTS `testdb`.`AnnualData` (
+#  `idAnnualData` INT NOT NULL AUTO_INCREMENT,
+  `index` VARCHAR(20) NULL,
+  `Revenue USD Mil` VARCHAR(20) NULL,
+  `Gross Margin percent` VARCHAR(20) NULL,
+  `Operating Income USD Mil` VARCHAR(20) NULL,
+  `Operating Margin percent` VARCHAR(20) NULL,
+  `Net Income USD Mil` VARCHAR(20) NULL,
+  `Earnings Per Share USD` VARCHAR(20) NULL,
+  `Dividends USD` VARCHAR(20) NULL,
+  `Payout Ratio percent` VARCHAR(20) NULL,
+  `Shares Mil` VARCHAR(20) NULL,
+  `Book Value Per Share USD` VARCHAR(20) NULL,
+  `Operating Cash Flow USD Mil` VARCHAR(20) NULL,
+  `Cap Spending USD Mil` VARCHAR(20) NULL,
+  `Free Cash Flow USD Mil` VARCHAR(20) NULL,
+  `Free Cash Flow Per Share USD` VARCHAR(20) NULL,
+  `Working Capital USD Mil` VARCHAR(20) NULL,
+  `Revenue` VARCHAR(20) NULL,
+  `COGS``Gross Margin` VARCHAR(20) NULL,
+  `SG&amp;A``R&amp;D``Other` VARCHAR(20) NULL,
+  `Operating Margin` VARCHAR(20) NULL,
+  `Net Int Inc &amp; Other` VARCHAR(20) NULL,
+  `EBT Margin` VARCHAR(20) NULL,
+  `Tax Rate percent` VARCHAR(20) NULL,
+  `Net Margin percent` VARCHAR(20) NULL,
+  `Asset Turnover (Average)` VARCHAR(20) NULL,
+  `Return on Assets percent` VARCHAR(20) NULL,
+  `Financial Leverage (Average)` VARCHAR(20) NULL,
+  `Return on Equity percent` VARCHAR(20) NULL,
+  `Return on Invested Capital percent` VARCHAR(20) NULL,
+  `Interest Coverage` VARCHAR(20) NULL,
+  `Revenue YOY` VARCHAR(20) NULL,
+  `Revenue 3yr avg` VARCHAR(20) NULL,
+  `Revenue 5yr avg` VARCHAR(20) NULL,
+  `Revenue 10yr avg` VARCHAR(20) NULL,
+  `Operating income yoy` VARCHAR(20) NULL,
+  `Operating income 3yr avg` VARCHAR(20) NULL,
+  `Operating income 5yr avg` VARCHAR(20) NULL,
+  `Operating income 10yr avg` VARCHAR(20) NULL,
+  `Net income yoy` VARCHAR(20) NULL,
+  `Net income 3yr avg` VARCHAR(20) NULL,
+  `Net income 5yr avg` VARCHAR(20) NULL,
+  `Net income 10yr avg` VARCHAR(20) NULL,
+  `EPS YOY` VARCHAR(20) NULL,
+  `EPS 3yr avg` VARCHAR(20) NULL,
+  `EPS 5yr avg` VARCHAR(20) NULL,
+  `EPS 10yr avg` VARCHAR(20) NULL,
+  `Operating Cash Flow Growth percent YOY` VARCHAR(20) NULL,
+  `Free Cash Flow Growth percent YOY` VARCHAR(20) NULL,
+  `Cap Ex as a percent of Sales` VARCHAR(20) NULL,
+  `Free Cash Flow/Sales percent` VARCHAR(20) NULL,
+  `Free Cash Flow/Net Income` VARCHAR(20) NULL,
+  `Cash &amp; Short-Term Investments` VARCHAR(20) NULL,
+  `Accounts Receivable` VARCHAR(20) NULL,
+  `Inventory` VARCHAR(20) NULL,
+  `Other Current Assets` VARCHAR(20) NULL,
+  `Total Current Assets` VARCHAR(20) NULL,
+  `Net PP&amp;E` VARCHAR(20) NULL,
+  `Intangibles` VARCHAR(20) NULL,
+  `Other Long-Term Assets` VARCHAR(20) NULL,
+  `Total Assets` VARCHAR(20) NULL,
+  `Accounts Payable` VARCHAR(20) NULL,
+  `Short-Term Debt` VARCHAR(20) NULL,
+  `Taxes Payable` VARCHAR(20) NULL,
+  `Accrued Liabilities` VARCHAR(20) NULL,
+  `Other Short-Term Liabilities` VARCHAR(20) NULL,
+  `Total Current Liabilities` VARCHAR(20) NULL,
+  `Long-Term Debt` VARCHAR(20) NULL,
+  `Other Long-Term Liabilities` VARCHAR(20) NULL,
+  `Total Liabilities` VARCHAR(20) NULL,
+  `Total Stockholders Equity` VARCHAR(20) NULL,
+  `Total Liabilities &amp; Equity` VARCHAR(20) NULL,
+  `Current Ratio` VARCHAR(20) NULL,
+  `Quick Ratio` VARCHAR(20) NULL,
+  `Financial Leverage` VARCHAR(20) NULL,
+  `Debt/Equity` VARCHAR(20) NULL,
+  `Days Sales Outstanding` VARCHAR(20) NULL,
+  `Days Inventory` VARCHAR(20) NULL,
+  `Payables Period` VARCHAR(20) NULL,
+  `Cash Conversion Cycle` VARCHAR(20) NULL,
+  `Receivables Turnover` VARCHAR(20) NULL,
+  `Inventory Turnover` VARCHAR(20) NULL,
+  `Fixed Assets Turnover` VARCHAR(20) NULL,
+  `Asset Turnover` VARCHAR(20) NULL,
+  `SYMBOL` VARCHAR(20) NULL
+  )
+ENGINE = InnoDB
+
+#select * from AnnualData
+
+#DROP TABLE IF EXISTS AnnualData</string>
+		<string>CREATE TABLE IF NOT EXISTS `testdb`.`AnnualData` (
+  `idAnnualData` INT NOT NULL AUTO_INCREMENT,
+  `index` VARCHAR(20) NULL,
+  `Revenue USD Mil` VARCHAR(20) NULL,
+  `Gross Margin percent` VARCHAR(20) NULL,
+  `Operating Income USD Mil` VARCHAR(20) NULL,
+  `Operating Margin percent` VARCHAR(20) NULL,
+  `Net Income USD Mil` VARCHAR(20) NULL,
+  `Earnings Per Share USD` VARCHAR(20) NULL,
+  `Dividends USD` VARCHAR(20) NULL,
+  `Payout Ratio percent` VARCHAR(20) NULL,
+  `Shares Mil` VARCHAR(20) NULL,
+  `Book Value Per Share USD` VARCHAR(20) NULL,
+  `Operating Cash Flow USD Mil` VARCHAR(20) NULL,
+  `Cap Spending USD Mil` VARCHAR(20) NULL,
+  `Free Cash Flow USD Mil` VARCHAR(20) NULL,
+  `Free Cash Flow Per Share USD` VARCHAR(20) NULL,
+  `Working Capital USD Mil` VARCHAR(20) NULL,
+  `Revenue` VARCHAR(20) NULL,
+  `COGS``Gross Margin` VARCHAR(20) NULL,
+  `SG&amp;A``R&amp;D``Other` VARCHAR(20) NULL,
+  `Operating Margin` VARCHAR(20) NULL,
+  `Net Int Inc &amp; Other` VARCHAR(20) NULL,
+  `EBT Margin` VARCHAR(20) NULL,
+  `Tax Rate percent` VARCHAR(20) NULL,
+  `Net Margin percent` VARCHAR(20) NULL,
+  `Asset Turnover (Average)` VARCHAR(20) NULL,
+  `Return on Assets percent` VARCHAR(20) NULL,
+  `Financial Leverage (Average)` VARCHAR(20) NULL,
+  `Return on Equity percent` VARCHAR(20) NULL,
+  `Return on Invested Capital percent` VARCHAR(20) NULL,
+  `Interest Coverage` VARCHAR(20) NULL,
+  `Revenue YOY` VARCHAR(20) NULL,
+  `Revenue 3yr avg` VARCHAR(20) NULL,
+  `Revenue 5yr avg` VARCHAR(20) NULL,
+  `Revenue 10yr avg` VARCHAR(20) NULL,
+  `Operating income yoy` VARCHAR(20) NULL,
+  `Operating income 3yr avg` VARCHAR(20) NULL,
+  `Operating income 5yr avg` VARCHAR(20) NULL,
+  `Operating income 10yr avg` VARCHAR(20) NULL,
+  `Net income yoy` VARCHAR(20) NULL,
+  `Net income 3yr avg` VARCHAR(20) NULL,
+  `Net income 5yr avg` VARCHAR(20) NULL,
+  `Net income 10yr avg` VARCHAR(20) NULL,
+  `EPS YOY` VARCHAR(20) NULL,
+  `EPS 3yr avg` VARCHAR(20) NULL,
+  `EPS 5yr avg` VARCHAR(20) NULL,
+  `EPS 10yr avg` VARCHAR(20) NULL,
+  `Operating Cash Flow Growth percent YOY` VARCHAR(20) NULL,
+  `Free Cash Flow Growth percent YOY` VARCHAR(20) NULL,
+  `Cap Ex as a percent of Sales` VARCHAR(20) NULL,
+  `Free Cash Flow/Sales percent` VARCHAR(20) NULL,
+  `Free Cash Flow/Net Income` VARCHAR(20) NULL,
+  `Cash &amp; Short-Term Investments` VARCHAR(20) NULL,
+  `Accounts Receivable` VARCHAR(20) NULL,
+  `Inventory` VARCHAR(20) NULL,
+  `Other Current Assets` VARCHAR(20) NULL,
+  `Total Current Assets` VARCHAR(20) NULL,
+  `Net PP&amp;E` VARCHAR(20) NULL,
+  `Intangibles` VARCHAR(20) NULL,
+  `Other Long-Term Assets` VARCHAR(20) NULL,
+  `Total Assets` VARCHAR(20) NULL,
+  `Accounts Payable` VARCHAR(20) NULL,
+  `Short-Term Debt` VARCHAR(20) NULL,
+  `Taxes Payable` VARCHAR(20) NULL,
+  `Accrued Liabilities` VARCHAR(20) NULL,
+  `Other Short-Term Liabilities` VARCHAR(20) NULL,
+  `Total Current Liabilities` VARCHAR(20) NULL,
+  `Long-Term Debt` VARCHAR(20) NULL,
+  `Other Long-Term Liabilities` VARCHAR(20) NULL,
+  `Total Liabilities` VARCHAR(20) NULL,
+  `Total Stockholders Equity` VARCHAR(20) NULL,
+  `Total Liabilities &amp; Equity` VARCHAR(20) NULL,
+  `Current Ratio` VARCHAR(20) NULL,
+  `Quick Ratio` VARCHAR(20) NULL,
+  `Financial Leverage` VARCHAR(20) NULL,
+  `Debt/Equity` VARCHAR(20) NULL,
+  `Days Sales Outstanding` VARCHAR(20) NULL,
+  `Days Inventory` VARCHAR(20) NULL,
+  `Payables Period` VARCHAR(20) NULL,
+  `Cash Conversion Cycle` VARCHAR(20) NULL,
+  `Receivables Turnover` VARCHAR(20) NULL,
+  `Inventory Turnover` VARCHAR(20) NULL,
+  `Fixed Assets Turnover` VARCHAR(20) NULL,
+  `Asset Turnover` VARCHAR(20) NULL,
+  `SYMBOL` VARCHAR(20) NULL
+  )
+ENGINE = InnoDB
+
+#select * from AnnualData
+
+#DROP TABLE IF EXISTS AnnualData</string>
+		<string>CREATE TABLE IF NOT EXISTS `testdb`.`AnnualData` (
+  `idAnnualData` INT NOT NULL AUTO_INCREMENT,
+  `index` VARCHAR(20) NULL,
+  `Revenue USD Mil` VARCHAR(20) NULL,
+  `Gross Margin percent` VARCHAR(20) NULL,
+  `Operating Income USD Mil` VARCHAR(20) NULL,
+  `Operating Margin percent` VARCHAR(20) NULL,
+  `Net Income USD Mil` VARCHAR(20) NULL,
+  `Earnings Per Share USD` VARCHAR(20) NULL,
+  `Dividends USD` VARCHAR(20) NULL,
+  `Payout Ratio percent` VARCHAR(20) NULL,
+  `Shares Mil` VARCHAR(20) NULL,
+  `Book Value Per Share USD` VARCHAR(20) NULL,
+  `Operating Cash Flow USD Mil` VARCHAR(20) NULL,
+  `Cap Spending USD Mil` VARCHAR(20) NULL,
+  `Free Cash Flow USD Mil` VARCHAR(20) NULL,
+  `Free Cash Flow Per Share USD` VARCHAR(20) NULL,
+  `Working Capital USD Mil` VARCHAR(20) NULL,
+  `Revenue` VARCHAR(20) NULL,
+  `COGS``Gross Margin` VARCHAR(20) NULL,
+  `SG&amp;A``R&amp;D``Other` VARCHAR(20) NULL,
+  `Operating Margin` VARCHAR(20) NULL,
+  `Net Int Inc &amp; Other` VARCHAR(20) NULL,
+  `EBT Margin` VARCHAR(20) NULL,
+  `Tax Rate percent` VARCHAR(20) NULL,
+  `Net Margin percent` VARCHAR(20) NULL,
+  `Asset Turnover (Average)` VARCHAR(20) NULL,
+  `Return on Assets percent` VARCHAR(20) NULL,
+  `Financial Leverage (Average)` VARCHAR(20) NULL,
+  `Return on Equity percent` VARCHAR(20) NULL,
+  `Return on Invested Capital percent` VARCHAR(20) NULL,
+  `Interest Coverage` VARCHAR(20) NULL,
+  `Revenue YOY` VARCHAR(20) NULL,
+  `Revenue 3yr avg` VARCHAR(20) NULL,
+  `Revenue 5yr avg` VARCHAR(20) NULL,
+  `Revenue 10yr avg` VARCHAR(20) NULL,
+  `Operating income yoy` VARCHAR(20) NULL,
+  `Operating income 3yr avg` VARCHAR(20) NULL,
+  `Operating income 5yr avg` VARCHAR(20) NULL,
+  `Operating income 10yr avg` VARCHAR(20) NULL,
+  `Net income yoy` VARCHAR(20) NULL,
+  `Net income 3yr avg` VARCHAR(20) NULL,
+  `Net income 5yr avg` VARCHAR(20) NULL,
+  `Net income 10yr avg` VARCHAR(20) NULL,
+  `EPS YOY` VARCHAR(20) NULL,
+  `EPS 3yr avg` VARCHAR(20) NULL,
+  `EPS 5yr avg` VARCHAR(20) NULL,
+  `EPS 10yr avg` VARCHAR(20) NULL,
+  `Operating Cash Flow Growth percent YOY` VARCHAR(20) NULL,
+  `Free Cash Flow Growth percent YOY` VARCHAR(20) NULL,
+  `Cap Ex as a percent of Sales` VARCHAR(20) NULL,
+  `Free Cash Flow/Sales percent` VARCHAR(20) NULL,
+  `Free Cash Flow/Net Income` VARCHAR(20) NULL,
+  `Cash &amp; Short-Term Investments` VARCHAR(20) NULL,
+  `Accounts Receivable` VARCHAR(20) NULL,
+  `Inventory` VARCHAR(20) NULL,
+  `Other Current Assets` VARCHAR(20) NULL,
+  `Total Current Assets` VARCHAR(20) NULL,
+  `Net PP&amp;E` VARCHAR(20) NULL,
+  `Intangibles` VARCHAR(20) NULL,
+  `Other Long-Term Assets` VARCHAR(20) NULL,
+  `Total Assets` VARCHAR(20) NULL,
+  `Accounts Payable` VARCHAR(20) NULL,
+  `Short-Term Debt` VARCHAR(20) NULL,
+  `Taxes Payable` VARCHAR(20) NULL,
+  `Accrued Liabilities` VARCHAR(20) NULL,
+  `Other Short-Term Liabilities` VARCHAR(20) NULL,
+  `Total Current Liabilities` VARCHAR(20) NULL,
+  `Long-Term Debt` VARCHAR(20) NULL,
+  `Other Long-Term Liabilities` VARCHAR(20) NULL,
+  `Total Liabilities` VARCHAR(20) NULL,
+  `Total Stockholders Equity` VARCHAR(20) NULL,
+  `Total Liabilities &amp; Equity` VARCHAR(20) NULL,
+  `Current Ratio` VARCHAR(20) NULL,
+  `Quick Ratio` VARCHAR(20) NULL,
+  `Financial Leverage` VARCHAR(20) NULL,
+  `Debt/Equity` VARCHAR(20) NULL,
+  `Days Sales Outstanding` VARCHAR(20) NULL,
+  `Days Inventory` VARCHAR(20) NULL,
+  `Payables Period` VARCHAR(20) NULL,
+  `Cash Conversion Cycle` VARCHAR(20) NULL,
+  `Receivables Turnover` VARCHAR(20) NULL,
+  `Inventory Turnover` VARCHAR(20) NULL,
+  `Fixed Assets Turnover` VARCHAR(20) NULL,
+  `Asset Turnover` VARCHAR(20) NULL,
+  `SYMBOL` VARCHAR(20) NULL
+  )
+ENGINE = csv
+
+#select * from AnnualData
+
+#DROP TABLE IF EXISTS AnnualData</string>
+		<string>CREATE TABLE IF NOT EXISTS `testdb`.`AnnualData` (
+  `idAnnualData` INT NOT NULL AUTO_INCREMENT,
+  `index` VARCHAR(20) NULL,
+  `Revenue USD Mil` VARCHAR(20) NULL,
+  `Gross Margin percent` VARCHAR(20) NULL,
+  `Operating Income USD Mil` VARCHAR(20) NULL,
+  `Operating Margin percent` VARCHAR(20) NULL,
+  `Net Income USD Mil` VARCHAR(20) NULL,
+  `Earnings Per Share USD` VARCHAR(20) NULL,
+  `Dividends USD` VARCHAR(20) NULL,
+  `Payout Ratio percent` VARCHAR(20) NULL,
+  `Shares Mil` VARCHAR(20) NULL,
+  `Book Value Per Share USD` VARCHAR(20) NULL,
+  `Operating Cash Flow USD Mil` VARCHAR(20) NULL,
+  `Cap Spending USD Mil` VARCHAR(20) NULL,
+  `Free Cash Flow USD Mil` VARCHAR(20) NULL,
+  `Free Cash Flow Per Share USD` VARCHAR(20) NULL,
+  `Working Capital USD Mil` VARCHAR(20) NULL,
+  `Revenue` VARCHAR(20) NULL,
+  `COGS``Gross Margin` VARCHAR(20) NULL,
+  `SG&amp;A``R&amp;D``Other` VARCHAR(20) NULL,
+  `Operating Margin` VARCHAR(20) NULL,
+  `Net Int Inc &amp; Other` VARCHAR(20) NULL,
+  `EBT Margin` VARCHAR(20) NULL,
+  `Tax Rate percent` VARCHAR(20) NULL,
+  `Net Margin percent` VARCHAR(20) NULL,
+  `Asset Turnover (Average)` VARCHAR(20) NULL,
+  `Return on Assets percent` VARCHAR(20) NULL,
+  `Financial Leverage (Average)` VARCHAR(20) NULL,
+  `Return on Equity percent` VARCHAR(20) NULL,
+  `Return on Invested Capital percent` VARCHAR(20) NULL,
+  `Interest Coverage` VARCHAR(20) NULL,
+  `Revenue YOY` VARCHAR(20) NULL,
+  `Revenue 3yr avg` VARCHAR(20) NULL,
+  `Revenue 5yr avg` VARCHAR(20) NULL,
+  `Revenue 10yr avg` VARCHAR(20) NULL,
+  `Operating income yoy` VARCHAR(20) NULL,
+  `Operating income 3yr avg` VARCHAR(20) NULL,
+  `Operating income 5yr avg` VARCHAR(20) NULL,
+  `Operating income 10yr avg` VARCHAR(20) NULL,
+  `Net income yoy` VARCHAR(20) NULL,
+  `Net income 3yr avg` VARCHAR(20) NULL,
+  `Net income 5yr avg` VARCHAR(20) NULL,
+  `Net income 10yr avg` VARCHAR(20) NULL,
+  `EPS YOY` VARCHAR(20) NULL,
+  `EPS 3yr avg` VARCHAR(20) NULL,
+  `EPS 5yr avg` VARCHAR(20) NULL,
+  `EPS 10yr avg` VARCHAR(20) NULL,
+  `Operating Cash Flow Growth percent YOY` VARCHAR(20) NULL,
+  `Free Cash Flow Growth percent YOY` VARCHAR(20) NULL,
+  `Cap Ex as a percent of Sales` VARCHAR(20) NULL,
+  `Free Cash Flow/Sales percent` VARCHAR(20) NULL,
+  `Free Cash Flow/Net Income` VARCHAR(20) NULL,
+  `Cash &amp; Short-Term Investments` VARCHAR(20) NULL,
+  `Accounts Receivable` VARCHAR(20) NULL,
+  `Inventory` VARCHAR(20) NULL,
+  `Other Current Assets` VARCHAR(20) NULL,
+  `Total Current Assets` VARCHAR(20) NULL,
+  `Net PP&amp;E` VARCHAR(20) NULL,
+  `Intangibles` VARCHAR(20) NULL,
+  `Other Long-Term Assets` VARCHAR(20) NULL,
+  `Total Assets` VARCHAR(20) NULL,
+  `Accounts Payable` VARCHAR(20) NULL,
+  `Short-Term Debt` VARCHAR(20) NULL,
+  `Taxes Payable` VARCHAR(20) NULL,
+  `Accrued Liabilities` VARCHAR(20) NULL,
+  `Other Short-Term Liabilities` VARCHAR(20) NULL,
+  `Total Current Liabilities` VARCHAR(20) NULL,
+  `Long-Term Debt` VARCHAR(20) NULL,
+  `Other Long-Term Liabilities` VARCHAR(20) NULL,
+  `Total Liabilities` VARCHAR(20) NULL,
+  `Total Stockholders Equity` VARCHAR(20) NULL,
+  `Total Liabilities &amp; Equity` VARCHAR(20) NULL,
+  `Current Ratio` VARCHAR(20) NULL,
+  `Quick Ratio` VARCHAR(20) NULL,
+  `Financial Leverage` VARCHAR(20) NULL,
+  `Debt/Equity` VARCHAR(20) NULL,
+  `Days Sales Outstanding` VARCHAR(20) NULL,
+  `Days Inventory` VARCHAR(20) NULL,
+  `Payables Period` VARCHAR(20) NULL,
+  `Cash Conversion Cycle` VARCHAR(20) NULL,
+  `Receivables Turnover` VARCHAR(20) NULL,
+  `Inventory Turnover` VARCHAR(20) NULL,
+  `Fixed Assets Turnover` VARCHAR(20) NULL,
+  `Asset Turnover` VARCHAR(20) NULL,
+  `SYMBOL` VARCHAR(20) NULL,
+
+
+  )
+ENGINE = csv
+
+#select * from AnnualData
+
+#DROP TABLE IF EXISTS AnnualData</string>
+		<string>CREATE TABLE IF NOT EXISTS `testdb`.`AnnualData` (
+  `idAnnualData` INT NOT NULL AUTO_INCREMENT,
+  `index` VARCHAR(20) NULL,
+  `Revenue USD Mil` VARCHAR(20) NULL,
+  `Gross Margin percent` VARCHAR(20) NULL,
+  `Operating Income USD Mil` VARCHAR(20) NULL,
+  `Operating Margin percent` VARCHAR(20) NULL,
+  `Net Income USD Mil` VARCHAR(20) NULL,
+  `Earnings Per Share USD` VARCHAR(20) NULL,
+  `Dividends USD` VARCHAR(20) NULL,
+  `Payout Ratio percent` VARCHAR(20) NULL,
+  `Shares Mil` VARCHAR(20) NULL,
+  `Book Value Per Share USD` VARCHAR(20) NULL,
+  `Operating Cash Flow USD Mil` VARCHAR(20) NULL,
+  `Cap Spending USD Mil` VARCHAR(20) NULL,
+  `Free Cash Flow USD Mil` VARCHAR(20) NULL,
+  `Free Cash Flow Per Share USD` VARCHAR(20) NULL,
+  `Working Capital USD Mil` VARCHAR(20) NULL,
+  `Revenue` VARCHAR(20) NULL,
+  `COGS``Gross Margin` VARCHAR(20) NULL,
+  `SG&amp;A``R&amp;D``Other` VARCHAR(20) NULL,
+  `Operating Margin` VARCHAR(20) NULL,
+  `Net Int Inc &amp; Other` VARCHAR(20) NULL,
+  `EBT Margin` VARCHAR(20) NULL,
+  `Tax Rate percent` VARCHAR(20) NULL,
+  `Net Margin percent` VARCHAR(20) NULL,
+  `Asset Turnover (Average)` VARCHAR(20) NULL,
+  `Return on Assets percent` VARCHAR(20) NULL,
+  `Financial Leverage (Average)` VARCHAR(20) NULL,
+  `Return on Equity percent` VARCHAR(20) NULL,
+  `Return on Invested Capital percent` VARCHAR(20) NULL,
+  `Interest Coverage` VARCHAR(20) NULL,
+  `Revenue YOY` VARCHAR(20) NULL,
+  `Revenue 3yr avg` VARCHAR(20) NULL,
+  `Revenue 5yr avg` VARCHAR(20) NULL,
+  `Revenue 10yr avg` VARCHAR(20) NULL,
+  `Operating income yoy` VARCHAR(20) NULL,
+  `Operating income 3yr avg` VARCHAR(20) NULL,
+  `Operating income 5yr avg` VARCHAR(20) NULL,
+  `Operating income 10yr avg` VARCHAR(20) NULL,
+  `Net income yoy` VARCHAR(20) NULL,
+  `Net income 3yr avg` VARCHAR(20) NULL,
+  `Net income 5yr avg` VARCHAR(20) NULL,
+  `Net income 10yr avg` VARCHAR(20) NULL,
+  `EPS YOY` VARCHAR(20) NULL,
+  `EPS 3yr avg` VARCHAR(20) NULL,
+  `EPS 5yr avg` VARCHAR(20) NULL,
+  `EPS 10yr avg` VARCHAR(20) NULL,
+  `Operating Cash Flow Growth percent YOY` VARCHAR(20) NULL,
+  `Free Cash Flow Growth percent YOY` VARCHAR(20) NULL,
+  `Cap Ex as a percent of Sales` VARCHAR(20) NULL,
+  `Free Cash Flow/Sales percent` VARCHAR(20) NULL,
+  `Free Cash Flow/Net Income` VARCHAR(20) NULL,
+  `Cash &amp; Short-Term Investments` VARCHAR(20) NULL,
+  `Accounts Receivable` VARCHAR(20) NULL,
+  `Inventory` VARCHAR(20) NULL,
+  `Other Current Assets` VARCHAR(20) NULL,
+  `Total Current Assets` VARCHAR(20) NULL,
+  `Net PP&amp;E` VARCHAR(20) NULL,
+  `Intangibles` VARCHAR(20) NULL,
+  `Other Long-Term Assets` VARCHAR(20) NULL,
+  `Total Assets` VARCHAR(20) NULL,
+  `Accounts Payable` VARCHAR(20) NULL,
+  `Short-Term Debt` VARCHAR(20) NULL,
+  `Taxes Payable` VARCHAR(20) NULL,
+  `Accrued Liabilities` VARCHAR(20) NULL,
+  `Other Short-Term Liabilities` VARCHAR(20) NULL,
+  `Total Current Liabilities` VARCHAR(20) NULL,
+  `Long-Term Debt` VARCHAR(20) NULL,
+  `Other Long-Term Liabilities` VARCHAR(20) NULL,
+  `Total Liabilities` VARCHAR(20) NULL,
+  `Total Stockholders Equity` VARCHAR(20) NULL,
+  `Total Liabilities &amp; Equity` VARCHAR(20) NULL,
+  `Current Ratio` VARCHAR(20) NULL,
+  `Quick Ratio` VARCHAR(20) NULL,
+  `Financial Leverage` VARCHAR(20) NULL,
+  `Debt/Equity` VARCHAR(20) NULL,
+  `Days Sales Outstanding` VARCHAR(20) NULL,
+  `Days Inventory` VARCHAR(20) NULL,
+  `Payables Period` VARCHAR(20) NULL,
+  `Cash Conversion Cycle` VARCHAR(20) NULL,
+  `Receivables Turnover` VARCHAR(20) NULL,
+  `Inventory Turnover` VARCHAR(20) NULL,
+  `Fixed Assets Turnover` VARCHAR(20) NULL,
+  `Asset Turnover` VARCHAR(20) NULL,
+  `SYMBOL` VARCHAR(20) NULL,
+
+
+  )
+ENGINE = InnoDB
+
+#select * from AnnualData
+
+#DROP TABLE IF EXISTS AnnualData</string>
+		<string>CREATE TABLE IF NOT EXISTS `testdb`.`AnnualData` (
+  `idAnnualData` INT NOT NULL AUTO_INCREMENT,
+  `index` VARCHAR(20) NULL,
+  `Revenue USD Mil` VARCHAR(20) NULL,
+  `Gross Margin percent` VARCHAR(20) NULL,
+  `Operating Income USD Mil` VARCHAR(20) NULL,
+  `Operating Margin percent` VARCHAR(20) NULL,
+  `Net Income USD Mil` VARCHAR(20) NULL,
+  `Earnings Per Share USD` VARCHAR(20) NULL,
+  `Dividends USD` VARCHAR(20) NULL,
+  `Payout Ratio percent` VARCHAR(20) NULL,
+  `Shares Mil` VARCHAR(20) NULL,
+  `Book Value Per Share USD` VARCHAR(20) NULL,
+  `Operating Cash Flow USD Mil` VARCHAR(20) NULL,
+  `Cap Spending USD Mil` VARCHAR(20) NULL,
+  `Free Cash Flow USD Mil` VARCHAR(20) NULL,
+  `Free Cash Flow Per Share USD` VARCHAR(20) NULL,
+  `Working Capital USD Mil` VARCHAR(20) NULL,
+  `Revenue` VARCHAR(20) NULL,
+  `COGS``Gross Margin` VARCHAR(20) NULL,
+  `SG&amp;A``R&amp;D``Other` VARCHAR(20) NULL,
+  `Operating Margin` VARCHAR(20) NULL,
+  `Net Int Inc &amp; Other` VARCHAR(20) NULL,
+  `EBT Margin` VARCHAR(20) NULL,
+  `Tax Rate percent` VARCHAR(20) NULL,
+  `Net Margin percent` VARCHAR(20) NULL,
+  `Asset Turnover (Average)` VARCHAR(20) NULL,
+  `Return on Assets percent` VARCHAR(20) NULL,
+  `Financial Leverage (Average)` VARCHAR(20) NULL,
+  `Return on Equity percent` VARCHAR(20) NULL,
+  `Return on Invested Capital percent` VARCHAR(20) NULL,
+  `Interest Coverage` VARCHAR(20) NULL,
+  `Revenue YOY` VARCHAR(20) NULL,
+  `Revenue 3yr avg` VARCHAR(20) NULL,
+  `Revenue 5yr avg` VARCHAR(20) NULL,
+  `Revenue 10yr avg` VARCHAR(20) NULL,
+  `Operating income yoy` VARCHAR(20) NULL,
+  `Operating income 3yr avg` VARCHAR(20) NULL,
+  `Operating income 5yr avg` VARCHAR(20) NULL,
+  `Operating income 10yr avg` VARCHAR(20) NULL,
+  `Net income yoy` VARCHAR(20) NULL,
+  `Net income 3yr avg` VARCHAR(20) NULL,
+  `Net income 5yr avg` VARCHAR(20) NULL,
+  `Net income 10yr avg` VARCHAR(20) NULL,
+  `EPS YOY` VARCHAR(20) NULL,
+  `EPS 3yr avg` VARCHAR(20) NULL,
+  `EPS 5yr avg` VARCHAR(20) NULL,
+  `EPS 10yr avg` VARCHAR(20) NULL,
+  `Operating Cash Flow Growth percent YOY` VARCHAR(20) NULL,
+  `Free Cash Flow Growth percent YOY` VARCHAR(20) NULL,
+  `Cap Ex as a percent of Sales` VARCHAR(20) NULL,
+  `Free Cash Flow/Sales percent` VARCHAR(20) NULL,
+  `Free Cash Flow/Net Income` VARCHAR(20) NULL,
+  `Cash &amp; Short-Term Investments` VARCHAR(20) NULL,
+  `Accounts Receivable` VARCHAR(20) NULL,
+  `Inventory` VARCHAR(20) NULL,
+  `Other Current Assets` VARCHAR(20) NULL,
+  `Total Current Assets` VARCHAR(20) NULL,
+  `Net PP&amp;E` VARCHAR(20) NULL,
+  `Intangibles` VARCHAR(20) NULL,
+  `Other Long-Term Assets` VARCHAR(20) NULL,
+  `Total Assets` VARCHAR(20) NULL,
+  `Accounts Payable` VARCHAR(20) NULL,
+  `Short-Term Debt` VARCHAR(20) NULL,
+  `Taxes Payable` VARCHAR(20) NULL,
+  `Accrued Liabilities` VARCHAR(20) NULL,
+  `Other Short-Term Liabilities` VARCHAR(20) NULL,
+  `Total Current Liabilities` VARCHAR(20) NULL,
+  `Long-Term Debt` VARCHAR(20) NULL,
+  `Other Long-Term Liabilities` VARCHAR(20) NULL,
+  `Total Liabilities` VARCHAR(20) NULL,
+  `Total Stockholders Equity` VARCHAR(20) NULL,
+  `Total Liabilities &amp; Equity` VARCHAR(20) NULL,
+  `Current Ratio` VARCHAR(20) NULL,
+  `Quick Ratio` VARCHAR(20) NULL,
+  `Financial Leverage` VARCHAR(20) NULL,
+  `Debt/Equity` VARCHAR(20) NULL,
+  `Days Sales Outstanding` VARCHAR(20) NULL,
+  `Days Inventory` VARCHAR(20) NULL,
+  `Payables Period` VARCHAR(20) NULL,
+  `Cash Conversion Cycle` VARCHAR(20) NULL,
+  `Receivables Turnover` VARCHAR(20) NULL,
+  `Inventory Turnover` VARCHAR(20) NULL,
+  `Fixed Assets Turnover` VARCHAR(20) NULL,
+  `Asset Turnover` VARCHAR(20) NULL,
+  `SYMBOL` VARCHAR(20) NULL,
+
+#  PRIMARY KEY (`idAnnualData`)
+  )
+ENGINE = InnoDB
+
+#select * from AnnualData
+
+#DROP TABLE IF EXISTS AnnualData</string>
+		<string>DROP TABLE IF EXISTS AnnualData</string>
+		<string>CREATE TABLE IF NOT EXISTS `testdb`.`AnnualData` (
+  `idAnnualData` INT NOT NULL AUTO_INCREMENT,
+  `index` VARCHAR(20) NULL,
+  `Revenue USD Mil` VARCHAR(20) NULL,
+  `Gross Margin percent` VARCHAR(20) NULL,
+  `Operating Income USD Mil` VARCHAR(20) NULL,
+  `Operating Margin percent` VARCHAR(20) NULL,
+  `Net Income USD Mil` VARCHAR(20) NULL,
+  `Earnings Per Share USD` VARCHAR(20) NULL,
+  `Dividends USD` VARCHAR(20) NULL,
+  `Payout Ratio percent` VARCHAR(20) NULL,
+  `Shares Mil` VARCHAR(20) NULL,
+  `Book Value Per Share USD` VARCHAR(20) NULL,
+  `Operating Cash Flow USD Mil` VARCHAR(20) NULL,
+  `Cap Spending USD Mil` VARCHAR(20) NULL,
+  `Free Cash Flow USD Mil` VARCHAR(20) NULL,
+  `Free Cash Flow Per Share USD` VARCHAR(20) NULL,
+  `Working Capital USD Mil` VARCHAR(20) NULL,
+  `Revenue` VARCHAR(20) NULL,
+  `COGS``Gross Margin` VARCHAR(20) NULL,
+  `SG&amp;A``R&amp;D``Other` VARCHAR(20) NULL,
+  `Operating Margin` VARCHAR(20) NULL,
+  `Net Int Inc &amp; Other` VARCHAR(20) NULL,
+  `EBT Margin` VARCHAR(20) NULL,
+  `Tax Rate percent` VARCHAR(20) NULL,
+  `Net Margin percent` VARCHAR(20) NULL,
+  `Asset Turnover (Average)` VARCHAR(20) NULL,
+  `Return on Assets percent` VARCHAR(20) NULL,
+  `Financial Leverage (Average)` VARCHAR(20) NULL,
+  `Return on Equity percent` VARCHAR(20) NULL,
+  `Return on Invested Capital percent` VARCHAR(20) NULL,
+  `Interest Coverage` VARCHAR(20) NULL,
+  `Revenue YOY` VARCHAR(20) NULL,
+  `Revenue 3yr avg` VARCHAR(20) NULL,
+  `Revenue 5yr avg` VARCHAR(20) NULL,
+  `Revenue 10yr avg` VARCHAR(20) NULL,
+  `Operating income yoy` VARCHAR(20) NULL,
+  `Operating income 3yr avg` VARCHAR(20) NULL,
+  `Operating income 5yr avg` VARCHAR(20) NULL,
+  `Operating income 10yr avg` VARCHAR(20) NULL,
+  `Net income yoy` VARCHAR(20) NULL,
+  `Net income 3yr avg` VARCHAR(20) NULL,
+  `Net income 5yr avg` VARCHAR(20) NULL,
+  `Net income 10yr avg` VARCHAR(20) NULL,
+  `EPS YOY` VARCHAR(20) NULL,
+  `EPS 3yr avg` VARCHAR(20) NULL,
+  `EPS 5yr avg` VARCHAR(20) NULL,
+  `EPS 10yr avg` VARCHAR(20) NULL,
+  `Operating Cash Flow Growth percent YOY` VARCHAR(20) NULL,
+  `Free Cash Flow Growth percent YOY` VARCHAR(20) NULL,
+  `Cap Ex as a percent of Sales` VARCHAR(20) NULL,
+  `Free Cash Flow/Sales percent` VARCHAR(20) NULL,
+  `Free Cash Flow/Net Income` VARCHAR(20) NULL,
+  `Cash &amp; Short-Term Investments` VARCHAR(20) NULL,
+  `Accounts Receivable` VARCHAR(20) NULL,
+  `Inventory` VARCHAR(20) NULL,
+  `Other Current Assets` VARCHAR(20) NULL,
+  `Total Current Assets` VARCHAR(20) NULL,
+  `Net PP&amp;E` VARCHAR(20) NULL,
+  `Intangibles` VARCHAR(20) NULL,
+  `Other Long-Term Assets` VARCHAR(20) NULL,
+  `Total Assets` VARCHAR(20) NULL,
+  `Accounts Payable` VARCHAR(20) NULL,
+  `Short-Term Debt` VARCHAR(20) NULL,
+  `Taxes Payable` VARCHAR(20) NULL,
+  `Accrued Liabilities` VARCHAR(20) NULL,
+  `Other Short-Term Liabilities` VARCHAR(20) NULL,
+  `Total Current Liabilities` VARCHAR(20) NULL,
+  `Long-Term Debt` VARCHAR(20) NULL,
+  `Other Long-Term Liabilities` VARCHAR(20) NULL,
+  `Total Liabilities` VARCHAR(20) NULL,
+  `Total Stockholders Equity` VARCHAR(20) NULL,
+  `Total Liabilities &amp; Equity` VARCHAR(20) NULL,
+  `Current Ratio` VARCHAR(20) NULL,
+  `Quick Ratio` VARCHAR(20) NULL,
+  `Financial Leverage` VARCHAR(20) NULL,
+  `Debt/Equity` VARCHAR(20) NULL,
+  `Days Sales Outstanding` VARCHAR(20) NULL,
+  `Days Inventory` VARCHAR(20) NULL,
+  `Payables Period` VARCHAR(20) NULL,
+  `Cash Conversion Cycle` VARCHAR(20) NULL,
+  `Receivables Turnover` VARCHAR(20) NULL,
+  `Inventory Turnover` VARCHAR(20) NULL,
+  `Fixed Assets Turnover` VARCHAR(20) NULL,
+  `Asset Turnover` VARCHAR(20) NULL,
+  `SYMBOL` VARCHAR(20) NULL,
+
+  PRIMARY KEY (`idAnnualData`)
+  )
+ENGINE = InnoDB
+
+#select * from AnnualData
+
+#DROP TABLE IF EXISTS AnnualData</string>
+		<string>select * from AnnualData</string>
+		<string>CREATE TABLE IF NOT EXISTS `testdb`.`AnnualData` (
+  `idAnnualData` INT NOT NULL AUTO_INCREMENT,
   `index` VARCHAR(20) NULL,
   `Revenue USD Mil` VARCHAR(20) NULL,
   `Gross Margin percent` VARCHAR(20) NULL,
@@ -219,90 +1196,271 @@ ENGINE = InnoDB
 #select * from AnnualData
 
 #DROP TABLE IF EXISTS AnnualData</string>
-		<string>LOAD DATA local INFILE "aaa.csv" 
-    INTO TABLE testdb.AnnualData
-    FIELDS TERMINATED BY ','
-    OPTIONALLY ENCLOSED BY '"'
-    LINES TERMINATED BY '\r'
-    IGNORE 1 LINES</string>
-		<string>LOAD DATA local INFILE "aaa.csv" 
-    INTO TABLE testdb.AnnualData
-    FIELDS TERMINATED BY ','
-    OPTIONALLY ENCLOSED BY '"'
-    LINES TERMINATED BY '\n'
-    IGNORE 1 LINES</string>
-		<string>LOAD DATA local INFILE "aaa.csv" REPLACE
-    INTO TABLE testdb.AnnualData
-    FIELDS TERMINATED BY ','
-#    OPTIONALLY ENCLOSED BY '"'
-    LINES TERMINATED BY '\r'
-    IGNORE 1 LINES</string>
-		<string>LOAD DATA local INFILE "aaa.csv" REPLACE
-    INTO TABLE testdb.AnnualData
-    FIELDS TERMINATED BY ','
-    OPTIONALLY ENCLOSED BY '"'
-    LINES TERMINATED BY '\r'
-    IGNORE 1 LINES</string>
-		<string>LOAD DATA local INFILE "aaa.csv" IGNORE
-    INTO TABLE testdb.AnnualData
-    FIELDS TERMINATED BY ','
-    OPTIONALLY ENCLOSED BY '"'
-    LINES TERMINATED BY '\r'
-    IGNORE 1 LINES</string>
-		<string>LOAD DATA local INFILE "aaa.csv"
-    INTO TABLE testdb.AnnualData
-    FIELDS TERMINATED BY ','
-    OPTIONALLY ENCLOSED BY '"'
-    LINES TERMINATED BY '\r'
-    IGNORE 1 LINES</string>
-		<string>LOAD DATA local INFILE ".//aaa.csv"
-    INTO TABLE testdb.AnnualData
-    FIELDS TERMINATED BY ','
-    OPTIONALLY ENCLOSED BY '"'
-    LINES TERMINATED BY '\r'
-    IGNORE 1 LINES</string>
-		<string>LOAD DATA local INFILE ".\\aaa.csv"
-    INTO TABLE testdb.AnnualData
-    FIELDS TERMINATED BY ','
-    OPTIONALLY ENCLOSED BY '"'
-    LINES TERMINATED BY '\r'
-    IGNORE 1 LINES</string>
-		<string>LOAD DATA local INFILE ".\aaa.csv"
-    INTO TABLE testdb.AnnualData
-    FIELDS TERMINATED BY ','
-    OPTIONALLY ENCLOSED BY '"'
-    LINES TERMINATED BY '\r'
-    IGNORE 1 LINES</string>
-		<string>LOAD DATA local INFILE "./aaa.csv"
-    INTO TABLE testdb.AnnualData
-    FIELDS TERMINATED BY ','
-    OPTIONALLY ENCLOSED BY '"'
-    LINES TERMINATED BY '\r'
-    IGNORE 1 LINES</string>
-		<string>LOAD DATA local INFILE "aaa.csv"
-    INTO TABLE testdb.AnnualData
-    FIELDS TERMINATED BY ','
-    #OPTIONALLY ENCLOSED BY '"'
-    LINES TERMINATED BY '\r'
-    IGNORE 1 LINES</string>
-		<string>LOAD DATA  INFILE "aaa.csv"
-    INTO TABLE testdb.AnnualData
-    FIELDS TERMINATED BY ','
-    OPTIONALLY ENCLOSED BY '"'
-    LINES TERMINATED BY '\r'
-    IGNORE 1 LINES</string>
-		<string>LOAD DATA local INFILE './/aaa.csv'
-    INTO TABLE testdb.AnnualData
-    FIELDS TERMINATED BY ','
-    OPTIONALLY ENCLOSED BY '"'
-    LINES TERMINATED BY '\r'
-    IGNORE 1 LINES</string>
-		<string>LOAD DATA local INFILE './aaa.csv'
-    INTO TABLE testdb.AnnualData
-    FIELDS TERMINATED BY ','
-    OPTIONALLY ENCLOSED BY '"'
-    LINES TERMINATED BY '\r'
-    IGNORE 1 LINES</string>
+		<string>use testdb
+ CREATE TABLE `AnnualData` (
+  `index` varchar(20) DEFAULT NULL,
+  `Revenue USD Mil` varchar(20) DEFAULT NULL,
+  `Gross Margin percent` varchar(20) DEFAULT NULL,
+  `Operating Income USD Mil` varchar(20) DEFAULT NULL,
+  `Operating Margin percent` varchar(20) DEFAULT NULL,
+  `Net Income USD Mil` varchar(20) DEFAULT NULL,
+  `Earnings Per Share USD` varchar(20) DEFAULT NULL,
+  `Dividends USD` varchar(20) DEFAULT NULL,
+  `Payout Ratio percent` varchar(20) DEFAULT NULL,
+  `Shares Mil` varchar(20) DEFAULT NULL,
+  `Book Value Per Share USD` varchar(20) DEFAULT NULL,
+  `Operating Cash Flow USD Mil` varchar(20) DEFAULT NULL,
+  `Cap Spending USD Mil` varchar(20) DEFAULT NULL,
+  `Free Cash Flow USD Mil` varchar(20) DEFAULT NULL,
+  `Free Cash Flow Per Share USD` varchar(20) DEFAULT NULL,
+  `Working Capital USD Mil` varchar(20) DEFAULT NULL,
+  `Revenue` varchar(20) DEFAULT NULL,
+  `COGS``Gross Margin` varchar(20) DEFAULT NULL,
+  `SG&amp;A``R&amp;D``Other` varchar(20) DEFAULT NULL,
+  `Operating Margin` varchar(20) DEFAULT NULL,
+  `Net Int Inc &amp; Other` varchar(20) DEFAULT NULL,
+  `EBT Margin` varchar(20) DEFAULT NULL,
+  `Tax Rate percent` varchar(20) DEFAULT NULL,
+  `Net Margin percent` varchar(20) DEFAULT NULL,
+  `Asset Turnover (Average)` varchar(20) DEFAULT NULL,
+  `Return on Assets percent` varchar(20) DEFAULT NULL,
+  `Financial Leverage (Average)` varchar(20) DEFAULT NULL,
+  `Return on Equity percent` varchar(20) DEFAULT NULL,
+  `Return on Invested Capital percent` varchar(20) DEFAULT NULL,
+  `Interest Coverage` varchar(20) DEFAULT NULL,
+  `Revenue YOY` varchar(20) DEFAULT NULL,
+  `Revenue 3yr avg` varchar(20) DEFAULT NULL,
+  `Revenue 5yr avg` varchar(20) DEFAULT NULL,
+  `Revenue 10yr avg` varchar(20) DEFAULT NULL,
+  `Operating income yoy` varchar(20) DEFAULT NULL,
+  `Operating income 3yr avg` varchar(20) DEFAULT NULL,
+  `Operating income 5yr avg` varchar(20) DEFAULT NULL,
+  `Operating income 10yr avg` varchar(20) DEFAULT NULL,
+  `Net income yoy` varchar(20) DEFAULT NULL,
+  `Net income 3yr avg` varchar(20) DEFAULT NULL,
+  `Net income 5yr avg` varchar(20) DEFAULT NULL,
+  `Net income 10yr avg` varchar(20) DEFAULT NULL,
+  `EPS YOY` varchar(20) DEFAULT NULL,
+  `EPS 3yr avg` varchar(20) DEFAULT NULL,
+  `EPS 5yr avg` varchar(20) DEFAULT NULL,
+  `EPS 10yr avg` varchar(20) DEFAULT NULL,
+  `Operating Cash Flow Growth percent YOY` varchar(20) DEFAULT NULL,
+  `Free Cash Flow Growth percent YOY` varchar(20) DEFAULT NULL,
+  `Cap Ex as a percent of Sales` varchar(20) DEFAULT NULL,
+  `Free Cash Flow/Sales percent` varchar(20) DEFAULT NULL,
+  `Free Cash Flow/Net Income` varchar(20) DEFAULT NULL,
+  `Cash &amp; Short-Term Investments` varchar(20) DEFAULT NULL,
+  `Accounts Receivable` varchar(20) DEFAULT NULL,
+  `Inventory` varchar(20) DEFAULT NULL,
+  `Other Current Assets` varchar(20) DEFAULT NULL,
+  `Total Current Assets` varchar(20) DEFAULT NULL,
+  `Net PP&amp;E` varchar(20) DEFAULT NULL,
+  `Intangibles` varchar(20) DEFAULT NULL,
+  `Other Long-Term Assets` varchar(20) DEFAULT NULL,
+  `Total Assets` varchar(20) DEFAULT NULL,
+  `Accounts Payable` varchar(20) DEFAULT NULL,
+  `Short-Term Debt` varchar(20) DEFAULT NULL,
+  `Taxes Payable` varchar(20) DEFAULT NULL,
+  `Accrued Liabilities` varchar(20) DEFAULT NULL,
+  `Other Short-Term Liabilities` varchar(20) DEFAULT NULL,
+  `Total Current Liabilities` varchar(20) DEFAULT NULL,
+  `Long-Term Debt` varchar(20) DEFAULT NULL,
+  `Other Long-Term Liabilities` varchar(20) DEFAULT NULL,
+  `Total Liabilities` varchar(20) DEFAULT NULL,
+  `Total Stockholders Equity` varchar(20) DEFAULT NULL,
+  `Total Liabilities &amp; Equity` varchar(20) DEFAULT NULL,
+  `Current Ratio` varchar(20) DEFAULT NULL,
+  `Quick Ratio` varchar(20) DEFAULT NULL,
+  `Financial Leverage` varchar(20) DEFAULT NULL,
+  `Debt/Equity` varchar(20) DEFAULT NULL,
+  `Days Sales Outstanding` varchar(20) DEFAULT NULL,
+  `Days Inventory` varchar(20) DEFAULT NULL,
+  `Payables Period` varchar(20) DEFAULT NULL,
+  `Cash Conversion Cycle` varchar(20) DEFAULT NULL,
+  `Receivables Turnover` varchar(20) DEFAULT NULL,
+  `Inventory Turnover` varchar(20) DEFAULT NULL,
+  `Fixed Assets Turnover` varchar(20) DEFAULT NULL,
+  `Asset Turnover` varchar(20) DEFAULT NULL,
+  `SYMBOL` varchar(20) DEFAULT NULL,
+#  PRIMARY KEY (`idAnnualData`)
+) ENGINE=CSV DEFAULT CHARSET=latin1</string>
+		<string>use testdb
+ CREATE TABLE `AnnualData` (
+#  `idAnnualData` varchar(20) NOT NULL DEFAULT '',
+  `index` varchar(20) DEFAULT NULL,
+  `Revenue USD Mil` varchar(20) DEFAULT NULL,
+  `Gross Margin percent` varchar(20) DEFAULT NULL,
+  `Operating Income USD Mil` varchar(20) DEFAULT NULL,
+  `Operating Margin percent` varchar(20) DEFAULT NULL,
+  `Net Income USD Mil` varchar(20) DEFAULT NULL,
+  `Earnings Per Share USD` varchar(20) DEFAULT NULL,
+  `Dividends USD` varchar(20) DEFAULT NULL,
+  `Payout Ratio percent` varchar(20) DEFAULT NULL,
+  `Shares Mil` varchar(20) DEFAULT NULL,
+  `Book Value Per Share USD` varchar(20) DEFAULT NULL,
+  `Operating Cash Flow USD Mil` varchar(20) DEFAULT NULL,
+  `Cap Spending USD Mil` varchar(20) DEFAULT NULL,
+  `Free Cash Flow USD Mil` varchar(20) DEFAULT NULL,
+  `Free Cash Flow Per Share USD` varchar(20) DEFAULT NULL,
+  `Working Capital USD Mil` varchar(20) DEFAULT NULL,
+  `Revenue` varchar(20) DEFAULT NULL,
+  `COGS``Gross Margin` varchar(20) DEFAULT NULL,
+  `SG&amp;A``R&amp;D``Other` varchar(20) DEFAULT NULL,
+  `Operating Margin` varchar(20) DEFAULT NULL,
+  `Net Int Inc &amp; Other` varchar(20) DEFAULT NULL,
+  `EBT Margin` varchar(20) DEFAULT NULL,
+  `Tax Rate percent` varchar(20) DEFAULT NULL,
+  `Net Margin percent` varchar(20) DEFAULT NULL,
+  `Asset Turnover (Average)` varchar(20) DEFAULT NULL,
+  `Return on Assets percent` varchar(20) DEFAULT NULL,
+  `Financial Leverage (Average)` varchar(20) DEFAULT NULL,
+  `Return on Equity percent` varchar(20) DEFAULT NULL,
+  `Return on Invested Capital percent` varchar(20) DEFAULT NULL,
+  `Interest Coverage` varchar(20) DEFAULT NULL,
+  `Revenue YOY` varchar(20) DEFAULT NULL,
+  `Revenue 3yr avg` varchar(20) DEFAULT NULL,
+  `Revenue 5yr avg` varchar(20) DEFAULT NULL,
+  `Revenue 10yr avg` varchar(20) DEFAULT NULL,
+  `Operating income yoy` varchar(20) DEFAULT NULL,
+  `Operating income 3yr avg` varchar(20) DEFAULT NULL,
+  `Operating income 5yr avg` varchar(20) DEFAULT NULL,
+  `Operating income 10yr avg` varchar(20) DEFAULT NULL,
+  `Net income yoy` varchar(20) DEFAULT NULL,
+  `Net income 3yr avg` varchar(20) DEFAULT NULL,
+  `Net income 5yr avg` varchar(20) DEFAULT NULL,
+  `Net income 10yr avg` varchar(20) DEFAULT NULL,
+  `EPS YOY` varchar(20) DEFAULT NULL,
+  `EPS 3yr avg` varchar(20) DEFAULT NULL,
+  `EPS 5yr avg` varchar(20) DEFAULT NULL,
+  `EPS 10yr avg` varchar(20) DEFAULT NULL,
+  `Operating Cash Flow Growth percent YOY` varchar(20) DEFAULT NULL,
+  `Free Cash Flow Growth percent YOY` varchar(20) DEFAULT NULL,
+  `Cap Ex as a percent of Sales` varchar(20) DEFAULT NULL,
+  `Free Cash Flow/Sales percent` varchar(20) DEFAULT NULL,
+  `Free Cash Flow/Net Income` varchar(20) DEFAULT NULL,
+  `Cash &amp; Short-Term Investments` varchar(20) DEFAULT NULL,
+  `Accounts Receivable` varchar(20) DEFAULT NULL,
+  `Inventory` varchar(20) DEFAULT NULL,
+  `Other Current Assets` varchar(20) DEFAULT NULL,
+  `Total Current Assets` varchar(20) DEFAULT NULL,
+  `Net PP&amp;E` varchar(20) DEFAULT NULL,
+  `Intangibles` varchar(20) DEFAULT NULL,
+  `Other Long-Term Assets` varchar(20) DEFAULT NULL,
+  `Total Assets` varchar(20) DEFAULT NULL,
+  `Accounts Payable` varchar(20) DEFAULT NULL,
+  `Short-Term Debt` varchar(20) DEFAULT NULL,
+  `Taxes Payable` varchar(20) DEFAULT NULL,
+  `Accrued Liabilities` varchar(20) DEFAULT NULL,
+  `Other Short-Term Liabilities` varchar(20) DEFAULT NULL,
+  `Total Current Liabilities` varchar(20) DEFAULT NULL,
+  `Long-Term Debt` varchar(20) DEFAULT NULL,
+  `Other Long-Term Liabilities` varchar(20) DEFAULT NULL,
+  `Total Liabilities` varchar(20) DEFAULT NULL,
+  `Total Stockholders Equity` varchar(20) DEFAULT NULL,
+  `Total Liabilities &amp; Equity` varchar(20) DEFAULT NULL,
+  `Current Ratio` varchar(20) DEFAULT NULL,
+  `Quick Ratio` varchar(20) DEFAULT NULL,
+  `Financial Leverage` varchar(20) DEFAULT NULL,
+  `Debt/Equity` varchar(20) DEFAULT NULL,
+  `Days Sales Outstanding` varchar(20) DEFAULT NULL,
+  `Days Inventory` varchar(20) DEFAULT NULL,
+  `Payables Period` varchar(20) DEFAULT NULL,
+  `Cash Conversion Cycle` varchar(20) DEFAULT NULL,
+  `Receivables Turnover` varchar(20) DEFAULT NULL,
+  `Inventory Turnover` varchar(20) DEFAULT NULL,
+  `Fixed Assets Turnover` varchar(20) DEFAULT NULL,
+  `Asset Turnover` varchar(20) DEFAULT NULL,
+  `SYMBOL` varchar(20) DEFAULT NULL,
+#  PRIMARY KEY (`idAnnualData`)
+) ENGINE=CSV DEFAULT CHARSET=latin1</string>
+		<string>CREATE TABLE `AnnualData` (
+#  `idAnnualData` varchar(20) NOT NULL DEFAULT '',
+  `index` varchar(20) DEFAULT NULL,
+  `Revenue USD Mil` varchar(20) DEFAULT NULL,
+  `Gross Margin percent` varchar(20) DEFAULT NULL,
+  `Operating Income USD Mil` varchar(20) DEFAULT NULL,
+  `Operating Margin percent` varchar(20) DEFAULT NULL,
+  `Net Income USD Mil` varchar(20) DEFAULT NULL,
+  `Earnings Per Share USD` varchar(20) DEFAULT NULL,
+  `Dividends USD` varchar(20) DEFAULT NULL,
+  `Payout Ratio percent` varchar(20) DEFAULT NULL,
+  `Shares Mil` varchar(20) DEFAULT NULL,
+  `Book Value Per Share USD` varchar(20) DEFAULT NULL,
+  `Operating Cash Flow USD Mil` varchar(20) DEFAULT NULL,
+  `Cap Spending USD Mil` varchar(20) DEFAULT NULL,
+  `Free Cash Flow USD Mil` varchar(20) DEFAULT NULL,
+  `Free Cash Flow Per Share USD` varchar(20) DEFAULT NULL,
+  `Working Capital USD Mil` varchar(20) DEFAULT NULL,
+  `Revenue` varchar(20) DEFAULT NULL,
+  `COGS``Gross Margin` varchar(20) DEFAULT NULL,
+  `SG&amp;A``R&amp;D``Other` varchar(20) DEFAULT NULL,
+  `Operating Margin` varchar(20) DEFAULT NULL,
+  `Net Int Inc &amp; Other` varchar(20) DEFAULT NULL,
+  `EBT Margin` varchar(20) DEFAULT NULL,
+  `Tax Rate percent` varchar(20) DEFAULT NULL,
+  `Net Margin percent` varchar(20) DEFAULT NULL,
+  `Asset Turnover (Average)` varchar(20) DEFAULT NULL,
+  `Return on Assets percent` varchar(20) DEFAULT NULL,
+  `Financial Leverage (Average)` varchar(20) DEFAULT NULL,
+  `Return on Equity percent` varchar(20) DEFAULT NULL,
+  `Return on Invested Capital percent` varchar(20) DEFAULT NULL,
+  `Interest Coverage` varchar(20) DEFAULT NULL,
+  `Revenue YOY` varchar(20) DEFAULT NULL,
+  `Revenue 3yr avg` varchar(20) DEFAULT NULL,
+  `Revenue 5yr avg` varchar(20) DEFAULT NULL,
+  `Revenue 10yr avg` varchar(20) DEFAULT NULL,
+  `Operating income yoy` varchar(20) DEFAULT NULL,
+  `Operating income 3yr avg` varchar(20) DEFAULT NULL,
+  `Operating income 5yr avg` varchar(20) DEFAULT NULL,
+  `Operating income 10yr avg` varchar(20) DEFAULT NULL,
+  `Net income yoy` varchar(20) DEFAULT NULL,
+  `Net income 3yr avg` varchar(20) DEFAULT NULL,
+  `Net income 5yr avg` varchar(20) DEFAULT NULL,
+  `Net income 10yr avg` varchar(20) DEFAULT NULL,
+  `EPS YOY` varchar(20) DEFAULT NULL,
+  `EPS 3yr avg` varchar(20) DEFAULT NULL,
+  `EPS 5yr avg` varchar(20) DEFAULT NULL,
+  `EPS 10yr avg` varchar(20) DEFAULT NULL,
+  `Operating Cash Flow Growth percent YOY` varchar(20) DEFAULT NULL,
+  `Free Cash Flow Growth percent YOY` varchar(20) DEFAULT NULL,
+  `Cap Ex as a percent of Sales` varchar(20) DEFAULT NULL,
+  `Free Cash Flow/Sales percent` varchar(20) DEFAULT NULL,
+  `Free Cash Flow/Net Income` varchar(20) DEFAULT NULL,
+  `Cash &amp; Short-Term Investments` varchar(20) DEFAULT NULL,
+  `Accounts Receivable` varchar(20) DEFAULT NULL,
+  `Inventory` varchar(20) DEFAULT NULL,
+  `Other Current Assets` varchar(20) DEFAULT NULL,
+  `Total Current Assets` varchar(20) DEFAULT NULL,
+  `Net PP&amp;E` varchar(20) DEFAULT NULL,
+  `Intangibles` varchar(20) DEFAULT NULL,
+  `Other Long-Term Assets` varchar(20) DEFAULT NULL,
+  `Total Assets` varchar(20) DEFAULT NULL,
+  `Accounts Payable` varchar(20) DEFAULT NULL,
+  `Short-Term Debt` varchar(20) DEFAULT NULL,
+  `Taxes Payable` varchar(20) DEFAULT NULL,
+  `Accrued Liabilities` varchar(20) DEFAULT NULL,
+  `Other Short-Term Liabilities` varchar(20) DEFAULT NULL,
+  `Total Current Liabilities` varchar(20) DEFAULT NULL,
+  `Long-Term Debt` varchar(20) DEFAULT NULL,
+  `Other Long-Term Liabilities` varchar(20) DEFAULT NULL,
+  `Total Liabilities` varchar(20) DEFAULT NULL,
+  `Total Stockholders Equity` varchar(20) DEFAULT NULL,
+  `Total Liabilities &amp; Equity` varchar(20) DEFAULT NULL,
+  `Current Ratio` varchar(20) DEFAULT NULL,
+  `Quick Ratio` varchar(20) DEFAULT NULL,
+  `Financial Leverage` varchar(20) DEFAULT NULL,
+  `Debt/Equity` varchar(20) DEFAULT NULL,
+  `Days Sales Outstanding` varchar(20) DEFAULT NULL,
+  `Days Inventory` varchar(20) DEFAULT NULL,
+  `Payables Period` varchar(20) DEFAULT NULL,
+  `Cash Conversion Cycle` varchar(20) DEFAULT NULL,
+  `Receivables Turnover` varchar(20) DEFAULT NULL,
+  `Inventory Turnover` varchar(20) DEFAULT NULL,
+  `Fixed Assets Turnover` varchar(20) DEFAULT NULL,
+  `Asset Turnover` varchar(20) DEFAULT NULL,
+  `SYMBOL` varchar(20) DEFAULT NULL,
+#  PRIMARY KEY (`idAnnualData`)
+) ENGINE=CSV DEFAULT CHARSET=latin1</string>
 	</array>
 	<key>rdbms_type</key>
 	<string>mysql</string>
