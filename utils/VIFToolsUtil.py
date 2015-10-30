@@ -92,7 +92,7 @@ def csvfiles2mysql():
 
 
     sql = """LOAD DATA LOCAL INFILE '{}'
-    INTO TABLE testdb.AnnualData
+    INTO TABLE testdb.AnnualKRData
     FIELDS TERMINATED BY ','
     OPTIONALLY ENCLOSED BY '"'
     LINES TERMINATED BY '\\n'

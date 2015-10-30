@@ -1,8 +1,8 @@
 use testdb;
 
-CREATE TABLE IF NOT EXISTS `testdb`.`AnnualData` (
+CREATE TABLE IF NOT EXISTS `testdb`.`AnnualKRData` (
 #  `idAnnualData` INT NOT NULL AUTO_INCREMENT,
-  `index` VARCHAR(20) NULL,
+  `Year` VARCHAR(20) NULL,
   `Revenue USD Mil` VARCHAR(20) NULL,
   `Gross Margin percent` VARCHAR(20) NULL,
   `Operating Income USD Mil` VARCHAR(20) NULL,

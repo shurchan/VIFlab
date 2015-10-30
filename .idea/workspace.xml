@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f1a83a3-08ab-4152-b3fd-d41c96bfe573" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/temp/ms_stats.csv" afterPath="$PROJECT_DIR$/data/temp/ms_stats.csv" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/temp/aaa.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/temp/ms_stats_tNYS:gm_t.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/temp/ms_stats_tNYS:unp_t.csv" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/data/temp/ms_stats_tNAS:msft_t.csv" afterPath="$PROJECT_DIR$/data/temp/ms_stats_tNAS:MSFT_t.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/data/temp/ms_stats_tNAS:yhoo_t.csv" afterPath="$PROJECT_DIR$/data/temp/ms_stats_tNAS:YHOO_t.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/VIFToolsUtil.py" afterPath="$PROJECT_DIR$/utils/VIFToolsUtil.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/createtable2.sql" afterPath="$PROJECT_DIR$/sql/createtable2.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data_ext_ms.py" afterPath="$PROJECT_DIR$/tests/data_ext_ms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/loadcsvfiles2mysql.sql" afterPath="$PROJECT_DIR$/sql/loadcsvfiles2mysql.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/morningstar_stats_extractor.py" afterPath="$PROJECT_DIR$/utils/morningstar_stats_extractor.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/temp/ms_stats.csv" afterPath="$PROJECT_DIR$/data/temp/ms_stats.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="viflab.iws" />
@@ -30,11 +36,21 @@
       <file leaf-file-name="morningstar_stats_extractor.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/morningstar_stats_extractor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+            <state vertical-scroll-proportion="-12.666667">
+              <caret line="115" column="49" selection-start-line="115" selection-start-column="49" selection-end-line="115" selection-end-column="49" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createtable2.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sql/createtable2.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -43,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/utils/VIFToolsUtil.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="93" column="35" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="35" />
+              <caret line="94" column="34" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -64,8 +80,8 @@
       <file leaf-file-name="data_ext_ms.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/data_ext_ms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5744681">
-              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.77375567">
+              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -80,8 +96,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/tests/morningstar_stats_extractor.py" />
-        <option value="$PROJECT_DIR$/utils/morningstar_stats_extractor.py" />
+        <option value="$PROJECT_DIR$/sql/createtable2.sql" />
         <option value="$PROJECT_DIR$/utils/VIFToolsUtil.py" />
+        <option value="$PROJECT_DIR$/utils/morningstar_stats_extractor.py" />
         <option value="$PROJECT_DIR$/tests/data_ext_ms.py" />
       </list>
     </option>
@@ -91,7 +108,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="11" />
-    <option name="y" value="35" />
+    <option name="y" value="36" />
     <option name="width" value="1400" />
     <option name="height" value="840" />
   </component>
@@ -118,8 +135,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -163,6 +180,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="viflab" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="viflab" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sql" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -244,6 +275,28 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/morningstar_stats_extractor.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in viflab" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="viflab" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="$PROJECT_DIR$" />
+      <option name="TEST_TYPE" value="TEST_FOLDER" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -368,18 +421,20 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.data_ext_ms" />
       <item index="1" class="java.lang.String" itemvalue="Python.morningstar_stats_extractor" />
       <item index="2" class="java.lang.String" itemvalue="Python.VIFToolsUtil" />
       <item index="3" class="java.lang.String" itemvalue="Python.morningstar_stats_extractor (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in viflab" />
     </list>
     <recent_temporary>
-      <list size="4">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.data_ext_ms" />
         <item index="1" class="java.lang.String" itemvalue="Python.morningstar_stats_extractor (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.VIFToolsUtil" />
-        <item index="3" class="java.lang.String" itemvalue="Python.morningstar_stats_extractor" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in viflab" />
+        <item index="3" class="java.lang.String" itemvalue="Python.VIFToolsUtil" />
+        <item index="4" class="java.lang.String" itemvalue="Python.morningstar_stats_extractor" />
       </list>
     </recent_temporary>
   </component>
@@ -397,7 +452,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="11" y="35" width="1400" height="840" extended-state="0" />
+    <frame x="11" y="36" width="1400" height="840" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -407,7 +462,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2538071" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.272" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.336" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33556148" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -436,7 +491,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/tests/data_ext_ms.py</url>
-          <line>31</line>
+          <line>38</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
@@ -449,12 +504,99 @@
           <line>107</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/utils/morningstar_stats_extractor.py</url>
+          <line>90</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/utils/morningstar_stats_extractor.py</url>
+          <line>78</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/utils/morningstar_stats_extractor.py</url>
+          <line>109</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="14" />
+      <option name="time" value="17" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/utils/morningstar_stats_extractor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/VIFToolsUtil.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="113" column="46" selection-start-line="113" selection-start-column="16" selection-end-line="113" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/data_ext_ms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/morningstar_stats_extractor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="154" column="12" selection-start-line="154" selection-start-column="12" selection-end-line="154" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/VIFToolsUtil.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="111" column="30" selection-start-line="111" selection-start-column="30" selection-end-line="111" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/data_ext_ms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/data_ext_ms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -551,30 +693,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/morningstar_stats_extractor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/VIFToolsUtil.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="93" column="35" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="35" />
+          <caret line="94" column="34" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sql/createtable2.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/morningstar_stats_extractor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.666667">
+          <caret line="115" column="49" selection-start-line="115" selection-start-column="49" selection-end-line="115" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/data_ext_ms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5744681">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.77375567">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding />
         </state>
       </provider>

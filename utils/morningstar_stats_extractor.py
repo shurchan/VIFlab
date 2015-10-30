@@ -1,6 +1,7 @@
 import re, os, sys, math, time, datetime, shutil
 import pandas
 from pattern.web import URL, DOM, plaintext, extension, Element, find_urls
+import time
 
 class MS_StatsExtract(object):
     """
@@ -86,9 +87,15 @@ class MS_StatsExtract(object):
         url = URL(self.com_data_full_url)
         f = open(self.ms_stats_extract_temp_csv, 'wb') # save as test.gif
         try:
+            print ('csv url:', self.com_data_full_url)
             f.write(url.download())#if have problem skip
-        except:
-            if self.__print_download_fault: print 'Problem with processing this data: ', self.com_data_full_url
+            #print "Wait for 10 secs ...."
+            #time.sleep(10)
+        #except:
+        except Exception, e:
+            print ('Download exception: %s' % e.message)
+            print 'Problem with processing this data: ', self.com_data_full_url
+            #if self.__print_download_fault: print 'Problem with processing this data: ', self.com_data_full_url
             self.download_fault =1
         f.close()
 
@@ -103,7 +110,7 @@ class MS_StatsExtract(object):
             self.target_stock_data_df =  pandas.read_csv(self.ms_stats_extract_temp_csv, header =2, index_col = 0, skiprows = [19,20,31,41,42,43,48,58,53,64,65,72,73,95,101,102])
 #            self.target_stock_data_df.info()
         except:
-            print 'problem downloading files. '
+            print 'Problem reading files via pandas.read_csv()'
         self.target_stock_data_df = self.target_stock_data_df.transpose().reset_index()
         self.target_stock_data_df["SYMBOL"] = self.com_data_stock_portion_url
         #after transpose save back to same file and call again for column duplication problem
@@ -133,7 +140,7 @@ class MS_StatsExtract(object):
             self.com_data_allstock_df = pandas.concat([self.com_data_allstock_df,self.target_stock_data_df],ignore_index =True)
 
     def save2mysql(self): #TODO: Port data from csv to mysql
-        print 'Processing stock:', self.stock_list
+        print 'Save stock info to mysql:', self.stock_list
 
     def get_com_data_fr_all_stocks(self):
         """ Cater for all stocks. Each stock is parse one at a time.
@@ -141,10 +148,13 @@ class MS_StatsExtract(object):
         self.com_data_allstock_df = pandas.DataFrame()
 
         for stock in self.stock_list:
-            print 'Processing stock:', stock
+            print 'Set target stock:', stock
             self.set_target_stock_url(stock)
+            print 'Get stock info:', stock
             self.get_com_data()
-            self.downloading_csv()
+            #print 'Download stock info to csv:', stock
+            #self.downloading_csv()
+            print 'Processing stock:', stock
             self.process_dataset()
 
 
