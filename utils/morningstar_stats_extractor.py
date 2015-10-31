@@ -1,4 +1,4 @@
-import re, os, sys, math, time, datetime, shutil
+import re, os, sys, math, time, datetime, shutil, thread
 import pandas
 from pattern.web import URL, DOM, plaintext, extension, Element, find_urls
 import time
@@ -12,20 +12,31 @@ class MS_StatsExtract(object):
         """ List of url parameters -- for url formation """
 ## http://financials.morningstar.com/ajax/exportKR2CSV.html?t=XNAS:AAPL&region=usa&culture=en-US&productcode=MLE&cur=&order=desc&r=448121
         #self.com_data_start_url = 'http://financials.morningstar.com/ajax/exportKR2CSV.html?&callback=?&t=XSES:'
-        self.com_data_start_url = 'http://financials.morningstar.com/ajax/exportKR2CSV.html?t=X'
+        self.com_data_start_url = r'http://financials.morningstar.com/ajax/exportKR2CSV.html?t=X'
         self.com_data_stock_portion_url = ''
         self.com_data_stock_portion_additional_url = ''# for adding additonal str to the stock url.
         #self.com_data_end_url = '&region=sgp&culture=en-US&cur=&order=asc'
-        self.com_data_end_url = '&region=usa&culture=en-US&productcode=MLE&cur=&order=desc&r=448121'
+        #self.com_data_end_url = '&region=usa&culture=en-US&productcode=MLE&cur=&order=desc&r=448121'
+        self.com_data_end_url = ''
         self.com_data_full_url = ''
+        self.com_is_data_full_url = ''
+        self.com_bs_data_full_url = ''
+        self.com_cf_data_full_url = ''
         self.stock_list = ''#list of stock to parse.
+
+        #Finance statement
+        self.com_data_is_url=r'http://financials.morningstar.com/ajax/ReportProcess4CSV.html?reportType=is&t=X'
+        self.com_data_bs_url=r'http://financials.morningstar.com/ajax/ReportProcess4CSV.html?reportType=bs&t=X'
+        self.com_data_cf_url=r'http://financials.morningstar.com/ajax/ReportProcess4CSV.html?reportType=cf&t=X'
 
         ## printing options
         self.__print_url = 0
 
         ## temp csv storage path
-        self.ms_stats_extract_temp_csv = r'/Users/misc/code/viflab/data/temp/ms_stats.csv'
-        self.ms_stats_extract_temp_csv_transpose = r'/Users/misc/code/viflab/data/temp/ms_stats_t'
+        #self.ms_stats_extract_temp_csv = r'/Users/misc/code/data/temp/ms_stats.csv'
+        self.com_data_folder = r'/Users/misc/code/data/temp/'
+        self.ms_stats_extract_temp_csv = ''
+        self.ms_stats_extract_temp_csv_transpose = ''
 
         ## Temp Results storage
         self.target_stock_data_df = object()
@@ -67,6 +78,14 @@ class MS_StatsExtract(object):
         self.com_data_full_url = self.com_data_start_url + self.com_data_stock_portion_url +\
                                    self.com_data_end_url
 
+        self.com_is_data_full_url = self.com_data_is_url + self.com_data_stock_portion_url
+        self.com_bs_data_full_url = self.com_data_bs_url + self.com_data_stock_portion_url
+        self.com_cf_data_full_url = self.com_data_cf_url + self.com_data_stock_portion_url
+
+    def form_csv_str(self):
+        self.ms_stats_extract_temp_csv = self.com_data_folder+self.com_data_stock_portion_url+'_ms_krstats.csv'
+        self.ms_stats_extract_temp_csv_transpose = self.com_data_folder+self.com_data_stock_portion_url+'_ms_krstats_t.csv'
+
     def get_com_data(self):
         """ Combine the cur quotes function.
             Formed the url, download the csv, put in the header. Have a dataframe object.
@@ -74,6 +93,7 @@ class MS_StatsExtract(object):
         """
         self.form_url_str()
         if self.__print_url: print self.com_data_full_url
+        self.form_csv_str()
 
         ## here will process the data set
         self.downloading_csv()
@@ -85,6 +105,8 @@ class MS_StatsExtract(object):
         self.download_fault = 0
 
         url = URL(self.com_data_full_url)
+
+        print 'Download to: '+self.ms_stats_extract_temp_csv
         f = open(self.ms_stats_extract_temp_csv, 'wb') # save as test.gif
         try:
             print ('csv url:', self.com_data_full_url)
@@ -94,31 +116,43 @@ class MS_StatsExtract(object):
         #except:
         except Exception, e:
             print ('Download exception: %s' % e.message)
-            print 'Problem with processing this data: ', self.com_data_full_url
-            #if self.__print_download_fault: print 'Problem with processing this data: ', self.com_data_full_url
+            print 'Problem when downloading this data: ', self.com_data_full_url
+            #if self.download_fault: print 'Problem with processing this data: ', self.com_data_full_url
             self.download_fault =1
+
         f.close()
+
 
 
     def process_dataset(self):
         """ Processed the data set by converting the csv to dataframe and attached the information for various stocks.
 
         """
+        if self.download_fault:
+            print 'Problem when downloading csv from this url: ', self.com_data_full_url
+            return
 
         ## Rows with additional headers are skipped
         try:
             self.target_stock_data_df =  pandas.read_csv(self.ms_stats_extract_temp_csv, header =2, index_col = 0, skiprows = [19,20,31,41,42,43,48,58,53,64,65,72,73,95,101,102])
 #            self.target_stock_data_df.info()
         except:
-            print 'Problem reading files via pandas.read_csv()'
+            print 'Problem reading files via pandas.read_csv() so return without transposing csv'
+            return
+            #thread.interrupt_main()
+            #os._exit(1)
+            #sys.exit()
+
         self.target_stock_data_df = self.target_stock_data_df.transpose().reset_index()
         self.target_stock_data_df["SYMBOL"] = self.com_data_stock_portion_url
         #after transpose save back to same file and call again for column duplication problem
 
         #self.target_stock_data_df.to_csv(self.ms_stats_extract_temp_csv_transpose, index =False)
-        self.target_stock_data_df.to_csv(self.ms_stats_extract_temp_csv_transpose+self.com_data_stock_portion_url+'_t.csv', index =False)
+        #self.ms_stats_extract_temp_csv_transpose = self.ms_stats_extract_temp_csv_transpose+self.com_data_stock_portion_url+'_ms_krstats_t.csv'
 
-        self.target_stock_data_df =  pandas.read_csv(self.ms_stats_extract_temp_csv_transpose+self.com_data_stock_portion_url+'_t.csv')
+        self.target_stock_data_df.to_csv(self.ms_stats_extract_temp_csv_transpose, index =False)
+
+        self.target_stock_data_df =  pandas.read_csv(self.ms_stats_extract_temp_csv_transpose)
         #rename columns
         #TODO: There is a bug here. CSV and DF columns do not match.
         self.target_stock_data_df.rename(columns={'Year over Year':'Revenue yoy','3-Year Average':'Revenue 3yr avg',
