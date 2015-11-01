@@ -1,0 +1,8 @@
+Design Finance Statement database
+Basically, standardize all three finance statements fields
+
+1. Use AAPL, LBTYA, WFC to identify all fields of income statement, balance sheet and cash flow statement
+2. Create 3 empty panda.dataframes to add all "potential" fields of income statement, balance sheet and cash flow statement respectively
+3. Import any company finance statements with real numbers to fill panda.df with numbers matched field name in above #2
+4. Export panda.df to csv with standardized "fixed" fields of income statement, balance sheet and cash flow statement
+5. Export those fixed fields csv of finance statements to finance statement db with fixed schema

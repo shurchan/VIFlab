@@ -11,7 +11,7 @@ import VIFToolsUtil
 #data_ext = YFinanceDataExtr()
 data_ext = MS_StatsExtract()
 
-cvsfilefolder = r'/Users/misc/code/viflab/data/temp'
+#cvsfilefolder = r'/Users/misc/code/viflab/data/temp'
 
 ## Specify the stocks to be retrieved. Each url constuct max up to 50 stocks.
 #data_ext.target_stocks = ['AAPL','GOOG'] #special character need to be converted
@@ -19,11 +19,12 @@ cvsfilefolder = r'/Users/misc/code/viflab/data/temp'
 #data_ext.stock_list = 'AAPL' #special character need to be converted
 #data_ext.com_data_stock_portion_url = 'AAPL'
 #data_ext.set_target_stock_url('AAPL')
-#data_ext.stock_list = ['NAS:AAPL','NAS:GOOG','NAS:yhoo','NAS:msft','NYS:gm','NYS:unp','NAS:LBTYA','NYS:WFC','NYS:SAN','NAS:ARMH','NAS:ZINC','NYS:BP','NYS:CHK','NYS:NOV','NYS:CL','NYS:MMM']
+data_ext.stock_list = ['NAS:AAPL','NAS:GOOG','NYS:BRK.A','NAS:yhoo','NYS:BAC.WS.B','NAS:msft','NYS:gm','NYS:unp','NAS:LBTYA','NYS:WFC','NYS:SAN','NAS:ARMH','NAS:ZINC','NYS:BP','NYS:CHK','NYS:NOV','NYS:CL','NYS:MMM']
 #data_ext.stock_list = ['NYS:KING', 'NYS:PAH','NYS:BAM','NAS:GLUU','NYS:MKL','NAS:COST']
 
 #data_ext.stock_list = ['NAS:AAPL','NAS:ARMH','NYS:SAN','NAS:ZINC','NYS:BP','NYS:CHK','NYS:NOV','NYS:CL','NYS:MMM']
-data_ext.stock_list = ['NYS:BAC.WS.A','NYS:BAC.WS.B','NAS:AAPL']
+#data_ext.stock_list = ['NAS:AAPL']
+#data_ext.stock_list = ['NYS:BAC.WS.A','NAS:AAPL']
 #data_ext.stock_list =['NAS:AAPL','NYS:CL','NYS:BRK.A','NYS:BRK.B']
 
 ## Get the url str

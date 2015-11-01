@@ -1,0 +1,13 @@
+SQL vs NOSQL
+1. http://highscalability.com/blog/2010/12/6/what-the-heck-are-you-actually-using-nosql-for.html
+  a. Big data
+  b. Huge write performance - 135B msg /day in FB, 7TB/day in twitter
+  c. Fast key value access
+  d. Flexible schema and data types
+  e. Schema migration
+2. Use cases
+  a. Applications where a wide variety of different write, read, query, and consistency patterns need to be supported. There are systems optimized for 50% reads 50% writes, 95% writes, or 95% reads. Read-only applications needing extreme speed and resiliency, simple queries, and can tolerate slightly stale data. Applications requiring moderate performance, read/write access, simple queries, completely authoritative data. Read-only application which complex query requirements.
+  b. Dynamic table creation.
+  c. Dynamic table creation.
+  d. Two tier applications where low latency data is made available through a fast NoSQL interface, but the data itself can be calculated and updated by high latency Hadoop apps or other low priority apps.
+3.http://nosql-database.org/

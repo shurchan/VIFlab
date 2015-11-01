@@ -12,7 +12,7 @@ class MS_StatsExtract(object):
         """ List of url parameters -- for url formation """
 ## http://financials.morningstar.com/ajax/exportKR2CSV.html?t=XNAS:AAPL&region=usa&culture=en-US&productcode=MLE&cur=&order=desc&r=448121
         #self.com_data_start_url = 'http://financials.morningstar.com/ajax/exportKR2CSV.html?&callback=?&t=XSES:'
-        self.com_data_start_url = r'http://financials.morningstar.com/ajax/exportKR2CSV.html?t=X'
+        self.com_kr_data_url = r'http://financials.morningstar.com/ajax/exportKR2CSV.html?t=X'
         self.com_data_stock_portion_url = ''
         self.com_data_stock_portion_additional_url = ''# for adding additonal str to the stock url.
         #self.com_data_end_url = '&region=sgp&culture=en-US&cur=&order=asc'
@@ -25,18 +25,31 @@ class MS_StatsExtract(object):
         self.stock_list = ''#list of stock to parse.
 
         #Finance statement
-        self.com_data_is_url=r'http://financials.morningstar.com/ajax/ReportProcess4CSV.html?reportType=is&t=X'
-        self.com_data_bs_url=r'http://financials.morningstar.com/ajax/ReportProcess4CSV.html?reportType=bs&t=X'
-        self.com_data_cf_url=r'http://financials.morningstar.com/ajax/ReportProcess4CSV.html?reportType=cf&t=X'
+        #                      http://financials.morningstar.com/ajax/ReportProcess4CSV.html?t=XNAS:AAPL&region=usa&culture=en-US&productcode=MLE&cur=&reportType=is&period=12&dataType=A&order=asc&columnYear=10&curYearPart=1st5year&rounding=3&view=raw&r=863441&denominatorView=raw&number=3
+        #http://financials.morningstar.com/ajax/ReportProcess4CSV.html?region=usa&culture=en-US&productcode=MLE&cur=&reportType=is&period=12&dataType=A&order=asc&columnYear=10&curYearPart=1st5year&rounding=3&view=raw&r=863441&denominatorView=raw&number=3&t=XNAS:AAPL
+        self.com_is_data_url=r'http://financials.morningstar.com/ajax/ReportProcess4CSV.html?region=usa&culture=en-US&productcode=MLE&cur=&reportType=is&period=12&dataType=A&order=asc&columnYear=10&curYearPart=1st5year&rounding=3&view=raw&r=863441&denominatorView=raw&number=3&t=X'
+        self.com_bs_data_url=r'http://financials.morningstar.com/ajax/ReportProcess4CSV.html?region=usa&culture=en-US&productcode=MLE&cur=&reportType=bs&period=12&dataType=A&order=asc&columnYear=10&curYearPart=1st5year&rounding=3&view=raw&r=863441&denominatorView=raw&number=3&t=X'
+        self.com_cf_data_url=r'http://financials.morningstar.com/ajax/ReportProcess4CSV.html?region=usa&culture=en-US&productcode=MLE&cur=&reportType=cf&period=12&dataType=A&order=asc&columnYear=10&curYearPart=1st5year&rounding=3&view=raw&r=863441&denominatorView=raw&number=3&t=X'
 
         ## printing options
         self.__print_url = 0
 
         ## temp csv storage path
         #self.ms_stats_extract_temp_csv = r'/Users/misc/code/data/temp/ms_stats.csv'
-        self.com_data_folder = r'/Users/misc/code/data/temp/'
-        self.ms_stats_extract_temp_csv = ''
-        self.ms_stats_extract_temp_csv_transpose = ''
+        self.com_kr_data_folder = r'/Users/misc/code/data/temp/kr/'
+        self.com_is_data_folder = r'/Users/misc/code/data/temp/is/'
+        self.com_bs_data_folder = r'/Users/misc/code/data/temp/bs/'
+        self.com_cf_data_folder = r'/Users/misc/code/data/temp/cf/'
+
+        #finance statement csv file name
+        self.ms_kr_stats_extract_temp_csv = ''
+        self.ms_kr_stats_extract_temp_csv_transpose = ''
+        self.ms_is_stats_extract_temp_csv = ''
+        self.ms_is_stats_extract_temp_csv_transpose = ''
+        self.ms_bs_stats_extract_temp_csv = ''
+        self.ms_bs_stats_extract_temp_csv_transpose = ''
+        self.ms_cf_stats_extract_temp_csv = ''
+        self.ms_cf_stats_extract_temp_csv_transpose = ''
 
         ## Temp Results storage
         self.target_stock_data_df = object()
@@ -75,16 +88,23 @@ class MS_StatsExtract(object):
             Args:
                 type (str): Retrieval type.
         """
-        self.com_data_full_url = self.com_data_start_url + self.com_data_stock_portion_url +\
+        self.com_kr_data_full_url = self.com_kr_data_url + self.com_data_stock_portion_url +\
                                    self.com_data_end_url
 
-        self.com_is_data_full_url = self.com_data_is_url + self.com_data_stock_portion_url
-        self.com_bs_data_full_url = self.com_data_bs_url + self.com_data_stock_portion_url
-        self.com_cf_data_full_url = self.com_data_cf_url + self.com_data_stock_portion_url
+        self.com_is_data_full_url = self.com_is_data_url + self.com_data_stock_portion_url
+        self.com_bs_data_full_url = self.com_bs_data_url + self.com_data_stock_portion_url
+        self.com_cf_data_full_url = self.com_cf_data_url + self.com_data_stock_portion_url
 
     def form_csv_str(self):
-        self.ms_stats_extract_temp_csv = self.com_data_folder+self.com_data_stock_portion_url+'_ms_krstats.csv'
-        self.ms_stats_extract_temp_csv_transpose = self.com_data_folder+self.com_data_stock_portion_url+'_ms_krstats_t.csv'
+        self.ms_kr_stats_extract_temp_csv = self.com_kr_data_folder+self.com_data_stock_portion_url+'_ms_kr.csv'
+        self.ms_kr_stats_extract_temp_csv_transpose = self.com_kr_data_folder+self.com_data_stock_portion_url+'_ms_kr_t.csv'
+        self.ms_bs_stats_extract_temp_csv = self.com_bs_data_folder+self.com_data_stock_portion_url+'_ms_bs.csv'
+        self.ms_bs_stats_extract_temp_csv_transpose = self.com_bs_data_folder+self.com_data_stock_portion_url+'_ms_bs_t.csv'
+        self.ms_is_stats_extract_temp_csv = self.com_is_data_folder+self.com_data_stock_portion_url+'_ms_is.csv'
+        self.ms_is_stats_extract_temp_csv_transpose = self.com_is_data_folder+self.com_data_stock_portion_url+'_ms_is_t.csv'
+        self.ms_cf_stats_extract_temp_csv = self.com_cf_data_folder+self.com_data_stock_portion_url+'_ms_cf.csv'
+        self.ms_cf_stats_extract_temp_csv_transpose = self.com_cf_data_folder+self.com_data_stock_portion_url+'_ms_cf_t.csv'
+
 
     def get_com_data(self):
         """ Combine the cur quotes function.
@@ -96,63 +116,71 @@ class MS_StatsExtract(object):
         self.form_csv_str()
 
         ## here will process the data set
-        self.downloading_csv()
+        self.downloading_csv('kr')
+        self.downloading_csv('is')
+        self.downloading_csv('bs')
+        self.downloading_csv('cf')
 
-    def downloading_csv(self):
+    #doctype = kr (Key Ratio), is (income statement), bs (balance sheet), cf (cash flow)
+    def downloading_csv(self,doctype):
         """ Download the csv information for particular stock.
-
         """
         self.download_fault = 0
 
-        url = URL(self.com_data_full_url)
+        if doctype == 'kr':
+            url = URL(self.com_kr_data_full_url)
+            print 'Download to: '+self.ms_kr_stats_extract_temp_csv
+            f = open(self.ms_kr_stats_extract_temp_csv, 'wb') # save as test.gif
+        elif doctype == 'is':
+            url = URL(self.com_is_data_full_url)
+            print 'Download to: '+self.ms_is_stats_extract_temp_csv
+            f = open(self.ms_is_stats_extract_temp_csv, 'wb') # save as test.gif
+        elif doctype == 'bs':
+            url = URL(self.com_bs_data_full_url)
+            print 'Download to: '+self.ms_bs_stats_extract_temp_csv
+            f = open(self.ms_bs_stats_extract_temp_csv, 'wb') # save as test.gif
+        elif doctype == 'cf':
+            url = URL(self.com_cf_data_full_url)
+            print 'Download to: '+self.ms_cf_stats_extract_temp_csv
+            f = open(self.ms_cf_stats_extract_temp_csv, 'wb') # save as test.gif
+        else:
+            print 'Error: Do not support doctype =',doctype
+            return
 
-        print 'Download to: '+self.ms_stats_extract_temp_csv
-        f = open(self.ms_stats_extract_temp_csv, 'wb') # save as test.gif
         try:
-            print ('csv url:', self.com_data_full_url)
+            print ('csv url:', url.string)
             f.write(url.download())#if have problem skip
-            #print "Wait for 10 secs ...."
-            #time.sleep(10)
-        #except:
+
         except Exception, e:
             print ('Download exception: %s' % e.message)
-            print 'Problem when downloading this data: ', self.com_data_full_url
-            #if self.download_fault: print 'Problem with processing this data: ', self.com_data_full_url
+            print 'Problem when downloading this data: ', url.string
             self.download_fault =1
 
         f.close()
 
-
-
-    def process_dataset(self):
+    def process_krdataset(self):
         """ Processed the data set by converting the csv to dataframe and attached the information for various stocks.
 
         """
         if self.download_fault:
-            print 'Problem when downloading csv from this url: ', self.com_data_full_url
+            print 'Problem when downloading csv from this url: ', self.com_kr_data_full_url
             return
 
         ## Rows with additional headers are skipped
         try:
-            self.target_stock_data_df =  pandas.read_csv(self.ms_stats_extract_temp_csv, header =2, index_col = 0, skiprows = [19,20,31,41,42,43,48,58,53,64,65,72,73,95,101,102])
+            self.target_stock_data_df =  pandas.read_csv(self.ms_kr_stats_extract_temp_csv, header =2, index_col = 0, skiprows = [19,20,31,41,42,43,48,58,53,64,65,72,73,95,101,102])
 #            self.target_stock_data_df.info()
         except:
             print 'Problem reading files via pandas.read_csv() so return without transposing csv'
             return
             #thread.interrupt_main()
-            #os._exit(1)
-            #sys.exit()
 
         self.target_stock_data_df = self.target_stock_data_df.transpose().reset_index()
         self.target_stock_data_df["SYMBOL"] = self.com_data_stock_portion_url
         #after transpose save back to same file and call again for column duplication problem
 
-        #self.target_stock_data_df.to_csv(self.ms_stats_extract_temp_csv_transpose, index =False)
-        #self.ms_stats_extract_temp_csv_transpose = self.ms_stats_extract_temp_csv_transpose+self.com_data_stock_portion_url+'_ms_krstats_t.csv'
-
-        self.target_stock_data_df.to_csv(self.ms_stats_extract_temp_csv_transpose, index =False)
-
-        self.target_stock_data_df =  pandas.read_csv(self.ms_stats_extract_temp_csv_transpose)
+        self.target_stock_data_df.to_csv(self.ms_kr_stats_extract_temp_csv_transpose, index =False)
+        self.target_stock_data_df =  pandas.read_csv(self.ms_kr_stats_extract_temp_csv_transpose)
         #rename columns
         #TODO: There is a bug here. CSV and DF columns do not match.
         self.target_stock_data_df.rename(columns={'Year over Year':'Revenue yoy','3-Year Average':'Revenue 3yr avg',
@@ -173,9 +201,6 @@ class MS_StatsExtract(object):
         else:
             self.com_data_allstock_df = pandas.concat([self.com_data_allstock_df,self.target_stock_data_df],ignore_index =True)
 
-    def save2mysql(self): #TODO: Port data from csv to mysql
-        print 'Save stock info to mysql:', self.stock_list
-
     def get_com_data_fr_all_stocks(self):
         """ Cater for all stocks. Each stock is parse one at a time.
         """
@@ -189,7 +214,7 @@ class MS_StatsExtract(object):
             #print 'Download stock info to csv:', stock
             #self.downloading_csv()
             print 'Processing stock:', stock
-            self.process_dataset()
+            self.process_krdataset()
 
 
     ## process the data, group by each symbol and take the last 3-5 years EPS year on year??

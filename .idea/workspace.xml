@@ -28,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/tests/data_ext_ms.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+              <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -37,8 +37,8 @@
       <file leaf-file-name="morningstar_stats_extractor.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/utils/morningstar_stats_extractor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.478424">
-              <caret line="94" column="57" selection-start-line="94" selection-start-column="40" selection-end-line="94" selection-end-column="57" />
+            <state vertical-scroll-proportion="0.83864915">
+              <caret line="146" column="62" selection-start-line="146" selection-start-column="62" selection-end-line="146" selection-end-column="62" />
               <folding>
                 <element signature="e#0#56#0" expanded="true" />
               </folding>
@@ -90,8 +90,8 @@
         <option value="$PROJECT_DIR$/sql/createtable2.sql" />
         <option value="$PROJECT_DIR$/utils/VIFToolsUtil.py" />
         <option value="$PROJECT_DIR$/tests/StockSymbolsList.py" />
-        <option value="$PROJECT_DIR$/tests/data_ext_ms.py" />
         <option value="$PROJECT_DIR$/utils/morningstar_stats_extractor.py" />
+        <option value="$PROJECT_DIR$/tests/data_ext_ms.py" />
       </list>
     </option>
   </component>
@@ -482,11 +482,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/tests/data_ext_ms.py</url>
-          <line>42</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/utils/VIFToolsUtil.py</url>
           <line>100</line>
           <option name="timeStamp" value="11" />
@@ -790,14 +785,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/data_ext_ms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/VIFToolsUtil.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -808,10 +795,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/data_ext_ms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/utils/morningstar_stats_extractor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.478424">
-          <caret line="94" column="57" selection-start-line="94" selection-start-column="40" selection-end-line="94" selection-end-column="57" />
+        <state vertical-scroll-proportion="0.83864915">
+          <caret line="146" column="62" selection-start-line="146" selection-start-column="62" selection-end-line="146" selection-end-column="62" />
           <folding>
             <element signature="e#0#56#0" expanded="true" />
           </folding>
