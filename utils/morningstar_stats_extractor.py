@@ -12,7 +12,7 @@ class MS_StatsExtract(object):
         """ List of url parameters -- for url formation """
 ## http://financials.morningstar.com/ajax/exportKR2CSV.html?t=XNAS:AAPL&region=usa&culture=en-US&productcode=MLE&cur=&order=desc&r=448121
         #self.com_data_start_url = 'http://financials.morningstar.com/ajax/exportKR2CSV.html?&callback=?&t=XSES:'
-        self.com_kr_data_url = r'http://financials.morningstar.com/ajax/exportKR2CSV.html?t=X'
+        self.com_kr_data_start_url = r'http://financials.morningstar.com/ajax/exportKR2CSV.html?t=X'
         self.com_data_stock_portion_url = ''
         self.com_data_stock_portion_additional_url = ''# for adding additonal str to the stock url.
         #self.com_data_end_url = '&region=sgp&culture=en-US&cur=&order=asc'
@@ -25,11 +25,9 @@ class MS_StatsExtract(object):
         self.stock_list = ''#list of stock to parse.
 
         #Finance statement
-        #                      http://financials.morningstar.com/ajax/ReportProcess4CSV.html?t=XNAS:AAPL&region=usa&culture=en-US&productcode=MLE&cur=&reportType=is&period=12&dataType=A&order=asc&columnYear=10&curYearPart=1st5year&rounding=3&view=raw&r=863441&denominatorView=raw&number=3
-        #http://financials.morningstar.com/ajax/ReportProcess4CSV.html?region=usa&culture=en-US&productcode=MLE&cur=&reportType=is&period=12&dataType=A&order=asc&columnYear=10&curYearPart=1st5year&rounding=3&view=raw&r=863441&denominatorView=raw&number=3&t=XNAS:AAPL
-        self.com_is_data_url=r'http://financials.morningstar.com/ajax/ReportProcess4CSV.html?region=usa&culture=en-US&productcode=MLE&cur=&reportType=is&period=12&dataType=A&order=asc&columnYear=10&curYearPart=1st5year&rounding=3&view=raw&r=863441&denominatorView=raw&number=3&t=X'
-        self.com_bs_data_url=r'http://financials.morningstar.com/ajax/ReportProcess4CSV.html?region=usa&culture=en-US&productcode=MLE&cur=&reportType=bs&period=12&dataType=A&order=asc&columnYear=10&curYearPart=1st5year&rounding=3&view=raw&r=863441&denominatorView=raw&number=3&t=X'
-        self.com_cf_data_url=r'http://financials.morningstar.com/ajax/ReportProcess4CSV.html?region=usa&culture=en-US&productcode=MLE&cur=&reportType=cf&period=12&dataType=A&order=asc&columnYear=10&curYearPart=1st5year&rounding=3&view=raw&r=863441&denominatorView=raw&number=3&t=X'
+        self.com_data_is_url=r'http://financials.morningstar.com/ajax/ReportProcess4CSV.html?reportType=is&t=X'
+        self.com_data_bs_url=r'http://financials.morningstar.com/ajax/ReportProcess4CSV.html?reportType=bs&t=X'
+        self.com_data_cf_url=r'http://financials.morningstar.com/ajax/ReportProcess4CSV.html?reportType=cf&t=X'
 
         ## printing options
         self.__print_url = 0
@@ -88,12 +86,12 @@ class MS_StatsExtract(object):
             Args:
                 type (str): Retrieval type.
         """
-        self.com_kr_data_full_url = self.com_kr_data_url + self.com_data_stock_portion_url +\
+        self.com_kr_data_full_url = self.com_kr_data_start_url + self.com_data_stock_portion_url +\
                                    self.com_data_end_url
 
-        self.com_is_data_full_url = self.com_is_data_url + self.com_data_stock_portion_url
-        self.com_bs_data_full_url = self.com_bs_data_url + self.com_data_stock_portion_url
-        self.com_cf_data_full_url = self.com_cf_data_url + self.com_data_stock_portion_url
+        self.com_is_data_full_url = self.com_data_is_url + self.com_data_stock_portion_url
+        self.com_bs_data_full_url = self.com_data_bs_url + self.com_data_stock_portion_url
+        self.com_cf_data_full_url = self.com_data_cf_url + self.com_data_stock_portion_url
 
     def form_csv_str(self):
         self.ms_kr_stats_extract_temp_csv = self.com_kr_data_folder+self.com_data_stock_portion_url+'_ms_kr.csv'
@@ -116,10 +114,10 @@ class MS_StatsExtract(object):
         self.form_csv_str()
 
         ## here will process the data set
-        self.downloading_csv('kr')
-        self.downloading_csv('is')
-        self.downloading_csv('bs')
-        self.downloading_csv('cf')
+        self.downloading_csv(self,'kr')
+        self.downloading_csv(self,'is')
+        self.downloading_csv(self,'bs')
+        self.downloading_csv(self,'cf')
 
     #doctype = kr (Key Ratio), is (income statement), bs (balance sheet), cf (cash flow)
     def downloading_csv(self,doctype):
@@ -163,7 +161,7 @@ class MS_StatsExtract(object):
 
         """
         if self.download_fault:
-            print 'Problem when downloading csv from this url: ', self.com_kr_data_full_url
+            print 'Problem when downloading csv from this url: ', self.com_data_full_url
             return
 
         ## Rows with additional headers are skipped
