@@ -11,3 +11,8 @@ SQL vs NOSQL
   c. Dynamic table creation.
   d. Two tier applications where low latency data is made available through a fast NoSQL interface, but the data itself can be calculated and updated by high latency Hadoop apps or other low priority apps.
 3.http://nosql-database.org/
+4. Jasoniq. http://www.jsoniq.org/  JSOniq is an expressive and highly optimizable language to query and update NoSQL stores. It enables developers to leverage the same productive high-level language across a variety of NoSQL products.
+5. XBML sample. http://www.sec.gov/Archives/edgar/data/1261734/000110262412001032/aols-20120930.xml
+6. Cassandra vs MongoDB vs CouchDB vs Redis vs Riak vs HBase vs Couchbase vs OrientDB vs Aerospike vs Neo4j vs Hypertable vs ElasticSearch vs Accumulo vs VoltDB vs Scalaris vs RethinkDB comparison
+    a. http://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis
+    b. http://stackoverflow.com/questions/3375494/nosql-mongodb-vs-couchdb

@@ -104,7 +104,7 @@ def csvfiles2mysql():
         if file_name.endswith('_t.csv'):
             try:
                 cursor = db.cursor()
-                sqlcmd = sql.format(r'/Users/misc/code/viflab/data/temp/'+file_name)
+                sqlcmd = sql.format(r'/Users/misc/code/data/temp/'+file_name)
                 print sqlcmd
                 cursor.execute(sqlcmd)
 #                cursor.execute(sql.format(file_name))

@@ -11,10 +11,10 @@ class MS_StatsExtract(object):
     def __init__(self):
         """ List of url parameters -- for url formation """
 ## http://financials.morningstar.com/ajax/exportKR2CSV.html?t=XNAS:AAPL&region=usa&culture=en-US&productcode=MLE&cur=&order=desc&r=448121
-        #self.com_data_start_url = 'http://financials.morningstar.com/ajax/exportKR2CSV.html?&callback=?&t=XSES:'
+# http://financials.morningstar.com/ajax/ReportProcess4CSV.html?t=XNAS:GOOG&region=usa&culture=en-US&productcode=MLE&cur=&reportType=is&period=12&dataType=A&order=asc&columnYear=10&curYearPart=1st5year&rounding=3&view=raw&r=904360&denominatorView=raw&number=3
         self.com_kr_data_start_url = r'http://financials.morningstar.com/ajax/exportKR2CSV.html?t=X'
         self.com_data_stock_portion_url = ''
-        self.com_data_stock_portion_additional_url = ''# for adding additonal str to the stock url.
+        self.com_data_stock_portion_additional_url = '' # for adding additonal str to the stock url.
         #self.com_data_end_url = '&region=sgp&culture=en-US&cur=&order=asc'
         #self.com_data_end_url = '&region=usa&culture=en-US&productcode=MLE&cur=&order=desc&r=448121'
         self.com_data_end_url = ''
@@ -25,9 +25,17 @@ class MS_StatsExtract(object):
         self.stock_list = ''#list of stock to parse.
 
         #Finance statement
-        self.com_data_is_url=r'http://financials.morningstar.com/ajax/ReportProcess4CSV.html?reportType=is&t=X'
-        self.com_data_bs_url=r'http://financials.morningstar.com/ajax/ReportProcess4CSV.html?reportType=bs&t=X'
-        self.com_data_cf_url=r'http://financials.morningstar.com/ajax/ReportProcess4CSV.html?reportType=cf&t=X'
+        self.com_data_is_url=r'http://financials.morningstar.com/ajax/ReportProcess4CSV.html?region=usa&culture=en-US&productcode=MLE&cur=&reportType=is&period=12&dataType=A&order=asc&columnYear=10&curYearPart=1st5year&rounding=3&view=raw&r=904360&denominatorView=raw&number=3&t=X'
+
+        #self.com_data_is_url=r'http://financials.morningstar.com/ajax/ReportProcess4CSV.html?reportType=is&t=X'
+
+        #self.com_data_bs_url=r'http://financials.morningstar.com/ajax/ReportProcess4CSV.html?reportType=bs&t=X'
+
+        self.com_data_bs_url=r'http://financials.morningstar.com/ajax/ReportProcess4CSV.html?region=usa&culture=en-US&productcode=MLE&cur=&reportType=bs&period=12&dataType=A&order=asc&columnYear=10&curYearPart=1st5year&rounding=3&view=raw&r=904360&denominatorView=raw&number=3&t=X'
+
+        #self.com_data_cf_url=r'http://financials.morningstar.com/ajax/ReportProcess4CSV.html?reportType=cf&t=X'
+
+        self.com_data_cf_url=r'http://financials.morningstar.com/ajax/ReportProcess4CSV.html?region=usa&culture=en-US&productcode=MLE&cur=&reportType=cf&period=12&dataType=A&order=asc&columnYear=10&curYearPart=1st5year&rounding=3&view=raw&r=904360&denominatorView=raw&number=3&t=X'
 
         ## printing options
         self.__print_url = 0
@@ -38,6 +46,7 @@ class MS_StatsExtract(object):
         self.com_is_data_folder = r'/Users/misc/code/data/temp/is/'
         self.com_bs_data_folder = r'/Users/misc/code/data/temp/bs/'
         self.com_cf_data_folder = r'/Users/misc/code/data/temp/cf/'
+        self.com_json_data_folder = r'/Users/misc/code/data/temp/json/'
 
         #finance statement csv file name
         self.ms_kr_stats_extract_temp_csv = ''
@@ -114,10 +123,10 @@ class MS_StatsExtract(object):
         self.form_csv_str()
 
         ## here will process the data set
-        self.downloading_csv(self,'kr')
-        self.downloading_csv(self,'is')
-        self.downloading_csv(self,'bs')
-        self.downloading_csv(self,'cf')
+        self.downloading_csv('kr')
+        self.downloading_csv('is')
+        self.downloading_csv('bs')
+        self.downloading_csv('cf')
 
     #doctype = kr (Key Ratio), is (income statement), bs (balance sheet), cf (cash flow)
     def downloading_csv(self,doctype):
@@ -161,7 +170,7 @@ class MS_StatsExtract(object):
 
         """
         if self.download_fault:
-            print 'Problem when downloading csv from this url: ', self.com_data_full_url
+            print 'Problem when downloading csv from this url: ', self.com_kr_data_full_url
             return
 
         ## Rows with additional headers are skipped
@@ -175,8 +184,8 @@ class MS_StatsExtract(object):
 
         self.target_stock_data_df = self.target_stock_data_df.transpose().reset_index()
         self.target_stock_data_df["SYMBOL"] = self.com_data_stock_portion_url
+        self.target_stock_data_df["ReportType"] = 'Key Ratio'
         #after transpose save back to same file and call again for column duplication problem
-
         self.target_stock_data_df.to_csv(self.ms_kr_stats_extract_temp_csv_transpose, index =False)
         self.target_stock_data_df =  pandas.read_csv(self.ms_kr_stats_extract_temp_csv_transpose)
         #rename columns
@@ -193,6 +202,132 @@ class MS_StatsExtract(object):
                                                 'Year over Year.3':'EPS yoy','3-Year Average.3':'EPS 3yr avg',
                                                 '5-Year Average.3':'EPS 5yr avg','10-Year Average.3':'EPS 10yr avg',},
                                        inplace =True)
+
+        self.target_stock_data_df.to_json(self.com_json_data_folder+self.com_data_stock_portion_url+'_kr_t.json',orient='index')
+
+
+        if len(self.com_data_allstock_df) == 0:
+            self.com_data_allstock_df = self.target_stock_data_df
+        else:
+            self.com_data_allstock_df = pandas.concat([self.com_data_allstock_df,self.target_stock_data_df],ignore_index =True)
+
+    def process_isdataset(self):
+        """ Processed the data set by converting the csv to dataframe and attached the information for various stocks.
+
+        """
+        if self.download_fault:
+            print 'Problem when downloading csv from this url: ', self.com_is_data_full_url
+            return
+
+        ## Rows with additional headers are skipped
+        try:
+            self.target_stock_data_df =  pandas.read_csv(self.ms_is_stats_extract_temp_csv, header =1, index_col = 0)
+#            self.target_stock_data_df.info()
+#        except:
+        except Exception, e:
+            print 'IS: Problem reading files via pandas.read_csv() so return without transposing csv'
+            print ('pandas.read_csv() exception: %s' % e.message)
+            return
+            #thread.interrupt_main()
+
+        self.target_stock_data_df = self.target_stock_data_df.transpose().reset_index()
+        self.target_stock_data_df["SYMBOL"] = self.com_data_stock_portion_url
+        self.target_stock_data_df["ReportType"] = 'Income Statement'
+        #after transpose save back to same file and call again for column duplication problem
+        self.target_stock_data_df.to_csv(self.ms_is_stats_extract_temp_csv_transpose, index =False)
+        self.target_stock_data_df =  pandas.read_csv(self.ms_is_stats_extract_temp_csv_transpose)
+        #rename columns
+        #TODO: There is a bug here. CSV and DF columns do not match.
+        self.target_stock_data_df.rename(columns={'Basic':'EPS Basic','Diluted':'EPS Diluted',
+                                                'Basic.1':'Weighted_avg_shares Basic','Diluted.1':'Weighted_avg_shares Diluted',},
+                                      inplace =True)
+
+        self.target_stock_data_df.to_json(self.com_json_data_folder+self.com_data_stock_portion_url+'_is_t.json',orient='index')
+
+
+        if len(self.com_data_allstock_df) == 0:
+            self.com_data_allstock_df = self.target_stock_data_df
+            #self.target_stock_data_df = object()
+        else:
+            self.com_data_allstock_df = pandas.concat([self.com_data_allstock_df,self.target_stock_data_df],ignore_index =True)
+            #self.target_stock_data_df = object()
+            #self.target_stock_data_df.drop()
+
+    def process_bsdataset(self):
+        """ Processed the data set by converting the csv to dataframe and attached the information for various stocks.
+
+        """
+        if self.download_fault:
+            print 'Problem when downloading csv from this url: ', self.com_bs_data_full_url
+            return
+
+        ## Rows with additional headers are skipped
+        try:
+            self.target_stock_data_df =  pandas.read_csv(self.ms_bs_stats_extract_temp_csv, header =1, index_col = 0)
+#            self.target_stock_data_df.info()
+#        except:
+        except Exception, e:
+            print 'BS: Problem reading files via pandas.read_csv() so return without transposing csv'
+            print ('pandas.read_csv() exception: %s' % e.message)
+            return
+            #thread.interrupt_main()
+
+        self.target_stock_data_df = self.target_stock_data_df.transpose().reset_index()
+        self.target_stock_data_df["SYMBOL"] = self.com_data_stock_portion_url
+        self.target_stock_data_df["ReportType"] = 'Balance Sheet'
+        #after transpose save back to same file and call again for column duplication problem
+        self.target_stock_data_df.to_csv(self.ms_bs_stats_extract_temp_csv_transpose, index =False)
+        self.target_stock_data_df =  pandas.read_csv(self.ms_bs_stats_extract_temp_csv_transpose)
+        #rename columns
+        #TODO: There is a bug here. CSV and DF columns do not match.
+        # self.target_stock_data_df.rename(columns={'Basic':'EPS Basic','Diluted':'EPS Diluted',
+        #                                         'Basic.1':'Weighted_avg_shares Basic','Diluted.1':'Weighted_avg_shares Diluted',},
+        #                               inplace =True)
+
+        self.target_stock_data_df.to_json(self.com_json_data_folder+self.com_data_stock_portion_url+'_bs_t.json',orient='index')
+
+
+        if len(self.com_data_allstock_df) == 0:
+            self.com_data_allstock_df = self.target_stock_data_df
+            #self.target_stock_data_df = object()
+        else:
+            self.com_data_allstock_df = pandas.concat([self.com_data_allstock_df,self.target_stock_data_df],ignore_index =True)
+            #self.target_stock_data_df = object()
+            #self.target_stock_data_df.drop()
+
+    def process_cfdataset(self):
+        """ Processed the data set by converting the csv to dataframe and attached the information for various stocks.
+
+        """
+        if self.download_fault:
+            print 'Problem when downloading csv from this url: ', self.com_cf_data_full_url
+            return
+
+        ## Rows with additional headers are skipped
+        try:
+            self.target_stock_data_df =  pandas.read_csv(self.ms_cf_stats_extract_temp_csv, header =1, index_col = 0)
+#            self.target_stock_data_df.info()
+#        except:
+        except Exception, e:
+            print 'CF: Problem reading files via pandas.read_csv() so return without transposing csv'
+            print ('pandas.read_csv() exception: %s' % e.message)
+            return
+            #thread.interrupt_main()
+
+        self.target_stock_data_df = self.target_stock_data_df.transpose().reset_index()
+        self.target_stock_data_df["SYMBOL"] = self.com_data_stock_portion_url
+        self.target_stock_data_df["ReportType"] = 'Cash Flow'
+        #after transpose save back to same file and call again for column duplication problem
+        self.target_stock_data_df.to_csv(self.ms_cf_stats_extract_temp_csv_transpose, index =False)
+        self.target_stock_data_df =  pandas.read_csv(self.ms_cf_stats_extract_temp_csv_transpose)
+        #rename columns
+        #TODO: There is a bug here. CSV and DF columns do not match.
+        # self.target_stock_data_df.rename(columns={'Basic':'EPS Basic','Diluted':'EPS Diluted',
+        #                                         'Basic.1':'Weighted_avg_shares Basic','Diluted.1':'Weighted_avg_shares Diluted',},
+        #                               inplace =True)
+
+        self.target_stock_data_df.to_json(self.com_json_data_folder+self.com_data_stock_portion_url+'_cf_t.json',orient='index')
+
 
         if len(self.com_data_allstock_df) == 0:
             self.com_data_allstock_df = self.target_stock_data_df
@@ -213,6 +348,9 @@ class MS_StatsExtract(object):
             #self.downloading_csv()
             print 'Processing stock:', stock
             self.process_krdataset()
+            self.process_isdataset()
+            self.process_bsdataset()
+            self.process_cfdataset()
 
 
     ## process the data, group by each symbol and take the last 3-5 years EPS year on year??

@@ -1,0 +1,83 @@
+Vagrant.configure("2") do |config|
+
+
+  # Number of nodes to provision
+
+  numNodes = 4
+
+
+  # IP Address Base for private network
+
+  ipAddrPrefix = "192.168.56.10"
+
+
+  # Define Number of RAM for each node
+
+  config.vm.provider "virtualbox" do |v|
+
+    v.customize ["modifyvm", :id, "--memory", 1024]
+
+  end
+
+
+  # Provision the server itself with puppet
+
+  config.vm.provision :puppet
+
+
+  # Download the initial box from this url
+
+  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+
+
+  # Provision Config for each of the nodes
+
+  1.upto(numNodes) do |num|
+
+    nodeName = ("node" + num.to_s).to_sym
+
+    config.vm.define nodeName do |node|
+
+      node.vm.box = "precise64"
+
+      node.vm.network :private_network, ip: ipAddrPrefix + num.to_s
+
+      node.vm.provider "virtualbox" do |v|
+
+      v.name = "Couchbase Server Node " + num.to_s
+    end
+  end
+end
+end
+
+exec { "couchbase-server-source":
+
+  command => "/usr/bin/wget http://packages.couchbase.com/releases/2.0.1/couchbase-server-enterprise_x86_64_2.0.1.deb",
+
+  cwd => "/home/vagrant/",
+
+  creates => "/home/vagrant/couchbase-server-enterprise_x86_64_2.0.1.deb",
+
+  before => Package['couchbase-server']
+
+}
+
+
+exec { "install-deps":
+
+  command => "/usr/bin/apt-get install libssl0.9.8",
+
+  before => Package['couchbase-server']
+
+}
+
+
+package { "couchbase-server":
+
+  provider => dpkg,
+
+  ensure => installed,
+
+  source => "/home/vagrant/couchbase-server-enterprise_x86_64_2.0.1.deb"
+
+}
