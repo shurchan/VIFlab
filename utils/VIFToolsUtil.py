@@ -5,8 +5,9 @@ import pandas as pd
 import json
 #import jsonpickle
 import collections
-import os
+import os,sys
 import string
+from couchbase.bucket import Bucket
 
 #import pudb;pu.db #for debugging
 
@@ -82,6 +83,7 @@ def csv2mysql(sUnpivotCSVFileName,sTicker,sReportType,sReportFreq):
     cursor.close()
     print "Done - import to mysql"
 
+# Import KAy Ratio csv files to mysql db
 def csvfiles2mysql():
 
     # Open database connection
@@ -118,6 +120,70 @@ def csvfiles2mysql():
 
     # disconnect from server
     db.close()
+
+def jsonfiles2counchbase(jsonfolder, couchbaseIP, bucketname):
+
+    #cb = Bucket('couchbase://10.141.100.101/vif-finance')
+      # check if the uploaded file exists
+    if not os.path.exists(jsonfolder):
+        sys.stderr.write("Invalid path: %s\n" % jsonfolder)
+        print "Invalid path: %s\n" % jsonfolder
+        return
+
+    cb = Bucket('couchbase://{0}/{1}'.format(couchbaseIP,bucketname))
+
+
+    #read files from json file folders
+    for dir_entry in os.listdir(jsonfolder):
+        dir_entry_path = os.path.join(jsonfolder, dir_entry)
+        if os.path.isfile(dir_entry_path) and dir_entry_path.endswith('.json'):
+            with open(dir_entry_path, 'r') as jsonfile:
+                jsondata = json.load(jsonfile)
+                #data[dir_entry] = jsonfile.read()
+                #set the key.
+                #key = "NAS_AAPL-Balance_Sheet"
+                key = "{0}-{1}".format(
+                jsondata['SYMBOL'].replace(':','_').lower(),
+                jsondata['ReportType'].replace(' ', '_').lower())
+                # key is "nas_aapl-balance_sheet"
+
+                #Add json to counch base bucket, cb.upsert()
+                result = cb.upsert(key, jsondata)
+                jsonfile.close()
+
+
+    #print one record to validate it
+    result = cb.get('nas_aapl-key_ratio')
+    print result
+
+
+    # with open('data.json', 'r') as f:
+    #     data = json.load(f)
+
+
+
+    #result = cb.get('new_holland_brewing_company-sundog')
+
+    #print result
+
+
+    # new_beer = {
+    #    "name": "Old Yankee Ale Jeren",
+    #    "abv": 5.00,
+    #    "ibu": 0,
+    #    "srm": 0,
+    #    "upc": 0,
+    #    "type": "beer",
+    #    "brewery_id": "cottrell_brewing_co",
+    #    "updated": "2012-08-30 20:00:20",
+    #    "description": ".A medium-bodied Amber Ale Jeren",
+    #    "style": "American-Style Amber Jeren",
+    #    "category": "North American Ale"
+    # }
+
+
+    #result = cb.upsert(key, new_beer)
+
 
 def Sql2Json(sStockSym, sReportType, jsonFile):
     mydb = MySQLdb.connect(host='localhost',
@@ -156,7 +222,6 @@ def Sql2Json(sStockSym, sReportType, jsonFile):
     mydb.close()
 
     print "Done - output to jason from db"
-
 
 class AnnualReport(object):
     #def __init__(self, hello):
@@ -217,7 +282,6 @@ class AnnualReport(object):
         mydb.close()
 
         print "Done - Create AnnualReport Object"
-
 
 #TODO: bugs in the following function
 def Sql2AnnualJson(sStockSym, sReportType):

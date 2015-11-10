@@ -1,7 +1,7 @@
 import re, os, sys, math, time, datetime, shutil, thread
 import pandas
 from pattern.web import URL, DOM, plaintext, extension, Element, find_urls
-import time
+import json
 
 class MS_StatsExtract(object):
     """
@@ -112,7 +112,6 @@ class MS_StatsExtract(object):
         self.ms_cf_stats_extract_temp_csv = self.com_cf_data_folder+self.com_data_stock_portion_url+'_ms_cf.csv'
         self.ms_cf_stats_extract_temp_csv_transpose = self.com_cf_data_folder+self.com_data_stock_portion_url+'_ms_cf_t.csv'
 
-
     def get_com_data(self):
         """ Combine the cur quotes function.
             Formed the url, download the csv, put in the header. Have a dataframe object.
@@ -203,8 +202,20 @@ class MS_StatsExtract(object):
                                                 '5-Year Average.3':'EPS 5yr avg','10-Year Average.3':'EPS 10yr avg',},
                                        inplace =True)
 
-        self.target_stock_data_df.to_json(self.com_json_data_folder+self.com_data_stock_portion_url+'_kr_t.json',orient='index')
+        jsonfile = self.com_json_data_folder+self.com_data_stock_portion_url+'_kr_t.json'
+        self.target_stock_data_df.to_json(jsonfile,orient='index')
 
+        #open json file to add SYMBOL and ReportType
+        with open(jsonfile, 'r') as data_file:
+            data = json.load(data_file)
+            data['SYMBOL'] = self.com_data_stock_portion_url
+            data['ReportType'] = 'Key Ratio'
+            data_file.close()
+
+        #Write back to json file
+        with open(jsonfile, 'w') as outfile:
+            json.dump(data, outfile)
+            outfile.close()
 
         if len(self.com_data_allstock_df) == 0:
             self.com_data_allstock_df = self.target_stock_data_df
@@ -242,8 +253,20 @@ class MS_StatsExtract(object):
                                                 'Basic.1':'Weighted_avg_shares Basic','Diluted.1':'Weighted_avg_shares Diluted',},
                                       inplace =True)
 
-        self.target_stock_data_df.to_json(self.com_json_data_folder+self.com_data_stock_portion_url+'_is_t.json',orient='index')
+        jsonfile = self.com_json_data_folder+self.com_data_stock_portion_url+'_is_t.json'
+        self.target_stock_data_df.to_json(jsonfile,orient='index')
 
+        #open json file to add SYMBOL and ReportType
+        with open(jsonfile, 'r') as data_file:
+            data = json.load(data_file)
+            data['SYMBOL'] = self.com_data_stock_portion_url
+            data['ReportType'] = 'Income Statement'
+            data_file.close()
+
+        #Write back to json file
+        with open(jsonfile, 'w') as outfile:
+            json.dump(data, outfile)
+            outfile.close()
 
         if len(self.com_data_allstock_df) == 0:
             self.com_data_allstock_df = self.target_stock_data_df
@@ -284,8 +307,20 @@ class MS_StatsExtract(object):
         #                                         'Basic.1':'Weighted_avg_shares Basic','Diluted.1':'Weighted_avg_shares Diluted',},
         #                               inplace =True)
 
-        self.target_stock_data_df.to_json(self.com_json_data_folder+self.com_data_stock_portion_url+'_bs_t.json',orient='index')
+        jsonfile = self.com_json_data_folder+self.com_data_stock_portion_url+'_bs_t.json'
+        self.target_stock_data_df.to_json(jsonfile,orient='index')
 
+        #open json file to add SYMBOL and ReportType
+        with open(jsonfile, 'r') as data_file:
+            data = json.load(data_file)
+            data['SYMBOL'] = self.com_data_stock_portion_url
+            data['ReportType'] = 'Balance Sheet'
+            data_file.close()
+
+        #Write back to json file
+        with open(jsonfile, 'w') as outfile:
+            json.dump(data, outfile)
+            outfile.close()
 
         if len(self.com_data_allstock_df) == 0:
             self.com_data_allstock_df = self.target_stock_data_df
@@ -326,8 +361,20 @@ class MS_StatsExtract(object):
         #                                         'Basic.1':'Weighted_avg_shares Basic','Diluted.1':'Weighted_avg_shares Diluted',},
         #                               inplace =True)
 
-        self.target_stock_data_df.to_json(self.com_json_data_folder+self.com_data_stock_portion_url+'_cf_t.json',orient='index')
+        jsonfile = self.com_json_data_folder+self.com_data_stock_portion_url+'_cf_t.json'
+        self.target_stock_data_df.to_json(jsonfile,orient='index')
 
+        #open json file to add SYMBOL and ReportType
+        with open(jsonfile, 'r') as data_file:
+            data = json.load(data_file)
+            data['SYMBOL'] = self.com_data_stock_portion_url
+            data['ReportType'] = 'Cash Flow'
+            data_file.close()
+
+        #Write back to json file
+        with open(jsonfile, 'w') as outfile:
+            json.dump(data, outfile)
+            outfile.close()
 
         if len(self.com_data_allstock_df) == 0:
             self.com_data_allstock_df = self.target_stock_data_df
@@ -351,7 +398,6 @@ class MS_StatsExtract(object):
             self.process_isdataset()
             self.process_bsdataset()
             self.process_cfdataset()
-
 
     ## process the data, group by each symbol and take the last 3-5 years EPS year on year??
     def get_trend_data(self):

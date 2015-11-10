@@ -42,6 +42,8 @@ data_ext.get_com_data_fr_all_stocks()
 #VIFToolsUtil.csvfiles2mysql()
 
 
+VIFToolsUtil.jsonfiles2counchbase('/Users/misc/code/data/temp/json/','10.141.100.101','vif-finance')
+
 #data_ext.target_stock_data_df.info()
 #data_ext.get_trend_data()
 

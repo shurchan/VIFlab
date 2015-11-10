@@ -1,10 +1,7 @@
 #!/usr/bin/env python
+from couchbase.bucket import Bucket
 
-from couchbase import Couchbase
-
-#cb = Couchbase.connect(host = '10.141.100.101', port=8091, bucket='default') #http://10.141.100.102:8091/
-
-cb = Couchbase.connect(host = '10.141.100.101', port=8091, bucket='beer-sample') #http://10.141.100.102:8091/
+cb = Bucket('couchbase://10.141.100.101/beer-sample')
 
 result = cb.get('new_holland_brewing_company-sundog')
 
@@ -30,7 +27,7 @@ key = "{0}-{1}".format(
         new_beer['name'].replace(' ', '_').lower())
 # key is "cottrell_brewing_co-old_yankee_ale"
 
-result = cb.set(key, new_beer)
+result = cb.upsert(key, new_beer)
 
 result = cb.get('cottrell_brewing_co-old_yankee_ale_jeren')
 
