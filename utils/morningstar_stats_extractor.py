@@ -14,6 +14,7 @@ class MS_StatsExtract(object):
 # http://financials.morningstar.com/ajax/ReportProcess4CSV.html?t=XNAS:GOOG&region=usa&culture=en-US&productcode=MLE&cur=&reportType=is&period=12&dataType=A&order=asc&columnYear=10&curYearPart=1st5year&rounding=3&view=raw&r=904360&denominatorView=raw&number=3
         self.com_kr_data_start_url = r'http://financials.morningstar.com/ajax/exportKR2CSV.html?t=X'
         self.com_data_stock_portion_url = ''
+        self.stockexchange_symbol = ''
         self.com_data_stock_portion_additional_url = '' # for adding additonal str to the stock url.
         #self.com_data_end_url = '&region=sgp&culture=en-US&cur=&order=asc'
         #self.com_data_end_url = '&region=usa&culture=en-US&productcode=MLE&cur=&order=desc&r=448121'
@@ -47,6 +48,7 @@ class MS_StatsExtract(object):
         self.com_bs_data_folder = r'/Users/misc/code/data/temp/bs/'
         self.com_cf_data_folder = r'/Users/misc/code/data/temp/cf/'
         self.com_json_data_folder = r'/Users/misc/code/data/temp/json/'
+        self.com_jsonchild_data_folder= r'/Users/misc/code/data/temp/jsonchild/'
 
         #finance statement csv file name
         self.ms_kr_stats_extract_temp_csv = ''
@@ -81,6 +83,7 @@ class MS_StatsExtract(object):
                 stock_sym (str): Stock symbol.
         """
         self.com_data_stock_portion_url = stock_sym
+        self.stockexchange_symbol = stock_sym.replace(':','_')
 
     def set_stocklist(self, stocklist):
         """ Set list of stocks to be retrieved.
@@ -103,14 +106,15 @@ class MS_StatsExtract(object):
         self.com_cf_data_full_url = self.com_data_cf_url + self.com_data_stock_portion_url
 
     def form_csv_str(self):
-        self.ms_kr_stats_extract_temp_csv = self.com_kr_data_folder+self.com_data_stock_portion_url+'_ms_kr.csv'
-        self.ms_kr_stats_extract_temp_csv_transpose = self.com_kr_data_folder+self.com_data_stock_portion_url+'_ms_kr_t.csv'
-        self.ms_bs_stats_extract_temp_csv = self.com_bs_data_folder+self.com_data_stock_portion_url+'_ms_bs.csv'
-        self.ms_bs_stats_extract_temp_csv_transpose = self.com_bs_data_folder+self.com_data_stock_portion_url+'_ms_bs_t.csv'
-        self.ms_is_stats_extract_temp_csv = self.com_is_data_folder+self.com_data_stock_portion_url+'_ms_is.csv'
-        self.ms_is_stats_extract_temp_csv_transpose = self.com_is_data_folder+self.com_data_stock_portion_url+'_ms_is_t.csv'
-        self.ms_cf_stats_extract_temp_csv = self.com_cf_data_folder+self.com_data_stock_portion_url+'_ms_cf.csv'
-        self.ms_cf_stats_extract_temp_csv_transpose = self.com_cf_data_folder+self.com_data_stock_portion_url+'_ms_cf_t.csv'
+
+        self.ms_kr_stats_extract_temp_csv = self.com_kr_data_folder+self.stockexchange_symbol+'_ms_kr.csv'
+        self.ms_kr_stats_extract_temp_csv_transpose = self.com_kr_data_folder+self.stockexchange_symbol+'_ms_kr_t.csv'
+        self.ms_bs_stats_extract_temp_csv = self.com_bs_data_folder+self.stockexchange_symbol+'_ms_bs.csv'
+        self.ms_bs_stats_extract_temp_csv_transpose = self.com_bs_data_folder+self.stockexchange_symbol+'_ms_bs_t.csv'
+        self.ms_is_stats_extract_temp_csv = self.com_is_data_folder+self.stockexchange_symbol+'_ms_is.csv'
+        self.ms_is_stats_extract_temp_csv_transpose = self.com_is_data_folder+self.stockexchange_symbol+'_ms_is_t.csv'
+        self.ms_cf_stats_extract_temp_csv = self.com_cf_data_folder+self.stockexchange_symbol+'_ms_cf.csv'
+        self.ms_cf_stats_extract_temp_csv_transpose = self.com_cf_data_folder+self.stockexchange_symbol+'_ms_cf_t.csv'
 
     def get_com_data(self):
         """ Combine the cur quotes function.
@@ -182,7 +186,7 @@ class MS_StatsExtract(object):
             #thread.interrupt_main()
 
         self.target_stock_data_df = self.target_stock_data_df.transpose().reset_index()
-        self.target_stock_data_df["SYMBOL"] = self.com_data_stock_portion_url
+        self.target_stock_data_df["SYMBOL"] = self.stockexchange_symbol
         self.target_stock_data_df["ReportType"] = 'Key Ratio'
         #after transpose save back to same file and call again for column duplication problem
         self.target_stock_data_df.to_csv(self.ms_kr_stats_extract_temp_csv_transpose, index =False)
@@ -199,23 +203,24 @@ class MS_StatsExtract(object):
                                                 '5-Year Average.2':'Net income 5yr avg','10-Year Average.2':'Net income 10yr avg',
 
                                                 'Year over Year.3':'EPS yoy','3-Year Average.3':'EPS 3yr avg',
-                                                '5-Year Average.3':'EPS 5yr avg','10-Year Average.3':'EPS 10yr avg',},
+                                                '5-Year Average.3':'EPS 5yr avg','10-Year Average.3':'EPS 10yr avg','index':'Date',},
                                        inplace =True)
 
-        jsonfile = self.com_json_data_folder+self.com_data_stock_portion_url+'_kr_t.json'
+        jsonfile = self.com_json_data_folder+self.stockexchange_symbol+'_kr_t.json'
         self.target_stock_data_df.to_json(jsonfile,orient='index')
 
-        #open json file to add SYMBOL and ReportType
+        #read json file
         with open(jsonfile, 'r') as data_file:
             data = json.load(data_file)
-            data['SYMBOL'] = self.com_data_stock_portion_url
-            data['ReportType'] = 'Key Ratio'
             data_file.close()
 
-        #Write back to json file
-        with open(jsonfile, 'w') as outfile:
-            json.dump(data, outfile)
-            outfile.close()
+        #Output each list item as single json file
+        for key in data:
+        #Write each line item in t_csv to json file
+            jsonchildfile = "{0}{1}_{2}_{3}.json".format(self.com_jsonchild_data_folder,self.stockexchange_symbol,data[key]['Date'],'kr')
+            with open(jsonchildfile, 'w') as outfile:
+                json.dump(data[key], outfile)
+                outfile.close()
 
         if len(self.com_data_allstock_df) == 0:
             self.com_data_allstock_df = self.target_stock_data_df
@@ -242,7 +247,7 @@ class MS_StatsExtract(object):
             #thread.interrupt_main()
 
         self.target_stock_data_df = self.target_stock_data_df.transpose().reset_index()
-        self.target_stock_data_df["SYMBOL"] = self.com_data_stock_portion_url
+        self.target_stock_data_df["SYMBOL"] = self.stockexchange_symbol
         self.target_stock_data_df["ReportType"] = 'Income Statement'
         #after transpose save back to same file and call again for column duplication problem
         self.target_stock_data_df.to_csv(self.ms_is_stats_extract_temp_csv_transpose, index =False)
@@ -250,23 +255,24 @@ class MS_StatsExtract(object):
         #rename columns
         #TODO: There is a bug here. CSV and DF columns do not match.
         self.target_stock_data_df.rename(columns={'Basic':'EPS Basic','Diluted':'EPS Diluted',
-                                                'Basic.1':'Weighted_avg_shares Basic','Diluted.1':'Weighted_avg_shares Diluted',},
+                                                'Basic.1':'Weighted_avg_shares Basic','Diluted.1':'Weighted_avg_shares Diluted','index':'Date',},
                                       inplace =True)
 
-        jsonfile = self.com_json_data_folder+self.com_data_stock_portion_url+'_is_t.json'
+        jsonfile = self.com_json_data_folder+self.stockexchange_symbol+'_is_t.json'
         self.target_stock_data_df.to_json(jsonfile,orient='index')
 
-        #open json file to add SYMBOL and ReportType
+        #read json file
         with open(jsonfile, 'r') as data_file:
             data = json.load(data_file)
-            data['SYMBOL'] = self.com_data_stock_portion_url
-            data['ReportType'] = 'Income Statement'
             data_file.close()
 
-        #Write back to json file
-        with open(jsonfile, 'w') as outfile:
-            json.dump(data, outfile)
-            outfile.close()
+        #Output each list item as single json file
+        for key in data:
+        #Write each line item in t_csv to json file
+            jsonchildfile = "{0}{1}_{2}_{3}.json".format(self.com_jsonchild_data_folder,self.stockexchange_symbol,data[key]['Date'],'is')
+            with open(jsonchildfile, 'w') as outfile:
+                json.dump(data[key], outfile)
+                outfile.close()
 
         if len(self.com_data_allstock_df) == 0:
             self.com_data_allstock_df = self.target_stock_data_df
@@ -296,31 +302,31 @@ class MS_StatsExtract(object):
             #thread.interrupt_main()
 
         self.target_stock_data_df = self.target_stock_data_df.transpose().reset_index()
-        self.target_stock_data_df["SYMBOL"] = self.com_data_stock_portion_url
+        self.target_stock_data_df["SYMBOL"] = self.stockexchange_symbol
         self.target_stock_data_df["ReportType"] = 'Balance Sheet'
         #after transpose save back to same file and call again for column duplication problem
         self.target_stock_data_df.to_csv(self.ms_bs_stats_extract_temp_csv_transpose, index =False)
         self.target_stock_data_df =  pandas.read_csv(self.ms_bs_stats_extract_temp_csv_transpose)
         #rename columns
         #TODO: There is a bug here. CSV and DF columns do not match.
-        # self.target_stock_data_df.rename(columns={'Basic':'EPS Basic','Diluted':'EPS Diluted',
-        #                                         'Basic.1':'Weighted_avg_shares Basic','Diluted.1':'Weighted_avg_shares Diluted',},
-        #                               inplace =True)
+        self.target_stock_data_df.rename(columns={'index':'Date',},
+                                      inplace =True)
 
-        jsonfile = self.com_json_data_folder+self.com_data_stock_portion_url+'_bs_t.json'
+        jsonfile = self.com_json_data_folder+self.stockexchange_symbol+'_bs_t.json'
         self.target_stock_data_df.to_json(jsonfile,orient='index')
 
-        #open json file to add SYMBOL and ReportType
+        #read json file
         with open(jsonfile, 'r') as data_file:
             data = json.load(data_file)
-            data['SYMBOL'] = self.com_data_stock_portion_url
-            data['ReportType'] = 'Balance Sheet'
             data_file.close()
 
-        #Write back to json file
-        with open(jsonfile, 'w') as outfile:
-            json.dump(data, outfile)
-            outfile.close()
+        #Output each list item as single json file
+        for key in data:
+        #Write each line item in t_csv to json file
+            jsonchildfile = "{0}{1}_{2}_{3}.json".format(self.com_jsonchild_data_folder,self.stockexchange_symbol,data[key]['Date'],'bs')
+            with open(jsonchildfile, 'w') as outfile:
+                json.dump(data[key], outfile)
+                outfile.close()
 
         if len(self.com_data_allstock_df) == 0:
             self.com_data_allstock_df = self.target_stock_data_df
@@ -350,31 +356,31 @@ class MS_StatsExtract(object):
             #thread.interrupt_main()
 
         self.target_stock_data_df = self.target_stock_data_df.transpose().reset_index()
-        self.target_stock_data_df["SYMBOL"] = self.com_data_stock_portion_url
+        self.target_stock_data_df["SYMBOL"] = self.stockexchange_symbol
         self.target_stock_data_df["ReportType"] = 'Cash Flow'
         #after transpose save back to same file and call again for column duplication problem
         self.target_stock_data_df.to_csv(self.ms_cf_stats_extract_temp_csv_transpose, index =False)
         self.target_stock_data_df =  pandas.read_csv(self.ms_cf_stats_extract_temp_csv_transpose)
         #rename columns
         #TODO: There is a bug here. CSV and DF columns do not match.
-        # self.target_stock_data_df.rename(columns={'Basic':'EPS Basic','Diluted':'EPS Diluted',
-        #                                         'Basic.1':'Weighted_avg_shares Basic','Diluted.1':'Weighted_avg_shares Diluted',},
-        #                               inplace =True)
+        self.target_stock_data_df.rename(columns={'index':'Date',},
+                                      inplace =True)
 
-        jsonfile = self.com_json_data_folder+self.com_data_stock_portion_url+'_cf_t.json'
+        jsonfile = self.com_json_data_folder+self.stockexchange_symbol+'_cf_t.json'
         self.target_stock_data_df.to_json(jsonfile,orient='index')
 
-        #open json file to add SYMBOL and ReportType
+        #read json file
         with open(jsonfile, 'r') as data_file:
             data = json.load(data_file)
-            data['SYMBOL'] = self.com_data_stock_portion_url
-            data['ReportType'] = 'Cash Flow'
             data_file.close()
 
-        #Write back to json file
-        with open(jsonfile, 'w') as outfile:
-            json.dump(data, outfile)
-            outfile.close()
+        #Output each list item as single json file
+        for key in data:
+        #Write each line item in t_csv to json file
+            jsonchildfile = "{0}{1}_{2}_{3}.json".format(self.com_jsonchild_data_folder,self.stockexchange_symbol,data[key]['Date'],'cf')
+            with open(jsonchildfile, 'w') as outfile:
+                json.dump(data[key], outfile)
+                outfile.close()
 
         if len(self.com_data_allstock_df) == 0:
             self.com_data_allstock_df = self.target_stock_data_df

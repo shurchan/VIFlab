@@ -142,10 +142,11 @@ def jsonfiles2counchbase(jsonfolder, couchbaseIP, bucketname):
                 #data[dir_entry] = jsonfile.read()
                 #set the key.
                 #key = "NAS_AAPL-Balance_Sheet"
-                key = "{0}-{1}".format(
-                jsondata['SYMBOL'].replace(':','_').lower(),
-                jsondata['ReportType'].replace(' ', '_').lower())
-                # key is "nas_aapl-balance_sheet"
+                key = "{0}-{1}-{2}".format(
+                jsondata['SYMBOL'].lower(),
+                jsondata['ReportType'].replace(' ', '_').lower(),
+                jsondata['Date'].replace('-','_').lower())
+                # key is "nas_aapl-balance_sheet-2007_09"
 
                 #Add json to counch base bucket, cb.upsert()
                 result = cb.upsert(key, jsondata)
@@ -153,7 +154,7 @@ def jsonfiles2counchbase(jsonfolder, couchbaseIP, bucketname):
 
 
     #print one record to validate it
-    result = cb.get('nas_aapl-key_ratio')
+    result = cb.get('nas_aapl-balance_sheet-2006_09')
     print result
 
 
