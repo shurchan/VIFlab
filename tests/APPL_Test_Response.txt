@@ -1,0 +1,2870 @@
+AlchemyAPI response
+
+/usr/bin/python /Users/misc/code/viflab/tests/alchemyAPPLMD1.py
+
+
+            ,
+      .I7777~
+     .I7777777
+   +.  77777777
+ =???,  I7777777=
+=??????   7777777?   ,:::===?
+=???????.  777777777777777777~         .77:    ??           :7                                              =$,     :$$$$$$+  =$?
+ ????????: .777777777777777777         II77    ??           :7                                              $$7     :$?   7$7 =$?
+  .???????=  +7777777777777777        .7 =7:   ??   :7777+  :7:I777?    ?777I=  77~777? ,777I I7      77   +$?$:    :$?    $$ =$?
+    ???????+  ~777???+===:::         :7+  ~7   ?? .77    +7 :7?.   II  7~   ,I7 77+   I77   ~7 ?7    =7:  .$, =$    :$?  ,$$? =$?
+    ,???????~                        77    7:  ?? ?I.     7 :7     :7 ~7      7 77    =7:    7  7    7~   7$   $=   :$$$$$$~  =$?
+    .???????  ,???I77777777777~     :77777777~ ?? 7:        :7     :7 777777777:77    =7     7  +7  ~7   $$$$$$$$I  :$?       =$?
+   .???????  ,7777777777777777      7=      77 ?? I+      7 :7     :7 ??      7,77    =7     7   7~ 7,  =$7     $$, :$?       =$?
+  .???????. I77777777777777777     +7       ,7???  77    I7 :7     :7  7~   .?7 77    =7     7   ,77I   $+       7$ :$?       =$?
+ ,???????= :77777777777777777~     7=        ~7??  ~I77777  :7     :7  ,777777. 77    =7     7    77,  +$        .$::$?       =$?
+,???????  :7777777                                                                                77
+ =?????  ,7777777                                                                               77=
+   +?+  7777777?
+    +  ~7777777
+       I777777
+          :~
+
+
+############################################
+#   Entity Extraction Example              #
+############################################
+
+
+Processing text:  In September 2015, the Company introduced the iPhone Upgrade Program, which is available to customers who
+purchase an iPhone 6s and 6s Plus in one of its U.S. physical retail stores and activate the purchased iPhone with one of the four national carriers. The iPhone Upgrade Program provides customers the right to trade in that iPhone for a new iPhone,
+provided certain conditions are met. One of the conditions of this program requires the customer to finance the initial purchase price of the iPhone with a third-party lender. Upon exercise of the trade-in right and purchase of a new iPhone, the
+Company satisfies the customer’s outstanding balance due to the third-party lender on the original device. The Company accounts for the trade-in right as a guarantee liability and recognizes arrangement revenue net of the fair value of such
+right with subsequent changes to the guarantee liability recognized within revenue.  The Company has entered into indemnification agreements with its
+directors and executive officers. Under these agreements, the Company has agreed to indemnify such individuals to the fullest extent permitted by law against liabilities that arise by reason of their status as directors or officers and to advance
+expenses incurred by such individuals in connection with related legal proceedings. It is not possible to determine the maximum potential amount of payments the Company could be required to make under these agreements due to the limited history of
+prior indemnification claims and the unique facts and circumstances involved in each claim. However, the Company maintains directors and officers liability insurance coverage to reduce its exposure to such obligations.
+Critical Accounting Policies and Estimates  The preparation of
+financial statements and related disclosures in conformity with U.S. generally accepted accounting principles (“GAAP”) and the Company’s discussion and analysis of its financial condition and operating results require the
+Company’s management to make judgments, assumptions and estimates that affect the amounts reported in its consolidated financial statements and accompanying notes. Note 1, “Summary of Significant Accounting Policies,” of the Notes to
+Consolidated Financial Statements in Part II, Item 8 of this Form 10-K describes the significant accounting policies and methods used in the preparation of the Company’s consolidated financial statements. Management bases its estimates on
+historical experience and on various other assumptions it believes to be reasonable under the circumstances, the results of which form the basis for making judgments about the carrying values of assets and liabilities. Actual results may differ from
+these estimates, and such differences may be material.  Management believes the Company’s critical accounting policies and estimates are those
+related to revenue recognition, valuation and impairment of marketable securities, inventory valuation and valuation of manufacturing-related assets and estimated purchase commitment cancellation fees, warranty costs, income taxes, and legal and
+other contingencies. Management considers these policies critical because they are both important to the portrayal of the Company’s financial condition and operating results, and they require management to make judgments and estimates about
+inherently uncertain matters. The Company’s senior management has reviewed these critical accounting policies and related disclosures with the Audit and Finance Committee of the Company’s Board of Directors.
+Revenue Recognition  Net sales consist primarily of revenue
+from the sale of hardware, software, digital content and applications, accessories, and service and support contracts. The Company recognizes revenue when persuasive evidence of an arrangement exists, delivery has occurred, the sales price is fixed
+or determinable and collection is probable. Product is considered delivered to the customer once it has been shipped and title, risk of loss and rewards of ownership have been transferred. For most of the Company’s product sales, these criteria
+are met at the time the product is shipped. For online sales to individuals, for some sales to education customers in the U.S., and for certain other sales, the Company defers revenue until the customer receives the product because the Company
+retains a portion of the risk of loss on these sales during transit. For payment terms in excess of the Company’s standard payment terms, revenue is recognized as payments become due unless the Company has positive evidence that the sales price
+is fixed or determinable, such as a successful history of collection, without concession, on comparable arrangements. The Company recognizes revenue from the sale of hardware products, software bundled with hardware that is essential to the
+functionality of the hardware and third-party digital content sold on the iTunes Store in accordance with general revenue recognition accounting guidance. The Company recognizes revenue in accordance with industry-specific software accounting
+guidance for the following types of sales transactions: (i) standalone sales of software products, (ii) sales of software upgrades and (iii) sales of software bundled with hardware not essential to the functionality of the hardware.
+ For multi-element arrangements that include hardware products containing software essential to the hardware product’s functionality,
+undelivered software elements that relate to the hardware product’s essential software and/or undelivered non-software services, the Company allocates revenue to all deliverables based on their relative selling prices. In such circumstances,
+the Company uses a hierarchy to determine the selling price to be used for allocating revenue to deliverables: (i) vendor-specific objective evidence of fair value (“VSOE”), (ii) third-party evidence of selling price
+(“TPE”) and (iii) best estimate of selling price (“ESP”). VSOE generally exists only when the Company sells the deliverable separately and is the price actually charged by the Company for that deliverable. ESPs reflect the
+Company’s best estimates of what the selling prices of elements would be if they were sold regularly on a stand-alone basis.
+
+
+## Response Object ##
+{
+    "status": "OK",
+    "totalTransactions": "2",
+    "language": "english",
+    "url": "",
+    "entities": [
+        {
+            "relevance": "0.750971",
+            "count": "7",
+            "type": "Technology",
+            "sentiment": {
+                "score": "0.739736",
+                "type": "positive"
+            },
+            "text": "iPhone"
+        },
+        {
+            "count": "3",
+            "sentiment": {
+                "type": "neutral"
+            },
+            "disambiguated": {
+                "website": "http://www.usa.gov/",
+                "yago": "http://yago-knowledge.org/resource/United_States",
+                "name": "United States",
+                "freebase": "http://rdf.freebase.com/ns/m.09c7w0",
+                "opencyc": "http://sw.opencyc.org/concept/Mx4rvVikKpwpEbGdrcN5Y29ycA",
+                "subType": [
+                    "Location",
+                    "Region",
+                    "AdministrativeDivision",
+                    "GovernmentalJurisdiction",
+                    "FilmEditor"
+                ],
+                "dbpedia": "http://dbpedia.org/resource/United_States",
+                "ciaFactbook": "http://www4.wiwiss.fu-berlin.de/factbook/resource/United_States"
+            },
+            "text": "U.S.",
+            "relevance": "0.48754",
+            "type": "Country"
+        },
+        {
+            "relevance": "0.321884",
+            "count": "1",
+            "type": "FieldTerminology",
+            "sentiment": {
+                "type": "neutral"
+            },
+            "text": "retail stores"
+        },
+        {
+            "relevance": "0.31233",
+            "count": "1",
+            "type": "JobTitle",
+            "sentiment": {
+                "score": "0.466351",
+                "type": "positive"
+            },
+            "text": "Audit and Finance Committee"
+        },
+        {
+            "relevance": "0.310874",
+            "count": "1",
+            "type": "JobTitle",
+            "sentiment": {
+                "score": "0.319945",
+                "type": "positive"
+            },
+            "text": "executive"
+        },
+        {
+            "relevance": "0.307725",
+            "count": "1",
+            "type": "FieldTerminology",
+            "sentiment": {
+                "score": "0.231062",
+                "type": "positive"
+            },
+            "text": "insurance coverage"
+        },
+        {
+            "relevance": "0.306521",
+            "count": "1",
+            "type": "FieldTerminology",
+            "sentiment": {
+                "score": "0.307309",
+                "type": "positive"
+            },
+            "text": "software products"
+        },
+        {
+            "relevance": "0.302136",
+            "count": "1",
+            "type": "Facility",
+            "sentiment": {
+                "score": "0.449211",
+                "type": "positive"
+            },
+            "text": "iTunes Store"
+        },
+        {
+            "relevance": "0.293313",
+            "count": "1",
+            "type": "FieldTerminology",
+            "sentiment": {
+                "score": "0.394676",
+                "type": "positive"
+            },
+            "text": "software upgrades"
+        },
+        {
+            "relevance": "0.293313",
+            "count": "1",
+            "type": "Quantity",
+            "sentiment": {
+                "type": "neutral"
+            },
+            "text": "10-K"
+        }
+    ],
+    "usage": "By accessing AlchemyAPI or using information generated by AlchemyAPI, you are agreeing to be bound by the AlchemyAPI Terms of Use: http://www.alchemyapi.com/company/terms.html"
+}
+
+## Entities ##
+text:  iPhone
+type:  Technology
+relevance:  0.750971
+sentiment:  positive
+sentiment score: 0.739736
+
+text:  U.S.
+type:  Country
+relevance:  0.48754
+sentiment:  neutral
+
+text:  retail stores
+type:  FieldTerminology
+relevance:  0.321884
+sentiment:  neutral
+
+text:  Audit and Finance Committee
+type:  JobTitle
+relevance:  0.31233
+sentiment:  positive
+sentiment score: 0.466351
+
+text:  executive
+type:  JobTitle
+relevance:  0.310874
+sentiment:  positive
+sentiment score: 0.319945
+
+text:  insurance coverage
+type:  FieldTerminology
+relevance:  0.307725
+sentiment:  positive
+sentiment score: 0.231062
+
+text:  software products
+type:  FieldTerminology
+relevance:  0.306521
+sentiment:  positive
+sentiment score: 0.307309
+
+text:  iTunes Store
+type:  Facility
+relevance:  0.302136
+sentiment:  positive
+sentiment score: 0.449211
+
+text:  software upgrades
+type:  FieldTerminology
+relevance:  0.293313
+sentiment:  positive
+sentiment score: 0.394676
+
+text:  10-K
+type:  Quantity
+relevance:  0.293313
+sentiment:  neutral
+
+
+
+
+############################################
+#   Keyword Extraction Example             #
+############################################
+
+
+Processing text:  In September 2015, the Company introduced the iPhone Upgrade Program, which is available to customers who
+purchase an iPhone 6s and 6s Plus in one of its U.S. physical retail stores and activate the purchased iPhone with one of the four national carriers. The iPhone Upgrade Program provides customers the right to trade in that iPhone for a new iPhone,
+provided certain conditions are met. One of the conditions of this program requires the customer to finance the initial purchase price of the iPhone with a third-party lender. Upon exercise of the trade-in right and purchase of a new iPhone, the
+Company satisfies the customer’s outstanding balance due to the third-party lender on the original device. The Company accounts for the trade-in right as a guarantee liability and recognizes arrangement revenue net of the fair value of such
+right with subsequent changes to the guarantee liability recognized within revenue.  The Company has entered into indemnification agreements with its
+directors and executive officers. Under these agreements, the Company has agreed to indemnify such individuals to the fullest extent permitted by law against liabilities that arise by reason of their status as directors or officers and to advance
+expenses incurred by such individuals in connection with related legal proceedings. It is not possible to determine the maximum potential amount of payments the Company could be required to make under these agreements due to the limited history of
+prior indemnification claims and the unique facts and circumstances involved in each claim. However, the Company maintains directors and officers liability insurance coverage to reduce its exposure to such obligations.
+Critical Accounting Policies and Estimates  The preparation of
+financial statements and related disclosures in conformity with U.S. generally accepted accounting principles (“GAAP”) and the Company’s discussion and analysis of its financial condition and operating results require the
+Company’s management to make judgments, assumptions and estimates that affect the amounts reported in its consolidated financial statements and accompanying notes. Note 1, “Summary of Significant Accounting Policies,” of the Notes to
+Consolidated Financial Statements in Part II, Item 8 of this Form 10-K describes the significant accounting policies and methods used in the preparation of the Company’s consolidated financial statements. Management bases its estimates on
+historical experience and on various other assumptions it believes to be reasonable under the circumstances, the results of which form the basis for making judgments about the carrying values of assets and liabilities. Actual results may differ from
+these estimates, and such differences may be material.  Management believes the Company’s critical accounting policies and estimates are those
+related to revenue recognition, valuation and impairment of marketable securities, inventory valuation and valuation of manufacturing-related assets and estimated purchase commitment cancellation fees, warranty costs, income taxes, and legal and
+other contingencies. Management considers these policies critical because they are both important to the portrayal of the Company’s financial condition and operating results, and they require management to make judgments and estimates about
+inherently uncertain matters. The Company’s senior management has reviewed these critical accounting policies and related disclosures with the Audit and Finance Committee of the Company’s Board of Directors.
+Revenue Recognition  Net sales consist primarily of revenue
+from the sale of hardware, software, digital content and applications, accessories, and service and support contracts. The Company recognizes revenue when persuasive evidence of an arrangement exists, delivery has occurred, the sales price is fixed
+or determinable and collection is probable. Product is considered delivered to the customer once it has been shipped and title, risk of loss and rewards of ownership have been transferred. For most of the Company’s product sales, these criteria
+are met at the time the product is shipped. For online sales to individuals, for some sales to education customers in the U.S., and for certain other sales, the Company defers revenue until the customer receives the product because the Company
+retains a portion of the risk of loss on these sales during transit. For payment terms in excess of the Company’s standard payment terms, revenue is recognized as payments become due unless the Company has positive evidence that the sales price
+is fixed or determinable, such as a successful history of collection, without concession, on comparable arrangements. The Company recognizes revenue from the sale of hardware products, software bundled with hardware that is essential to the
+functionality of the hardware and third-party digital content sold on the iTunes Store in accordance with general revenue recognition accounting guidance. The Company recognizes revenue in accordance with industry-specific software accounting
+guidance for the following types of sales transactions: (i) standalone sales of software products, (ii) sales of software upgrades and (iii) sales of software bundled with hardware not essential to the functionality of the hardware.
+ For multi-element arrangements that include hardware products containing software essential to the hardware product’s functionality,
+undelivered software elements that relate to the hardware product’s essential software and/or undelivered non-software services, the Company allocates revenue to all deliverables based on their relative selling prices. In such circumstances,
+the Company uses a hierarchy to determine the selling price to be used for allocating revenue to deliverables: (i) vendor-specific objective evidence of fair value (“VSOE”), (ii) third-party evidence of selling price
+(“TPE”) and (iii) best estimate of selling price (“ESP”). VSOE generally exists only when the Company sells the deliverable separately and is the price actually charged by the Company for that deliverable. ESPs reflect the
+Company’s best estimates of what the selling prices of elements would be if they were sold regularly on a stand-alone basis.
+
+
+## Response Object ##
+{
+    "status": "OK",
+    "usage": "By accessing AlchemyAPI or using information generated by AlchemyAPI, you are agreeing to be bound by the AlchemyAPI Terms of Use: http://www.alchemyapi.com/company/terms.html",
+    "keywords": [
+        {
+            "relevance": "0.934376",
+            "text": "Company",
+            "sentiment": {
+                "score": "0.449168",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.81189",
+            "text": "critical accounting policies",
+            "sentiment": {
+                "score": "0.466351",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.775544",
+            "text": "consolidated financial statements",
+            "sentiment": {
+                "score": "-0.239501",
+                "type": "negative"
+            }
+        },
+        {
+            "relevance": "0.668279",
+            "text": "iPhone Upgrade Program",
+            "sentiment": {
+                "score": "0.589124",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.611531",
+            "text": "significant accounting policies",
+            "sentiment": {
+                "score": "0.291559",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.607869",
+            "text": "revenue recognition",
+            "sentiment": {
+                "score": "0.428553",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.508091",
+            "text": "new iPhone",
+            "sentiment": {
+                "score": "0.739469",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.496645",
+            "text": "Revenue Recognition  Net",
+            "sentiment": {
+                "score": "0.407895",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.483694",
+            "text": "general revenue recognition",
+            "sentiment": {
+                "score": "0.449211",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.457783",
+            "text": "third-party lender",
+            "sentiment": {
+                "score": "0.702334",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.450506",
+            "text": "initial purchase price",
+            "sentiment": {
+                "score": "0.548181",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.437587",
+            "text": "physical retail stores",
+            "sentiment": {
+                "type": "neutral"
+            }
+        },
+        {
+            "relevance": "0.434822",
+            "text": "related disclosures",
+            "sentiment": {
+                "score": "0.466351",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.427499",
+            "text": "prior indemnification claims",
+            "sentiment": {
+                "type": "neutral"
+            }
+        },
+        {
+            "relevance": "0.42588",
+            "text": "financial condition",
+            "sentiment": {
+                "score": "0.610292",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.425858",
+            "text": "operating results",
+            "sentiment": {
+                "score": "0.610292",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.425039",
+            "text": "fair value",
+            "sentiment": {
+                "score": "0.696803",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.424628",
+            "text": "sales",
+            "sentiment": {
+                "mixed": "1",
+                "score": "0.032236",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.423664",
+            "text": "industry-specific software accounting",
+            "sentiment": {
+                "score": "0.404441",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.42296",
+            "text": "revenue net",
+            "sentiment": {
+                "score": "0.901376",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.420036",
+            "text": "undelivered software elements",
+            "sentiment": {
+                "score": "0.335815",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.419835",
+            "text": "liability insurance coverage",
+            "sentiment": {
+                "score": "0.231062",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.419403",
+            "text": "digital content",
+            "sentiment": {
+                "score": "0.357543",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.417831",
+            "text": "related legal proceedings",
+            "sentiment": {
+                "score": "-0.297313",
+                "type": "negative"
+            }
+        },
+        {
+            "relevance": "0.41657",
+            "text": "sales price",
+            "sentiment": {
+                "score": "0.427065",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.416191",
+            "text": "guarantee liability",
+            "sentiment": {
+                "score": "0.831445",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.407692",
+            "text": "purchase commitment cancellation",
+            "sentiment": {
+                "type": "neutral"
+            }
+        },
+        {
+            "relevance": "0.406781",
+            "text": "undelivered non-software services",
+            "sentiment": {
+                "score": "0.335815",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.405844",
+            "text": "hardware products",
+            "sentiment": {
+                "score": "0.835329",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.40453",
+            "text": "third-party digital content",
+            "sentiment": {
+                "score": "0.449211",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.397022",
+            "text": "vendor-specific objective evidence",
+            "sentiment": {
+                "score": "0.492229",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.392156",
+            "text": "relative selling prices",
+            "sentiment": {
+                "type": "neutral"
+            }
+        },
+        {
+            "relevance": "0.390841",
+            "text": "Company accounts",
+            "sentiment": {
+                "score": "0.901376",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.390788",
+            "text": "standard payment terms",
+            "sentiment": {
+                "score": "0.278384",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.381426",
+            "text": "hardware product",
+            "sentiment": {
+                "score": "0.585572",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.341444",
+            "text": "product sales",
+            "sentiment": {
+                "score": "0.372927",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.341416",
+            "text": "best estimates",
+            "sentiment": {
+                "score": "0.296763",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.334918",
+            "text": "indemnification agreements",
+            "sentiment": {
+                "score": "0.445308",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.333057",
+            "text": "accounting principles",
+            "sentiment": {
+                "type": "neutral"
+            }
+        },
+        {
+            "relevance": "0.331299",
+            "text": "management",
+            "sentiment": {
+                "score": "0.476733",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.32972",
+            "text": "sales transactions",
+            "sentiment": {
+                "score": "0.325305",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.329528",
+            "text": "certain conditions",
+            "sentiment": {
+                "type": "neutral"
+            }
+        },
+        {
+            "relevance": "0.328052",
+            "text": "national carriers",
+            "sentiment": {
+                "type": "neutral"
+            }
+        },
+        {
+            "relevance": "0.327457",
+            "text": "certain other sales",
+            "sentiment": {
+                "type": "neutral"
+            }
+        },
+        {
+            "relevance": "0.326831",
+            "text": "standalone sales",
+            "sentiment": {
+                "score": "0.307309",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.326088",
+            "text": "executive officers",
+            "sentiment": {
+                "score": "0.319945",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.32106",
+            "text": "fullest extent",
+            "sentiment": {
+                "score": "0.381178",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.321037",
+            "text": "subsequent changes",
+            "sentiment": {
+                "score": "0.761514",
+                "type": "positive"
+            }
+        },
+        {
+            "relevance": "0.320875",
+            "text": "unique facts",
+            "sentiment": {
+                "type": "neutral"
+            }
+        },
+        {
+            "relevance": "0.320806",
+            "text": "software products",
+            "sentiment": {
+                "score": "0.307309",
+                "type": "positive"
+            }
+        }
+    ],
+    "totalTransactions": "2",
+    "language": "english"
+}
+
+## Keywords ##
+text:  Company
+relevance:  0.934376
+sentiment:  positive
+sentiment score: 0.449168
+
+text:  critical accounting policies
+relevance:  0.81189
+sentiment:  positive
+sentiment score: 0.466351
+
+text:  consolidated financial statements
+relevance:  0.775544
+sentiment:  negative
+sentiment score: -0.239501
+
+text:  iPhone Upgrade Program
+relevance:  0.668279
+sentiment:  positive
+sentiment score: 0.589124
+
+text:  significant accounting policies
+relevance:  0.611531
+sentiment:  positive
+sentiment score: 0.291559
+
+text:  revenue recognition
+relevance:  0.607869
+sentiment:  positive
+sentiment score: 0.428553
+
+text:  new iPhone
+relevance:  0.508091
+sentiment:  positive
+sentiment score: 0.739469
+
+text:  Revenue Recognition  Net
+relevance:  0.496645
+sentiment:  positive
+sentiment score: 0.407895
+
+text:  general revenue recognition
+relevance:  0.483694
+sentiment:  positive
+sentiment score: 0.449211
+
+text:  third-party lender
+relevance:  0.457783
+sentiment:  positive
+sentiment score: 0.702334
+
+text:  initial purchase price
+relevance:  0.450506
+sentiment:  positive
+sentiment score: 0.548181
+
+text:  physical retail stores
+relevance:  0.437587
+sentiment:  neutral
+
+text:  related disclosures
+relevance:  0.434822
+sentiment:  positive
+sentiment score: 0.466351
+
+text:  prior indemnification claims
+relevance:  0.427499
+sentiment:  neutral
+
+text:  financial condition
+relevance:  0.42588
+sentiment:  positive
+sentiment score: 0.610292
+
+text:  operating results
+relevance:  0.425858
+sentiment:  positive
+sentiment score: 0.610292
+
+text:  fair value
+relevance:  0.425039
+sentiment:  positive
+sentiment score: 0.696803
+
+text:  sales
+relevance:  0.424628
+sentiment:  positive
+sentiment score: 0.032236
+
+text:  industry-specific software accounting
+relevance:  0.423664
+sentiment:  positive
+sentiment score: 0.404441
+
+text:  revenue net
+relevance:  0.42296
+sentiment:  positive
+sentiment score: 0.901376
+
+text:  undelivered software elements
+relevance:  0.420036
+sentiment:  positive
+sentiment score: 0.335815
+
+text:  liability insurance coverage
+relevance:  0.419835
+sentiment:  positive
+sentiment score: 0.231062
+
+text:  digital content
+relevance:  0.419403
+sentiment:  positive
+sentiment score: 0.357543
+
+text:  related legal proceedings
+relevance:  0.417831
+sentiment:  negative
+sentiment score: -0.297313
+
+text:  sales price
+relevance:  0.41657
+sentiment:  positive
+sentiment score: 0.427065
+
+text:  guarantee liability
+relevance:  0.416191
+sentiment:  positive
+sentiment score: 0.831445
+
+text:  purchase commitment cancellation
+relevance:  0.407692
+sentiment:  neutral
+
+text:  undelivered non-software services
+relevance:  0.406781
+sentiment:  positive
+sentiment score: 0.335815
+
+text:  hardware products
+relevance:  0.405844
+sentiment:  positive
+sentiment score: 0.835329
+
+text:  third-party digital content
+relevance:  0.40453
+sentiment:  positive
+sentiment score: 0.449211
+
+text:  vendor-specific objective evidence
+relevance:  0.397022
+sentiment:  positive
+sentiment score: 0.492229
+
+text:  relative selling prices
+relevance:  0.392156
+sentiment:  neutral
+
+text:  Company accounts
+relevance:  0.390841
+sentiment:  positive
+sentiment score: 0.901376
+
+text:  standard payment terms
+relevance:  0.390788
+sentiment:  positive
+sentiment score: 0.278384
+
+text:  hardware product
+relevance:  0.381426
+sentiment:  positive
+sentiment score: 0.585572
+
+text:  product sales
+relevance:  0.341444
+sentiment:  positive
+sentiment score: 0.372927
+
+text:  best estimates
+relevance:  0.341416
+sentiment:  positive
+sentiment score: 0.296763
+
+text:  indemnification agreements
+relevance:  0.334918
+sentiment:  positive
+sentiment score: 0.445308
+
+text:  accounting principles
+relevance:  0.333057
+sentiment:  neutral
+
+text:  management
+relevance:  0.331299
+sentiment:  positive
+sentiment score: 0.476733
+
+text:  sales transactions
+relevance:  0.32972
+sentiment:  positive
+sentiment score: 0.325305
+
+text:  certain conditions
+relevance:  0.329528
+sentiment:  neutral
+
+text:  national carriers
+relevance:  0.328052
+sentiment:  neutral
+
+text:  certain other sales
+relevance:  0.327457
+sentiment:  neutral
+
+text:  standalone sales
+relevance:  0.326831
+sentiment:  positive
+sentiment score: 0.307309
+
+text:  executive officers
+relevance:  0.326088
+sentiment:  positive
+sentiment score: 0.319945
+
+text:  fullest extent
+relevance:  0.32106
+sentiment:  positive
+sentiment score: 0.381178
+
+text:  subsequent changes
+relevance:  0.321037
+sentiment:  positive
+sentiment score: 0.761514
+
+text:  unique facts
+relevance:  0.320875
+sentiment:  neutral
+
+text:  software products
+relevance:  0.320806
+sentiment:  positive
+sentiment score: 0.307309
+
+
+
+
+############################################
+#   Concept Tagging Example                #
+############################################
+
+
+Processing text:  In September 2015, the Company introduced the iPhone Upgrade Program, which is available to customers who
+purchase an iPhone 6s and 6s Plus in one of its U.S. physical retail stores and activate the purchased iPhone with one of the four national carriers. The iPhone Upgrade Program provides customers the right to trade in that iPhone for a new iPhone,
+provided certain conditions are met. One of the conditions of this program requires the customer to finance the initial purchase price of the iPhone with a third-party lender. Upon exercise of the trade-in right and purchase of a new iPhone, the
+Company satisfies the customer’s outstanding balance due to the third-party lender on the original device. The Company accounts for the trade-in right as a guarantee liability and recognizes arrangement revenue net of the fair value of such
+right with subsequent changes to the guarantee liability recognized within revenue.  The Company has entered into indemnification agreements with its
+directors and executive officers. Under these agreements, the Company has agreed to indemnify such individuals to the fullest extent permitted by law against liabilities that arise by reason of their status as directors or officers and to advance
+expenses incurred by such individuals in connection with related legal proceedings. It is not possible to determine the maximum potential amount of payments the Company could be required to make under these agreements due to the limited history of
+prior indemnification claims and the unique facts and circumstances involved in each claim. However, the Company maintains directors and officers liability insurance coverage to reduce its exposure to such obligations.
+Critical Accounting Policies and Estimates  The preparation of
+financial statements and related disclosures in conformity with U.S. generally accepted accounting principles (“GAAP”) and the Company’s discussion and analysis of its financial condition and operating results require the
+Company’s management to make judgments, assumptions and estimates that affect the amounts reported in its consolidated financial statements and accompanying notes. Note 1, “Summary of Significant Accounting Policies,” of the Notes to
+Consolidated Financial Statements in Part II, Item 8 of this Form 10-K describes the significant accounting policies and methods used in the preparation of the Company’s consolidated financial statements. Management bases its estimates on
+historical experience and on various other assumptions it believes to be reasonable under the circumstances, the results of which form the basis for making judgments about the carrying values of assets and liabilities. Actual results may differ from
+these estimates, and such differences may be material.  Management believes the Company’s critical accounting policies and estimates are those
+related to revenue recognition, valuation and impairment of marketable securities, inventory valuation and valuation of manufacturing-related assets and estimated purchase commitment cancellation fees, warranty costs, income taxes, and legal and
+other contingencies. Management considers these policies critical because they are both important to the portrayal of the Company’s financial condition and operating results, and they require management to make judgments and estimates about
+inherently uncertain matters. The Company’s senior management has reviewed these critical accounting policies and related disclosures with the Audit and Finance Committee of the Company’s Board of Directors.
+Revenue Recognition  Net sales consist primarily of revenue
+from the sale of hardware, software, digital content and applications, accessories, and service and support contracts. The Company recognizes revenue when persuasive evidence of an arrangement exists, delivery has occurred, the sales price is fixed
+or determinable and collection is probable. Product is considered delivered to the customer once it has been shipped and title, risk of loss and rewards of ownership have been transferred. For most of the Company’s product sales, these criteria
+are met at the time the product is shipped. For online sales to individuals, for some sales to education customers in the U.S., and for certain other sales, the Company defers revenue until the customer receives the product because the Company
+retains a portion of the risk of loss on these sales during transit. For payment terms in excess of the Company’s standard payment terms, revenue is recognized as payments become due unless the Company has positive evidence that the sales price
+is fixed or determinable, such as a successful history of collection, without concession, on comparable arrangements. The Company recognizes revenue from the sale of hardware products, software bundled with hardware that is essential to the
+functionality of the hardware and third-party digital content sold on the iTunes Store in accordance with general revenue recognition accounting guidance. The Company recognizes revenue in accordance with industry-specific software accounting
+guidance for the following types of sales transactions: (i) standalone sales of software products, (ii) sales of software upgrades and (iii) sales of software bundled with hardware not essential to the functionality of the hardware.
+ For multi-element arrangements that include hardware products containing software essential to the hardware product’s functionality,
+undelivered software elements that relate to the hardware product’s essential software and/or undelivered non-software services, the Company allocates revenue to all deliverables based on their relative selling prices. In such circumstances,
+the Company uses a hierarchy to determine the selling price to be used for allocating revenue to deliverables: (i) vendor-specific objective evidence of fair value (“VSOE”), (ii) third-party evidence of selling price
+(“TPE”) and (iii) best estimate of selling price (“ESP”). VSOE generally exists only when the Company sells the deliverable separately and is the price actually charged by the Company for that deliverable. ESPs reflect the
+Company’s best estimates of what the selling prices of elements would be if they were sold regularly on a stand-alone basis.
+
+
+## Object ##
+{
+    "status": "OK",
+    "usage": "By accessing AlchemyAPI or using information generated by AlchemyAPI, you are agreeing to be bound by the AlchemyAPI Terms of Use: http://www.alchemyapi.com/company/terms.html",
+    "url": "",
+    "language": "english",
+    "concepts": [
+        {
+            "relevance": "0.957196",
+            "text": "Generally Accepted Accounting Principles",
+            "dbpedia": "http://dbpedia.org/resource/Generally_Accepted_Accounting_Principles"
+        },
+        {
+            "relevance": "0.760949",
+            "text": "Balance sheet",
+            "opencyc": "http://sw.opencyc.org/concept/Mx4rvVjQg5wpEbGdrcN5Y29ycA",
+            "dbpedia": "http://dbpedia.org/resource/Balance_sheet",
+            "freebase": "http://rdf.freebase.com/ns/m.0pkp2"
+        },
+        {
+            "relevance": "0.759706",
+            "text": "Sales",
+            "opencyc": "http://sw.opencyc.org/concept/Mx4rwQwl6JwpEbGdrcN5Y29ycA",
+            "dbpedia": "http://dbpedia.org/resource/Sales",
+            "freebase": "http://rdf.freebase.com/ns/m.014dgf"
+        },
+        {
+            "relevance": "0.603616",
+            "text": "Consultative selling",
+            "yago": "http://yago-knowledge.org/resource/Consultative_selling",
+            "dbpedia": "http://dbpedia.org/resource/Consultative_selling"
+        },
+        {
+            "relevance": "0.566455",
+            "text": "Insurance",
+            "opencyc": "http://sw.opencyc.org/concept/Mx4rvWNwLZwpEbGdrcN5Y29ycA",
+            "dbpedia": "http://dbpedia.org/resource/Insurance",
+            "freebase": "http://rdf.freebase.com/ns/m.03xks"
+        },
+        {
+            "relevance": "0.548919",
+            "text": "Marketing",
+            "dbpedia": "http://dbpedia.org/resource/Marketing",
+            "freebase": "http://rdf.freebase.com/ns/m.0g4gr"
+        },
+        {
+            "relevance": "0.535309",
+            "text": "Asset",
+            "opencyc": "http://sw.opencyc.org/concept/Mx4rvldq0ZwpEbGdrcN5Y29ycA",
+            "dbpedia": "http://dbpedia.org/resource/Asset",
+            "freebase": "http://rdf.freebase.com/ns/m.0z1j"
+        },
+        {
+            "relevance": "0.528755",
+            "text": "IPhone",
+            "yago": "http://yago-knowledge.org/resource/IPhone",
+            "dbpedia": "http://dbpedia.org/resource/IPhone",
+            "freebase": "http://rdf.freebase.com/ns/m.027lnzs"
+        }
+    ]
+}
+
+## Concepts ##
+text:  Generally Accepted Accounting Principles
+relevance:  0.957196
+
+text:  Balance sheet
+relevance:  0.760949
+
+text:  Sales
+relevance:  0.759706
+
+text:  Consultative selling
+relevance:  0.603616
+
+text:  Insurance
+relevance:  0.566455
+
+text:  Marketing
+relevance:  0.548919
+
+text:  Asset
+relevance:  0.535309
+
+text:  IPhone
+relevance:  0.528755
+
+
+
+
+############################################
+#   Targeted Sentiment Analysis Example    #
+############################################
+
+
+Processing text:  In September 2015, the Company introduced the iPhone Upgrade Program, which is available to customers who
+purchase an iPhone 6s and 6s Plus in one of its U.S. physical retail stores and activate the purchased iPhone with one of the four national carriers. The iPhone Upgrade Program provides customers the right to trade in that iPhone for a new iPhone,
+provided certain conditions are met. One of the conditions of this program requires the customer to finance the initial purchase price of the iPhone with a third-party lender. Upon exercise of the trade-in right and purchase of a new iPhone, the
+Company satisfies the customer’s outstanding balance due to the third-party lender on the original device. The Company accounts for the trade-in right as a guarantee liability and recognizes arrangement revenue net of the fair value of such
+right with subsequent changes to the guarantee liability recognized within revenue.  The Company has entered into indemnification agreements with its
+directors and executive officers. Under these agreements, the Company has agreed to indemnify such individuals to the fullest extent permitted by law against liabilities that arise by reason of their status as directors or officers and to advance
+expenses incurred by such individuals in connection with related legal proceedings. It is not possible to determine the maximum potential amount of payments the Company could be required to make under these agreements due to the limited history of
+prior indemnification claims and the unique facts and circumstances involved in each claim. However, the Company maintains directors and officers liability insurance coverage to reduce its exposure to such obligations.
+Critical Accounting Policies and Estimates  The preparation of
+financial statements and related disclosures in conformity with U.S. generally accepted accounting principles (“GAAP”) and the Company’s discussion and analysis of its financial condition and operating results require the
+Company’s management to make judgments, assumptions and estimates that affect the amounts reported in its consolidated financial statements and accompanying notes. Note 1, “Summary of Significant Accounting Policies,” of the Notes to
+Consolidated Financial Statements in Part II, Item 8 of this Form 10-K describes the significant accounting policies and methods used in the preparation of the Company’s consolidated financial statements. Management bases its estimates on
+historical experience and on various other assumptions it believes to be reasonable under the circumstances, the results of which form the basis for making judgments about the carrying values of assets and liabilities. Actual results may differ from
+these estimates, and such differences may be material.  Management believes the Company’s critical accounting policies and estimates are those
+related to revenue recognition, valuation and impairment of marketable securities, inventory valuation and valuation of manufacturing-related assets and estimated purchase commitment cancellation fees, warranty costs, income taxes, and legal and
+other contingencies. Management considers these policies critical because they are both important to the portrayal of the Company’s financial condition and operating results, and they require management to make judgments and estimates about
+inherently uncertain matters. The Company’s senior management has reviewed these critical accounting policies and related disclosures with the Audit and Finance Committee of the Company’s Board of Directors.
+Revenue Recognition  Net sales consist primarily of revenue
+from the sale of hardware, software, digital content and applications, accessories, and service and support contracts. The Company recognizes revenue when persuasive evidence of an arrangement exists, delivery has occurred, the sales price is fixed
+or determinable and collection is probable. Product is considered delivered to the customer once it has been shipped and title, risk of loss and rewards of ownership have been transferred. For most of the Company’s product sales, these criteria
+are met at the time the product is shipped. For online sales to individuals, for some sales to education customers in the U.S., and for certain other sales, the Company defers revenue until the customer receives the product because the Company
+retains a portion of the risk of loss on these sales during transit. For payment terms in excess of the Company’s standard payment terms, revenue is recognized as payments become due unless the Company has positive evidence that the sales price
+is fixed or determinable, such as a successful history of collection, without concession, on comparable arrangements. The Company recognizes revenue from the sale of hardware products, software bundled with hardware that is essential to the
+functionality of the hardware and third-party digital content sold on the iTunes Store in accordance with general revenue recognition accounting guidance. The Company recognizes revenue in accordance with industry-specific software accounting
+guidance for the following types of sales transactions: (i) standalone sales of software products, (ii) sales of software upgrades and (iii) sales of software bundled with hardware not essential to the functionality of the hardware.
+ For multi-element arrangements that include hardware products containing software essential to the hardware product’s functionality,
+undelivered software elements that relate to the hardware product’s essential software and/or undelivered non-software services, the Company allocates revenue to all deliverables based on their relative selling prices. In such circumstances,
+the Company uses a hierarchy to determine the selling price to be used for allocating revenue to deliverables: (i) vendor-specific objective evidence of fair value (“VSOE”), (ii) third-party evidence of selling price
+(“TPE”) and (iii) best estimate of selling price (“ESP”). VSOE generally exists only when the Company sells the deliverable separately and is the price actually charged by the Company for that deliverable. ESPs reflect the
+Company’s best estimates of what the selling prices of elements would be if they were sold regularly on a stand-alone basis.
+
+
+Error in targeted sentiment analysis call:  cannot-locate-keyphrase
+
+
+
+############################################
+#   Language Detection Example             #
+############################################
+
+
+Processing text:  In September 2015, the Company introduced the iPhone Upgrade Program, which is available to customers who
+purchase an iPhone 6s and 6s Plus in one of its U.S. physical retail stores and activate the purchased iPhone with one of the four national carriers. The iPhone Upgrade Program provides customers the right to trade in that iPhone for a new iPhone,
+provided certain conditions are met. One of the conditions of this program requires the customer to finance the initial purchase price of the iPhone with a third-party lender. Upon exercise of the trade-in right and purchase of a new iPhone, the
+Company satisfies the customer’s outstanding balance due to the third-party lender on the original device. The Company accounts for the trade-in right as a guarantee liability and recognizes arrangement revenue net of the fair value of such
+right with subsequent changes to the guarantee liability recognized within revenue.  The Company has entered into indemnification agreements with its
+directors and executive officers. Under these agreements, the Company has agreed to indemnify such individuals to the fullest extent permitted by law against liabilities that arise by reason of their status as directors or officers and to advance
+expenses incurred by such individuals in connection with related legal proceedings. It is not possible to determine the maximum potential amount of payments the Company could be required to make under these agreements due to the limited history of
+prior indemnification claims and the unique facts and circumstances involved in each claim. However, the Company maintains directors and officers liability insurance coverage to reduce its exposure to such obligations.
+Critical Accounting Policies and Estimates  The preparation of
+financial statements and related disclosures in conformity with U.S. generally accepted accounting principles (“GAAP”) and the Company’s discussion and analysis of its financial condition and operating results require the
+Company’s management to make judgments, assumptions and estimates that affect the amounts reported in its consolidated financial statements and accompanying notes. Note 1, “Summary of Significant Accounting Policies,” of the Notes to
+Consolidated Financial Statements in Part II, Item 8 of this Form 10-K describes the significant accounting policies and methods used in the preparation of the Company’s consolidated financial statements. Management bases its estimates on
+historical experience and on various other assumptions it believes to be reasonable under the circumstances, the results of which form the basis for making judgments about the carrying values of assets and liabilities. Actual results may differ from
+these estimates, and such differences may be material.  Management believes the Company’s critical accounting policies and estimates are those
+related to revenue recognition, valuation and impairment of marketable securities, inventory valuation and valuation of manufacturing-related assets and estimated purchase commitment cancellation fees, warranty costs, income taxes, and legal and
+other contingencies. Management considers these policies critical because they are both important to the portrayal of the Company’s financial condition and operating results, and they require management to make judgments and estimates about
+inherently uncertain matters. The Company’s senior management has reviewed these critical accounting policies and related disclosures with the Audit and Finance Committee of the Company’s Board of Directors.
+Revenue Recognition  Net sales consist primarily of revenue
+from the sale of hardware, software, digital content and applications, accessories, and service and support contracts. The Company recognizes revenue when persuasive evidence of an arrangement exists, delivery has occurred, the sales price is fixed
+or determinable and collection is probable. Product is considered delivered to the customer once it has been shipped and title, risk of loss and rewards of ownership have been transferred. For most of the Company’s product sales, these criteria
+are met at the time the product is shipped. For online sales to individuals, for some sales to education customers in the U.S., and for certain other sales, the Company defers revenue until the customer receives the product because the Company
+retains a portion of the risk of loss on these sales during transit. For payment terms in excess of the Company’s standard payment terms, revenue is recognized as payments become due unless the Company has positive evidence that the sales price
+is fixed or determinable, such as a successful history of collection, without concession, on comparable arrangements. The Company recognizes revenue from the sale of hardware products, software bundled with hardware that is essential to the
+functionality of the hardware and third-party digital content sold on the iTunes Store in accordance with general revenue recognition accounting guidance. The Company recognizes revenue in accordance with industry-specific software accounting
+guidance for the following types of sales transactions: (i) standalone sales of software products, (ii) sales of software upgrades and (iii) sales of software bundled with hardware not essential to the functionality of the hardware.
+ For multi-element arrangements that include hardware products containing software essential to the hardware product’s functionality,
+undelivered software elements that relate to the hardware product’s essential software and/or undelivered non-software services, the Company allocates revenue to all deliverables based on their relative selling prices. In such circumstances,
+the Company uses a hierarchy to determine the selling price to be used for allocating revenue to deliverables: (i) vendor-specific objective evidence of fair value (“VSOE”), (ii) third-party evidence of selling price
+(“TPE”) and (iii) best estimate of selling price (“ESP”). VSOE generally exists only when the Company sells the deliverable separately and is the price actually charged by the Company for that deliverable. ESPs reflect the
+Company’s best estimates of what the selling prices of elements would be if they were sold regularly on a stand-alone basis.
+
+
+## Response Object ##
+{
+    "status": "OK",
+    "language": "english",
+    "url": "",
+    "iso-639-1": "en",
+    "iso-639-2": "eng",
+    "iso-639-3": "eng",
+    "wikipedia": "http://en.wikipedia.org/wiki/English_language",
+    "native-speakers": "309-400 million",
+    "usage": "By accessing AlchemyAPI or using information generated by AlchemyAPI, you are agreeing to be bound by the AlchemyAPI Terms of Use: http://www.alchemyapi.com/company/terms.html",
+    "ethnologue": "http://www.ethnologue.com/show_language.asp?code=eng"
+}
+
+## Language ##
+language:  english
+iso-639-1:  en
+native speakers:  309-400 million
+
+
+
+
+############################################
+#   Relation Extraction Example            #
+############################################
+
+
+Processing text:  In September 2015, the Company introduced the iPhone Upgrade Program, which is available to customers who
+purchase an iPhone 6s and 6s Plus in one of its U.S. physical retail stores and activate the purchased iPhone with one of the four national carriers. The iPhone Upgrade Program provides customers the right to trade in that iPhone for a new iPhone,
+provided certain conditions are met. One of the conditions of this program requires the customer to finance the initial purchase price of the iPhone with a third-party lender. Upon exercise of the trade-in right and purchase of a new iPhone, the
+Company satisfies the customer’s outstanding balance due to the third-party lender on the original device. The Company accounts for the trade-in right as a guarantee liability and recognizes arrangement revenue net of the fair value of such
+right with subsequent changes to the guarantee liability recognized within revenue.  The Company has entered into indemnification agreements with its
+directors and executive officers. Under these agreements, the Company has agreed to indemnify such individuals to the fullest extent permitted by law against liabilities that arise by reason of their status as directors or officers and to advance
+expenses incurred by such individuals in connection with related legal proceedings. It is not possible to determine the maximum potential amount of payments the Company could be required to make under these agreements due to the limited history of
+prior indemnification claims and the unique facts and circumstances involved in each claim. However, the Company maintains directors and officers liability insurance coverage to reduce its exposure to such obligations.
+Critical Accounting Policies and Estimates  The preparation of
+financial statements and related disclosures in conformity with U.S. generally accepted accounting principles (“GAAP”) and the Company’s discussion and analysis of its financial condition and operating results require the
+Company’s management to make judgments, assumptions and estimates that affect the amounts reported in its consolidated financial statements and accompanying notes. Note 1, “Summary of Significant Accounting Policies,” of the Notes to
+Consolidated Financial Statements in Part II, Item 8 of this Form 10-K describes the significant accounting policies and methods used in the preparation of the Company’s consolidated financial statements. Management bases its estimates on
+historical experience and on various other assumptions it believes to be reasonable under the circumstances, the results of which form the basis for making judgments about the carrying values of assets and liabilities. Actual results may differ from
+these estimates, and such differences may be material.  Management believes the Company’s critical accounting policies and estimates are those
+related to revenue recognition, valuation and impairment of marketable securities, inventory valuation and valuation of manufacturing-related assets and estimated purchase commitment cancellation fees, warranty costs, income taxes, and legal and
+other contingencies. Management considers these policies critical because they are both important to the portrayal of the Company’s financial condition and operating results, and they require management to make judgments and estimates about
+inherently uncertain matters. The Company’s senior management has reviewed these critical accounting policies and related disclosures with the Audit and Finance Committee of the Company’s Board of Directors.
+Revenue Recognition  Net sales consist primarily of revenue
+from the sale of hardware, software, digital content and applications, accessories, and service and support contracts. The Company recognizes revenue when persuasive evidence of an arrangement exists, delivery has occurred, the sales price is fixed
+or determinable and collection is probable. Product is considered delivered to the customer once it has been shipped and title, risk of loss and rewards of ownership have been transferred. For most of the Company’s product sales, these criteria
+are met at the time the product is shipped. For online sales to individuals, for some sales to education customers in the U.S., and for certain other sales, the Company defers revenue until the customer receives the product because the Company
+retains a portion of the risk of loss on these sales during transit. For payment terms in excess of the Company’s standard payment terms, revenue is recognized as payments become due unless the Company has positive evidence that the sales price
+is fixed or determinable, such as a successful history of collection, without concession, on comparable arrangements. The Company recognizes revenue from the sale of hardware products, software bundled with hardware that is essential to the
+functionality of the hardware and third-party digital content sold on the iTunes Store in accordance with general revenue recognition accounting guidance. The Company recognizes revenue in accordance with industry-specific software accounting
+guidance for the following types of sales transactions: (i) standalone sales of software products, (ii) sales of software upgrades and (iii) sales of software bundled with hardware not essential to the functionality of the hardware.
+ For multi-element arrangements that include hardware products containing software essential to the hardware product’s functionality,
+undelivered software elements that relate to the hardware product’s essential software and/or undelivered non-software services, the Company allocates revenue to all deliverables based on their relative selling prices. In such circumstances,
+the Company uses a hierarchy to determine the selling price to be used for allocating revenue to deliverables: (i) vendor-specific objective evidence of fair value (“VSOE”), (ii) third-party evidence of selling price
+(“TPE”) and (iii) best estimate of selling price (“ESP”). VSOE generally exists only when the Company sells the deliverable separately and is the price actually charged by the Company for that deliverable. ESPs reflect the
+Company’s best estimates of what the selling prices of elements would be if they were sold regularly on a stand-alone basis.
+
+
+## Object ##
+{
+    "status": "OK",
+    "usage": "By accessing AlchemyAPI or using information generated by AlchemyAPI, you are agreeing to be bound by the AlchemyAPI Terms of Use: http://www.alchemyapi.com/company/terms.html",
+    "relations": [
+        {
+            "action": {
+                "text": "introduced",
+                "verb": {
+                    "text": "introduce",
+                    "tense": "past"
+                },
+                "lemmatized": "introduce"
+            },
+            "subject": {
+                "text": "the Company"
+            },
+            "object": {
+                "text": "the iPhone Upgrade Program, which is available to customers who"
+            },
+            "sentence": "In September 2015, the Company introduced the iPhone Upgrade Program, which is available to customers who"
+        },
+        {
+            "action": {
+                "text": "is",
+                "verb": {
+                    "text": "be",
+                    "tense": "present"
+                },
+                "lemmatized": "be"
+            },
+            "subject": {
+                "text": "the iPhone Upgrade Program"
+            },
+            "object": {
+                "text": "available to customers who"
+            },
+            "sentence": "In September 2015, the Company introduced the iPhone Upgrade Program, which is available to customers who"
+        },
+        {
+            "action": {
+                "text": "provides",
+                "verb": {
+                    "text": "provide",
+                    "tense": "present"
+                },
+                "lemmatized": "provide"
+            },
+            "subject": {
+                "text": "The iPhone Upgrade Program"
+            },
+            "location": {
+                "text": "in that iPhone for a new iPhone,"
+            },
+            "object": {
+                "text": "the right to trade"
+            },
+            "sentence": " The iPhone Upgrade Program provides customers the right to trade in that iPhone for a new iPhone,"
+        },
+        {
+            "action": {
+                "text": "to trade",
+                "verb": {
+                    "text": "trade",
+                    "tense": "future"
+                },
+                "lemmatized": "to trade"
+            },
+            "subject": {
+                "text": "customers"
+            },
+            "location": {
+                "text": "in that iPhone"
+            },
+            "sentence": " The iPhone Upgrade Program provides customers the right to trade in that iPhone for a new iPhone,"
+        },
+        {
+            "action": {
+                "text": "requires",
+                "verb": {
+                    "text": "require",
+                    "tense": "present"
+                },
+                "lemmatized": "require"
+            },
+            "subject": {
+                "text": "One of the conditions of this program"
+            },
+            "object": {
+                "text": "to finance the initial purchase price of the iPhone with a third-party lender"
+            },
+            "sentence": " One of the conditions of this program requires the customer to finance the initial purchase price of the iPhone with a third-party lender."
+        },
+        {
+            "action": {
+                "text": "to finance",
+                "verb": {
+                    "text": "finance",
+                    "tense": "future"
+                },
+                "lemmatized": "to finance"
+            },
+            "subject": {
+                "text": "the customer"
+            },
+            "object": {
+                "text": "the initial purchase price of the iPhone"
+            },
+            "sentence": " One of the conditions of this program requires the customer to finance the initial purchase price of the iPhone with a third-party lender."
+        },
+        {
+            "action": {
+                "text": "satisfies",
+                "verb": {
+                    "text": "satisfy",
+                    "tense": "present"
+                },
+                "lemmatized": "satisfy"
+            },
+            "subject": {
+                "text": "Company"
+            },
+            "object": {
+                "text": "the customer\u2019s outstanding balance due to the third-party lender"
+            },
+            "sentence": " Company satisfies the customer\u2019s outstanding balance due to the third-party lender on the original device."
+        },
+        {
+            "action": {
+                "text": "recognizes",
+                "verb": {
+                    "text": "recognize",
+                    "tense": "present"
+                },
+                "lemmatized": "recognize"
+            },
+            "subject": {
+                "text": "The Company"
+            },
+            "object": {
+                "text": "arrangement revenue net of the fair value of such"
+            },
+            "sentence": " The Company accounts for the trade-in right as a guarantee liability and recognizes arrangement revenue net of the fair value of such"
+        },
+        {
+            "action": {
+                "text": "recognized",
+                "verb": {
+                    "text": "recognize",
+                    "tense": "past"
+                },
+                "lemmatized": "recognize"
+            },
+            "subject": {
+                "text": "subsequent changes to the guarantee liability"
+            },
+            "object": {
+                "text": "within revenue"
+            },
+            "sentence": " right with subsequent changes to the guarantee liability recognized within revenue."
+        },
+        {
+            "action": {
+                "text": "has",
+                "verb": {
+                    "text": "have",
+                    "tense": "present"
+                },
+                "lemmatized": "have"
+            },
+            "subject": {
+                "text": "The Company"
+            },
+            "object": {
+                "text": "entered into indemnification agreements with its"
+            },
+            "sentence": " The Company has entered into indemnification agreements with its"
+        },
+        {
+            "action": {
+                "text": "has entered",
+                "verb": {
+                    "text": "enter",
+                    "tense": "past"
+                },
+                "lemmatized": "have enter"
+            },
+            "subject": {
+                "text": "The Company"
+            },
+            "object": {
+                "text": "into indemnification agreements with its"
+            },
+            "sentence": " The Company has entered into indemnification agreements with its"
+        },
+        {
+            "action": {
+                "text": "has",
+                "verb": {
+                    "text": "have",
+                    "tense": "present"
+                },
+                "lemmatized": "have"
+            },
+            "subject": {
+                "text": "the Company"
+            },
+            "object": {
+                "text": "agreed to indemnify such individuals to the fullest extent permitted by law against liabilities that arise"
+            },
+            "sentence": " Under these agreements, the Company has agreed to indemnify such individuals to the fullest extent permitted by law against liabilities that arise by reason of their status as directors or officers and to advance"
+        },
+        {
+            "action": {
+                "text": "agreed",
+                "verb": {
+                    "text": "agree",
+                    "tense": "past"
+                },
+                "lemmatized": "agree"
+            },
+            "subject": {
+                "text": "the Company"
+            },
+            "location": {
+                "text": "Under these agreements"
+            },
+            "object": {
+                "text": "to indemnify such individuals to the fullest extent permitted by law against liabilities that arise by reason of their status as directors or officers and to advance"
+            },
+            "sentence": " Under these agreements, the Company has agreed to indemnify such individuals to the fullest extent permitted by law against liabilities that arise by reason of their status as directors or officers and to advance"
+        },
+        {
+            "action": {
+                "text": "has agreed to indemnify",
+                "verb": {
+                    "text": "indemnify",
+                    "tense": "future"
+                },
+                "lemmatized": "have agree to indemnify"
+            },
+            "subject": {
+                "text": "the Company"
+            },
+            "object": {
+                "text": "such individuals"
+            },
+            "sentence": " Under these agreements, the Company has agreed to indemnify such individuals to the fullest extent permitted by law against liabilities that arise by reason of their status as directors or officers and to advance"
+        },
+        {
+            "action": {
+                "text": "incurred",
+                "verb": {
+                    "text": "incur",
+                    "tense": "past"
+                },
+                "lemmatized": "incur"
+            },
+            "subject": {
+                "text": "by such individuals"
+            },
+            "object": {
+                "text": "expenses"
+            },
+            "sentence": " expenses incurred by such individuals in connection with related legal proceedings."
+        },
+        {
+            "action": {
+                "text": "is",
+                "verb": {
+                    "text": "be",
+                    "tense": "present"
+                },
+                "lemmatized": "be"
+            },
+            "subject": {
+                "text": "It"
+            },
+            "object": {
+                "text": "possible to determine the maximum potential amount of payments the Company could be required to make under these agreements due to the limited history of"
+            },
+            "sentence": " It is not possible to determine the maximum potential amount of payments the Company could be required to make under these agreements due to the limited history of"
+        },
+        {
+            "action": {
+                "text": "could be required to make",
+                "verb": {
+                    "text": "make",
+                    "tense": "future"
+                },
+                "lemmatized": "could be require to make"
+            },
+            "subject": {
+                "text": "the Company"
+            },
+            "location": {
+                "text": "under these agreements"
+            },
+            "sentence": " It is not possible to determine the maximum potential amount of payments the Company could be required to make under these agreements due to the limited history of"
+        },
+        {
+            "action": {
+                "text": "involved",
+                "verb": {
+                    "text": "involve",
+                    "tense": "past"
+                },
+                "lemmatized": "involve"
+            },
+            "subject": {
+                "text": "the unique facts and circumstances"
+            },
+            "object": {
+                "text": "in each claim"
+            },
+            "sentence": " prior indemnification claims and the unique facts and circumstances involved in each claim."
+        },
+        {
+            "action": {
+                "text": "maintains",
+                "verb": {
+                    "text": "maintain",
+                    "tense": "present"
+                },
+                "lemmatized": "maintain"
+            },
+            "subject": {
+                "text": "the Company"
+            },
+            "object": {
+                "text": "directors and officers liability insurance coverage"
+            },
+            "sentence": " However, the Company maintains directors and officers liability insurance coverage to reduce its exposure to such obligations."
+        },
+        {
+            "action": {
+                "text": "to reduce",
+                "verb": {
+                    "text": "reduce",
+                    "tense": "future"
+                },
+                "lemmatized": "to reduce"
+            },
+            "subject": {
+                "text": "directors and officers liability insurance coverage"
+            },
+            "object": {
+                "text": "its exposure to such obligations"
+            },
+            "sentence": " However, the Company maintains directors and officers liability insurance coverage to reduce its exposure to such obligations."
+        },
+        {
+            "action": {
+                "text": "accepted",
+                "verb": {
+                    "text": "accept",
+                    "tense": "past"
+                },
+                "lemmatized": "accept"
+            },
+            "subject": {
+                "text": "financial statements and related disclosures in conformity with U.S."
+            },
+            "object": {
+                "text": "accounting principles"
+            },
+            "sentence": " financial statements and related disclosures in conformity with U.S. generally accepted accounting principles (\u201cGAAP\u201d) and the Company\u2019s discussion and analysis of its financial condition and operating results require the"
+        },
+        {
+            "action": {
+                "text": "s",
+                "verb": {
+                    "text": "has",
+                    "tense": "present"
+                },
+                "lemmatized": "s"
+            },
+            "subject": {
+                "text": "the Company"
+            },
+            "object": {
+                "text": "discussion and analysis of its financial condition and operating results require the"
+            },
+            "sentence": " financial statements and related disclosures in conformity with U.S. generally accepted accounting principles (\u201cGAAP\u201d) and the Company\u2019s discussion and analysis of its financial condition and operating results require the"
+        },
+        {
+            "action": {
+                "text": "s",
+                "verb": {
+                    "text": "has",
+                    "tense": "present"
+                },
+                "lemmatized": "s"
+            },
+            "subject": {
+                "text": "Company"
+            },
+            "object": {
+                "text": "management"
+            },
+            "sentence": " Company\u2019s management to make judgments, assumptions and estimates that affect the amounts reported in its consolidated financial statements and accompanying notes."
+        },
+        {
+            "action": {
+                "text": "estimates",
+                "verb": {
+                    "text": "estimate",
+                    "tense": "present"
+                },
+                "lemmatized": "estimate"
+            },
+            "subject": {
+                "text": "Company"
+            },
+            "object": {
+                "text": "that affect the amounts reported in its consolidated financial statements and accompanying notes"
+            },
+            "sentence": " Company\u2019s management to make judgments, assumptions and estimates that affect the amounts reported in its consolidated financial statements and accompanying notes."
+        },
+        {
+            "action": {
+                "text": "affect",
+                "verb": {
+                    "text": "affect",
+                    "tense": "present"
+                },
+                "lemmatized": "affect"
+            },
+            "subject": {
+                "text": "assumptions and estimates"
+            },
+            "object": {
+                "text": "the amounts reported in its consolidated financial statements and accompanying notes"
+            },
+            "sentence": " Company\u2019s management to make judgments, assumptions and estimates that affect the amounts reported in its consolidated financial statements and accompanying notes."
+        },
+        {
+            "action": {
+                "text": "reported",
+                "verb": {
+                    "text": "report",
+                    "tense": "past"
+                },
+                "lemmatized": "report"
+            },
+            "subject": {
+                "text": "the amounts"
+            },
+            "location": {
+                "text": "in its consolidated financial statements and accompanying notes"
+            },
+            "sentence": " Company\u2019s management to make judgments, assumptions and estimates that affect the amounts reported in its consolidated financial statements and accompanying notes."
+        },
+        {
+            "action": {
+                "text": "describes",
+                "verb": {
+                    "text": "describe",
+                    "tense": "present"
+                },
+                "lemmatized": "describe"
+            },
+            "subject": {
+                "text": "Item\u00a08 of this Form 10-K"
+            },
+            "object": {
+                "text": "the significant accounting policies and methods used in the preparation of the Company\u2019s consolidated financial statements"
+            },
+            "sentence": " Consolidated Financial Statements in Part II, Item\u00a08 of this Form 10-K describes the significant accounting policies and methods used in the preparation of the Company\u2019s consolidated financial statements."
+        },
+        {
+            "action": {
+                "text": "s",
+                "verb": {
+                    "text": "has",
+                    "tense": "present"
+                },
+                "lemmatized": "s"
+            },
+            "subject": {
+                "text": "the Company"
+            },
+            "object": {
+                "text": "consolidated financial statements"
+            },
+            "sentence": " Consolidated Financial Statements in Part II, Item\u00a08 of this Form 10-K describes the significant accounting policies and methods used in the preparation of the Company\u2019s consolidated financial statements."
+        },
+        {
+            "action": {
+                "text": "bases",
+                "verb": {
+                    "text": "base",
+                    "tense": "present"
+                },
+                "lemmatized": "base"
+            },
+            "subject": {
+                "text": "Management"
+            },
+            "object": {
+                "text": "its estimates"
+            },
+            "sentence": " Management bases its estimates on"
+        },
+        {
+            "action": {
+                "text": "form",
+                "verb": {
+                    "text": "form",
+                    "tense": "present"
+                },
+                "lemmatized": "form"
+            },
+            "subject": {
+                "text": "the results"
+            },
+            "object": {
+                "text": "the basis for making judgments about the carrying values of assets and liabilities"
+            },
+            "sentence": " historical experience and on various other assumptions it believes to be reasonable under the circumstances, the results of which form the basis for making judgments about the carrying values of assets and liabilities."
+        },
+        {
+            "action": {
+                "text": "making",
+                "verb": {
+                    "text": "make",
+                    "tense": "present"
+                },
+                "lemmatized": "make"
+            },
+            "subject": {
+                "text": "judgments"
+            },
+            "object": {
+                "text": "about the carrying values of assets and liabilities"
+            },
+            "sentence": " historical experience and on various other assumptions it believes to be reasonable under the circumstances, the results of which form the basis for making judgments about the carrying values of assets and liabilities."
+        },
+        {
+            "action": {
+                "text": "may be",
+                "verb": {
+                    "text": "be",
+                    "tense": "future"
+                },
+                "lemmatized": "may be"
+            },
+            "subject": {
+                "text": "such differences"
+            },
+            "object": {
+                "text": "material"
+            },
+            "sentence": " these estimates, and such differences may be material."
+        },
+        {
+            "action": {
+                "text": "believes",
+                "verb": {
+                    "text": "believe",
+                    "tense": "present"
+                },
+                "lemmatized": "believe"
+            },
+            "subject": {
+                "text": "Management"
+            },
+            "object": {
+                "text": "the Company\u2019s critical accounting policies"
+            },
+            "sentence": " Management believes the Company\u2019s critical accounting policies and estimates are those"
+        },
+        {
+            "action": {
+                "text": "s",
+                "verb": {
+                    "text": "has",
+                    "tense": "present"
+                },
+                "lemmatized": "s"
+            },
+            "subject": {
+                "text": "the Company"
+            },
+            "object": {
+                "text": "critical accounting policies"
+            },
+            "sentence": " Management believes the Company\u2019s critical accounting policies and estimates are those"
+        },
+        {
+            "action": {
+                "text": "estimated",
+                "verb": {
+                    "text": "estimate",
+                    "tense": "past"
+                },
+                "lemmatized": "estimate"
+            },
+            "subject": {
+                "text": "purchase"
+            },
+            "object": {
+                "text": "commitment cancellation fees, warranty costs, income taxes"
+            },
+            "sentence": " related to revenue recognition, valuation and impairment of marketable securities, inventory valuation and valuation of manufacturing-related assets and estimated purchase commitment cancellation fees, warranty costs, income taxes, and legal and"
+        },
+        {
+            "action": {
+                "text": "considers",
+                "verb": {
+                    "text": "consider",
+                    "tense": "present"
+                },
+                "lemmatized": "consider"
+            },
+            "subject": {
+                "text": "Management"
+            },
+            "object": {
+                "text": "these policies"
+            },
+            "sentence": " Management considers these policies critical because they are both important to the portrayal of the Company\u2019s financial condition and operating results, and they require management to make judgments and estimates about"
+        },
+        {
+            "action": {
+                "text": "are",
+                "verb": {
+                    "text": "be",
+                    "tense": "present"
+                },
+                "lemmatized": "be"
+            },
+            "subject": {
+                "text": "they"
+            },
+            "object": {
+                "text": "both important to the portrayal of the Company\u2019s financial condition and operating results"
+            },
+            "sentence": " Management considers these policies critical because they are both important to the portrayal of the Company\u2019s financial condition and operating results, and they require management to make judgments and estimates about"
+        },
+        {
+            "action": {
+                "text": "s",
+                "verb": {
+                    "text": "has",
+                    "tense": "present"
+                },
+                "lemmatized": "s"
+            },
+            "subject": {
+                "text": "the Company"
+            },
+            "object": {
+                "text": "financial condition and operating results"
+            },
+            "sentence": " Management considers these policies critical because they are both important to the portrayal of the Company\u2019s financial condition and operating results, and they require management to make judgments and estimates about"
+        },
+        {
+            "action": {
+                "text": "require",
+                "verb": {
+                    "text": "require",
+                    "tense": "present"
+                },
+                "lemmatized": "require"
+            },
+            "subject": {
+                "text": "they"
+            },
+            "object": {
+                "text": "management to make judgments and estimates"
+            },
+            "sentence": " Management considers these policies critical because they are both important to the portrayal of the Company\u2019s financial condition and operating results, and they require management to make judgments and estimates about"
+        },
+        {
+            "action": {
+                "text": "s",
+                "verb": {
+                    "text": "has",
+                    "tense": "present"
+                },
+                "lemmatized": "s"
+            },
+            "subject": {
+                "text": "The Company"
+            },
+            "object": {
+                "text": "senior management has reviewed these critical accounting policies and related disclosures"
+            },
+            "sentence": " The Company\u2019s senior management has reviewed these critical accounting policies and related disclosures with the Audit and Finance Committee of the Company\u2019s Board of Directors."
+        },
+        {
+            "action": {
+                "text": "has",
+                "verb": {
+                    "text": "have",
+                    "tense": "present"
+                },
+                "lemmatized": "have"
+            },
+            "subject": {
+                "text": "The Company\u2019s senior management"
+            },
+            "object": {
+                "text": "reviewed these critical accounting policies and related disclosures with the Audit and Finance Committee of the Company\u2019s Board of Directors"
+            },
+            "sentence": " The Company\u2019s senior management has reviewed these critical accounting policies and related disclosures with the Audit and Finance Committee of the Company\u2019s Board of Directors."
+        },
+        {
+            "action": {
+                "text": "has reviewed",
+                "verb": {
+                    "text": "review",
+                    "tense": "past"
+                },
+                "lemmatized": "have review"
+            },
+            "subject": {
+                "text": "The Company\u2019s senior management"
+            },
+            "object": {
+                "text": "these critical accounting policies and related disclosures"
+            },
+            "sentence": " The Company\u2019s senior management has reviewed these critical accounting policies and related disclosures with the Audit and Finance Committee of the Company\u2019s Board of Directors."
+        },
+        {
+            "action": {
+                "text": "s",
+                "verb": {
+                    "text": "has",
+                    "tense": "present"
+                },
+                "lemmatized": "s"
+            },
+            "subject": {
+                "text": "the Company"
+            },
+            "object": {
+                "text": "Board of Directors"
+            },
+            "sentence": " The Company\u2019s senior management has reviewed these critical accounting policies and related disclosures with the Audit and Finance Committee of the Company\u2019s Board of Directors."
+        },
+        {
+            "action": {
+                "text": "consist",
+                "verb": {
+                    "text": "consist",
+                    "tense": "present"
+                },
+                "lemmatized": "consist"
+            },
+            "subject": {
+                "text": "Revenue Recognition Net sales"
+            },
+            "object": {
+                "text": "primarily of revenue"
+            },
+            "sentence": " Revenue Recognition Net sales consist primarily of revenue"
+        },
+        {
+            "action": {
+                "text": "recognizes",
+                "verb": {
+                    "text": "recognize",
+                    "tense": "present"
+                },
+                "lemmatized": "recognize"
+            },
+            "subject": {
+                "text": "The Company"
+            },
+            "object": {
+                "text": "revenue"
+            },
+            "sentence": " The Company recognizes revenue when persuasive evidence of an arrangement exists, delivery has occurred, the sales price is fixed"
+        },
+        {
+            "action": {
+                "text": "is",
+                "verb": {
+                    "text": "be",
+                    "tense": "present"
+                },
+                "lemmatized": "be"
+            },
+            "subject": {
+                "text": "the sales price"
+            },
+            "object": {
+                "text": "fixed"
+            },
+            "sentence": " The Company recognizes revenue when persuasive evidence of an arrangement exists, delivery has occurred, the sales price is fixed"
+        },
+        {
+            "action": {
+                "text": "is",
+                "verb": {
+                    "text": "be",
+                    "tense": "present"
+                },
+                "lemmatized": "be"
+            },
+            "subject": {
+                "text": "collection"
+            },
+            "object": {
+                "text": "probable"
+            },
+            "sentence": " or determinable and collection is probable."
+        },
+        {
+            "action": {
+                "text": "considered",
+                "verb": {
+                    "text": "consider",
+                    "tense": "past"
+                },
+                "lemmatized": "consider"
+            },
+            "subject": {
+                "text": "Product"
+            },
+            "object": {
+                "text": "delivered to the customer"
+            },
+            "sentence": " Product is considered delivered to the customer once it has been shipped and title, risk of loss and rewards of ownership have been transferred."
+        },
+        {
+            "action": {
+                "text": "is considered delivered",
+                "verb": {
+                    "text": "deliver",
+                    "tense": "past"
+                },
+                "lemmatized": "be consider deliver"
+            },
+            "subject": {
+                "text": "Product"
+            },
+            "object": {
+                "text": "to the customer"
+            },
+            "sentence": " Product is considered delivered to the customer once it has been shipped and title, risk of loss and rewards of ownership have been transferred."
+        },
+        {
+            "action": {
+                "text": "has",
+                "verb": {
+                    "text": "have",
+                    "tense": "present"
+                },
+                "lemmatized": "have"
+            },
+            "subject": {
+                "text": "it"
+            },
+            "object": {
+                "text": "been shipped and title"
+            },
+            "sentence": " Product is considered delivered to the customer once it has been shipped and title, risk of loss and rewards of ownership have been transferred."
+        }
+    ],
+    "url": "",
+    "language": "english"
+}
+
+## Relations ##
+Subject:  the Company
+Action:  introduced
+Object:  the iPhone Upgrade Program, which is available to customers who
+
+Subject:  the iPhone Upgrade Program
+Action:  is
+Object:  available to customers who
+
+Subject:  The iPhone Upgrade Program
+Action:  provides
+Object:  the right to trade
+
+Subject:  customers
+Action:  to trade
+
+Subject:  One of the conditions of this program
+Action:  requires
+Object:  to finance the initial purchase price of the iPhone with a third-party lender
+
+Subject:  the customer
+Action:  to finance
+Object:  the initial purchase price of the iPhone
+
+Subject:  Company
+Action:  satisfies
+Object:  the customer’s outstanding balance due to the third-party lender
+
+Subject:  The Company
+Action:  recognizes
+Object:  arrangement revenue net of the fair value of such
+
+Subject:  subsequent changes to the guarantee liability
+Action:  recognized
+Object:  within revenue
+
+Subject:  The Company
+Action:  has
+Object:  entered into indemnification agreements with its
+
+Subject:  The Company
+Action:  has entered
+Object:  into indemnification agreements with its
+
+Subject:  the Company
+Action:  has
+Object:  agreed to indemnify such individuals to the fullest extent permitted by law against liabilities that arise
+
+Subject:  the Company
+Action:  agreed
+Object:  to indemnify such individuals to the fullest extent permitted by law against liabilities that arise by reason of their status as directors or officers and to advance
+
+Subject:  the Company
+Action:  has agreed to indemnify
+Object:  such individuals
+
+Subject:  by such individuals
+Action:  incurred
+Object:  expenses
+
+Subject:  It
+Action:  is
+Object:  possible to determine the maximum potential amount of payments the Company could be required to make under these agreements due to the limited history of
+
+Subject:  the Company
+Action:  could be required to make
+
+Subject:  the unique facts and circumstances
+Action:  involved
+Object:  in each claim
+
+Subject:  the Company
+Action:  maintains
+Object:  directors and officers liability insurance coverage
+
+Subject:  directors and officers liability insurance coverage
+Action:  to reduce
+Object:  its exposure to such obligations
+
+Subject:  financial statements and related disclosures in conformity with U.S.
+Action:  accepted
+Object:  accounting principles
+
+Subject:  the Company
+Action:  s
+Object:  discussion and analysis of its financial condition and operating results require the
+
+Subject:  Company
+Action:  s
+Object:  management
+
+Subject:  Company
+Action:  estimates
+Object:  that affect the amounts reported in its consolidated financial statements and accompanying notes
+
+Subject:  assumptions and estimates
+Action:  affect
+Object:  the amounts reported in its consolidated financial statements and accompanying notes
+
+Subject:  the amounts
+Action:  reported
+
+Subject:  Item 8 of this Form 10-K
+Action:  describes
+Object:  the significant accounting policies and methods used in the preparation of the Company’s consolidated financial statements
+
+Subject:  the Company
+Action:  s
+Object:  consolidated financial statements
+
+Subject:  Management
+Action:  bases
+Object:  its estimates
+
+Subject:  the results
+Action:  form
+Object:  the basis for making judgments about the carrying values of assets and liabilities
+
+Subject:  judgments
+Action:  making
+Object:  about the carrying values of assets and liabilities
+
+Subject:  such differences
+Action:  may be
+Object:  material
+
+Subject:  Management
+Action:  believes
+Object:  the Company’s critical accounting policies
+
+Subject:  the Company
+Action:  s
+Object:  critical accounting policies
+
+Subject:  purchase
+Action:  estimated
+Object:  commitment cancellation fees, warranty costs, income taxes
+
+Subject:  Management
+Action:  considers
+Object:  these policies
+
+Subject:  they
+Action:  are
+Object:  both important to the portrayal of the Company’s financial condition and operating results
+
+Subject:  the Company
+Action:  s
+Object:  financial condition and operating results
+
+Subject:  they
+Action:  require
+Object:  management to make judgments and estimates
+
+Subject:  The Company
+Action:  s
+Object:  senior management has reviewed these critical accounting policies and related disclosures
+
+Subject:  The Company’s senior management
+Action:  has
+Object:  reviewed these critical accounting policies and related disclosures with the Audit and Finance Committee of the Company’s Board of Directors
+
+Subject:  The Company’s senior management
+Action:  has reviewed
+Object:  these critical accounting policies and related disclosures
+
+Subject:  the Company
+Action:  s
+Object:  Board of Directors
+
+Subject:  Revenue Recognition Net sales
+Action:  consist
+Object:  primarily of revenue
+
+Subject:  The Company
+Action:  recognizes
+Object:  revenue
+
+Subject:  the sales price
+Action:  is
+Object:  fixed
+
+Subject:  collection
+Action:  is
+Object:  probable
+
+Subject:  Product
+Action:  considered
+Object:  delivered to the customer
+
+Subject:  Product
+Action:  is considered delivered
+Object:  to the customer
+
+Subject:  it
+Action:  has
+Object:  been shipped and title
+
+
+
+
+############################################
+#   Text Categorization Example            #
+############################################
+
+
+Processing text:  In September 2015, the Company introduced the iPhone Upgrade Program, which is available to customers who
+purchase an iPhone 6s and 6s Plus in one of its U.S. physical retail stores and activate the purchased iPhone with one of the four national carriers. The iPhone Upgrade Program provides customers the right to trade in that iPhone for a new iPhone,
+provided certain conditions are met. One of the conditions of this program requires the customer to finance the initial purchase price of the iPhone with a third-party lender. Upon exercise of the trade-in right and purchase of a new iPhone, the
+Company satisfies the customer’s outstanding balance due to the third-party lender on the original device. The Company accounts for the trade-in right as a guarantee liability and recognizes arrangement revenue net of the fair value of such
+right with subsequent changes to the guarantee liability recognized within revenue.  The Company has entered into indemnification agreements with its
+directors and executive officers. Under these agreements, the Company has agreed to indemnify such individuals to the fullest extent permitted by law against liabilities that arise by reason of their status as directors or officers and to advance
+expenses incurred by such individuals in connection with related legal proceedings. It is not possible to determine the maximum potential amount of payments the Company could be required to make under these agreements due to the limited history of
+prior indemnification claims and the unique facts and circumstances involved in each claim. However, the Company maintains directors and officers liability insurance coverage to reduce its exposure to such obligations.
+Critical Accounting Policies and Estimates  The preparation of
+financial statements and related disclosures in conformity with U.S. generally accepted accounting principles (“GAAP”) and the Company’s discussion and analysis of its financial condition and operating results require the
+Company’s management to make judgments, assumptions and estimates that affect the amounts reported in its consolidated financial statements and accompanying notes. Note 1, “Summary of Significant Accounting Policies,” of the Notes to
+Consolidated Financial Statements in Part II, Item 8 of this Form 10-K describes the significant accounting policies and methods used in the preparation of the Company’s consolidated financial statements. Management bases its estimates on
+historical experience and on various other assumptions it believes to be reasonable under the circumstances, the results of which form the basis for making judgments about the carrying values of assets and liabilities. Actual results may differ from
+these estimates, and such differences may be material.  Management believes the Company’s critical accounting policies and estimates are those
+related to revenue recognition, valuation and impairment of marketable securities, inventory valuation and valuation of manufacturing-related assets and estimated purchase commitment cancellation fees, warranty costs, income taxes, and legal and
+other contingencies. Management considers these policies critical because they are both important to the portrayal of the Company’s financial condition and operating results, and they require management to make judgments and estimates about
+inherently uncertain matters. The Company’s senior management has reviewed these critical accounting policies and related disclosures with the Audit and Finance Committee of the Company’s Board of Directors.
+Revenue Recognition  Net sales consist primarily of revenue
+from the sale of hardware, software, digital content and applications, accessories, and service and support contracts. The Company recognizes revenue when persuasive evidence of an arrangement exists, delivery has occurred, the sales price is fixed
+or determinable and collection is probable. Product is considered delivered to the customer once it has been shipped and title, risk of loss and rewards of ownership have been transferred. For most of the Company’s product sales, these criteria
+are met at the time the product is shipped. For online sales to individuals, for some sales to education customers in the U.S., and for certain other sales, the Company defers revenue until the customer receives the product because the Company
+retains a portion of the risk of loss on these sales during transit. For payment terms in excess of the Company’s standard payment terms, revenue is recognized as payments become due unless the Company has positive evidence that the sales price
+is fixed or determinable, such as a successful history of collection, without concession, on comparable arrangements. The Company recognizes revenue from the sale of hardware products, software bundled with hardware that is essential to the
+functionality of the hardware and third-party digital content sold on the iTunes Store in accordance with general revenue recognition accounting guidance. The Company recognizes revenue in accordance with industry-specific software accounting
+guidance for the following types of sales transactions: (i) standalone sales of software products, (ii) sales of software upgrades and (iii) sales of software bundled with hardware not essential to the functionality of the hardware.
+ For multi-element arrangements that include hardware products containing software essential to the hardware product’s functionality,
+undelivered software elements that relate to the hardware product’s essential software and/or undelivered non-software services, the Company allocates revenue to all deliverables based on their relative selling prices. In such circumstances,
+the Company uses a hierarchy to determine the selling price to be used for allocating revenue to deliverables: (i) vendor-specific objective evidence of fair value (“VSOE”), (ii) third-party evidence of selling price
+(“TPE”) and (iii) best estimate of selling price (“ESP”). VSOE generally exists only when the Company sells the deliverable separately and is the price actually charged by the Company for that deliverable. ESPs reflect the
+Company’s best estimates of what the selling prices of elements would be if they were sold regularly on a stand-alone basis.
+
+
+## Response Object ##
+{
+    "status": "OK",
+    "category": "business",
+    "language": "english",
+    "url": "",
+    "score": "0.849993",
+    "usage": "By accessing AlchemyAPI or using information generated by AlchemyAPI, you are agreeing to be bound by the AlchemyAPI Terms of Use: http://www.alchemyapi.com/company/terms.html"
+}
+
+## Category ##
+text:  business
+score:  0.849993
+
+
+
+
+############################################
+#   Feed Detection Example                 #
+############################################
+
+
+Processing url:  http://www.npr.org/2013/11/26/247336038/dont-stuff-the-turkey-and-other-tips-from-americas-test-kitchen
+
+## Response Object ##
+{
+    "status": "OK",
+    "usage": "By accessing AlchemyAPI or using information generated by AlchemyAPI, you are agreeing to be bound by the AlchemyAPI Terms of Use: http://www.alchemyapi.com/company/terms.html",
+    "feeds": [
+        {
+            "feed": "http://www.npr.org/rss/rss.php?id=1053"
+        }
+    ],
+    "url": "http://www.npr.org/2013/11/26/247336038/dont-stuff-the-turkey-and-other-tips-from-americas-test-kitchen"
+}
+
+## Feeds ##
+feed:  http://www.npr.org/rss/rss.php?id=1053
+
+
+
+
+
+############################################
+#   Microformats Parsing Example           #
+############################################
+
+
+Processing url:  http://www.npr.org/2013/11/26/247336038/dont-stuff-the-turkey-and-other-tips-from-americas-test-kitchen
+
+## Response Object ##
+{
+    "status": "OK",
+    "usage": "By accessing AlchemyAPI or using information generated by AlchemyAPI, you are agreeing to be bound by the AlchemyAPI Terms of Use: http://www.alchemyapi.com/company/terms.html",
+    "url": "http://www.npr.org/2013/11/26/247336038/dont-stuff-the-turkey-and-other-tips-from-americas-test-kitchen",
+    "microformats": []
+}
+
+## Microformats ##
+
+
+
+
+
+############################################
+#   Image Extraction Example               #
+############################################
+
+
+Processing url:  http://www.npr.org/2013/11/26/247336038/dont-stuff-the-turkey-and-other-tips-from-americas-test-kitchen
+
+## Response Object ##
+{
+    "status": "OK",
+    "usage": "By accessing AlchemyAPI or using information generated by AlchemyAPI, you are agreeing to be bound by the AlchemyAPI Terms of Use: http://www.alchemyapi.com/company/terms.html",
+    "image": "http://media.npr.org/assets/img/2013/11/26/8069135368_e3e5e07a5f_o_wide-f2b926dd9c3bb074bd554e12b0eecee72fbbdc5c.jpg?s=1400",
+    "totalTransactions": "2",
+    "url": "http://www.npr.org/2013/11/26/247336038/dont-stuff-the-turkey-and-other-tips-from-americas-test-kitchen"
+}
+
+## Image ##
+Image:  http://media.npr.org/assets/img/2013/11/26/8069135368_e3e5e07a5f_o_wide-f2b926dd9c3bb074bd554e12b0eecee72fbbdc5c.jpg?s=1400
+
+
+
+
+
+
+############################################
+#   Image tagging Example                  #
+############################################
+
+
+Processing url:  http://demo1.alchemyapi.com/images/vision/football.jpg
+
+## Response Object ##
+{
+    "status": "OK",
+    "usage": "By accessing AlchemyAPI or using information generated by AlchemyAPI, you are agreeing to be bound by the AlchemyAPI Terms of Use: http://www.alchemyapi.com/company/terms.html",
+    "imageKeywords": [
+        {
+            "text": "sport",
+            "score": "0.989013"
+        },
+        {
+            "text": "football",
+            "score": "0.985226"
+        }
+    ],
+    "totalTransactions": "4",
+    "url": "http://demo1.alchemyapi.com/images/vision/football.jpg"
+}
+
+## Keywords ##
+sport  :  0.989013
+football  :  0.985226
+
+
+
+
+
+
+############################################
+#   Taxonomy  Example                      #
+############################################
+
+
+Processing text:  In September 2015, the Company introduced the iPhone Upgrade Program, which is available to customers who
+purchase an iPhone 6s and 6s Plus in one of its U.S. physical retail stores and activate the purchased iPhone with one of the four national carriers. The iPhone Upgrade Program provides customers the right to trade in that iPhone for a new iPhone,
+provided certain conditions are met. One of the conditions of this program requires the customer to finance the initial purchase price of the iPhone with a third-party lender. Upon exercise of the trade-in right and purchase of a new iPhone, the
+Company satisfies the customer’s outstanding balance due to the third-party lender on the original device. The Company accounts for the trade-in right as a guarantee liability and recognizes arrangement revenue net of the fair value of such
+right with subsequent changes to the guarantee liability recognized within revenue.  The Company has entered into indemnification agreements with its
+directors and executive officers. Under these agreements, the Company has agreed to indemnify such individuals to the fullest extent permitted by law against liabilities that arise by reason of their status as directors or officers and to advance
+expenses incurred by such individuals in connection with related legal proceedings. It is not possible to determine the maximum potential amount of payments the Company could be required to make under these agreements due to the limited history of
+prior indemnification claims and the unique facts and circumstances involved in each claim. However, the Company maintains directors and officers liability insurance coverage to reduce its exposure to such obligations.
+Critical Accounting Policies and Estimates  The preparation of
+financial statements and related disclosures in conformity with U.S. generally accepted accounting principles (“GAAP”) and the Company’s discussion and analysis of its financial condition and operating results require the
+Company’s management to make judgments, assumptions and estimates that affect the amounts reported in its consolidated financial statements and accompanying notes. Note 1, “Summary of Significant Accounting Policies,” of the Notes to
+Consolidated Financial Statements in Part II, Item 8 of this Form 10-K describes the significant accounting policies and methods used in the preparation of the Company’s consolidated financial statements. Management bases its estimates on
+historical experience and on various other assumptions it believes to be reasonable under the circumstances, the results of which form the basis for making judgments about the carrying values of assets and liabilities. Actual results may differ from
+these estimates, and such differences may be material.  Management believes the Company’s critical accounting policies and estimates are those
+related to revenue recognition, valuation and impairment of marketable securities, inventory valuation and valuation of manufacturing-related assets and estimated purchase commitment cancellation fees, warranty costs, income taxes, and legal and
+other contingencies. Management considers these policies critical because they are both important to the portrayal of the Company’s financial condition and operating results, and they require management to make judgments and estimates about
+inherently uncertain matters. The Company’s senior management has reviewed these critical accounting policies and related disclosures with the Audit and Finance Committee of the Company’s Board of Directors.
+Revenue Recognition  Net sales consist primarily of revenue
+from the sale of hardware, software, digital content and applications, accessories, and service and support contracts. The Company recognizes revenue when persuasive evidence of an arrangement exists, delivery has occurred, the sales price is fixed
+or determinable and collection is probable. Product is considered delivered to the customer once it has been shipped and title, risk of loss and rewards of ownership have been transferred. For most of the Company’s product sales, these criteria
+are met at the time the product is shipped. For online sales to individuals, for some sales to education customers in the U.S., and for certain other sales, the Company defers revenue until the customer receives the product because the Company
+retains a portion of the risk of loss on these sales during transit. For payment terms in excess of the Company’s standard payment terms, revenue is recognized as payments become due unless the Company has positive evidence that the sales price
+is fixed or determinable, such as a successful history of collection, without concession, on comparable arrangements. The Company recognizes revenue from the sale of hardware products, software bundled with hardware that is essential to the
+functionality of the hardware and third-party digital content sold on the iTunes Store in accordance with general revenue recognition accounting guidance. The Company recognizes revenue in accordance with industry-specific software accounting
+guidance for the following types of sales transactions: (i) standalone sales of software products, (ii) sales of software upgrades and (iii) sales of software bundled with hardware not essential to the functionality of the hardware.
+ For multi-element arrangements that include hardware products containing software essential to the hardware product’s functionality,
+undelivered software elements that relate to the hardware product’s essential software and/or undelivered non-software services, the Company allocates revenue to all deliverables based on their relative selling prices. In such circumstances,
+the Company uses a hierarchy to determine the selling price to be used for allocating revenue to deliverables: (i) vendor-specific objective evidence of fair value (“VSOE”), (ii) third-party evidence of selling price
+(“TPE”) and (iii) best estimate of selling price (“ESP”). VSOE generally exists only when the Company sells the deliverable separately and is the price actually charged by the Company for that deliverable. ESPs reflect the
+Company’s best estimates of what the selling prices of elements would be if they were sold regularly on a stand-alone basis.
+
+
+## Response Object ##
+{
+    "status": "OK",
+    "usage": "By accessing AlchemyAPI or using information generated by AlchemyAPI, you are agreeing to be bound by the AlchemyAPI Terms of Use: http://www.alchemyapi.com/company/terms.html",
+    "totalTransactions": "1",
+    "language": "english",
+    "taxonomy": [
+        {
+            "confident": "no",
+            "score": "0.360249",
+            "label": "/technology and computing/hardware"
+        },
+        {
+            "confident": "no",
+            "score": "0.336016",
+            "label": "/shopping/resources/warranties and service contracts"
+        },
+        {
+            "confident": "no",
+            "score": "0.335001",
+            "label": "/business and industrial"
+        }
+    ]
+}
+
+## Categories ##
+/technology and computing/hardware  :  0.360249
+/shopping/resources/warranties and service contracts  :  0.336016
+/business and industrial  :  0.335001
+
+
+
+
+
+
+############################################
+#   Combined  Example                      #
+############################################
+
+
+Processing text:  In September 2015, the Company introduced the iPhone Upgrade Program, which is available to customers who
+purchase an iPhone 6s and 6s Plus in one of its U.S. physical retail stores and activate the purchased iPhone with one of the four national carriers. The iPhone Upgrade Program provides customers the right to trade in that iPhone for a new iPhone,
+provided certain conditions are met. One of the conditions of this program requires the customer to finance the initial purchase price of the iPhone with a third-party lender. Upon exercise of the trade-in right and purchase of a new iPhone, the
+Company satisfies the customer’s outstanding balance due to the third-party lender on the original device. The Company accounts for the trade-in right as a guarantee liability and recognizes arrangement revenue net of the fair value of such
+right with subsequent changes to the guarantee liability recognized within revenue.  The Company has entered into indemnification agreements with its
+directors and executive officers. Under these agreements, the Company has agreed to indemnify such individuals to the fullest extent permitted by law against liabilities that arise by reason of their status as directors or officers and to advance
+expenses incurred by such individuals in connection with related legal proceedings. It is not possible to determine the maximum potential amount of payments the Company could be required to make under these agreements due to the limited history of
+prior indemnification claims and the unique facts and circumstances involved in each claim. However, the Company maintains directors and officers liability insurance coverage to reduce its exposure to such obligations.
+Critical Accounting Policies and Estimates  The preparation of
+financial statements and related disclosures in conformity with U.S. generally accepted accounting principles (“GAAP”) and the Company’s discussion and analysis of its financial condition and operating results require the
+Company’s management to make judgments, assumptions and estimates that affect the amounts reported in its consolidated financial statements and accompanying notes. Note 1, “Summary of Significant Accounting Policies,” of the Notes to
+Consolidated Financial Statements in Part II, Item 8 of this Form 10-K describes the significant accounting policies and methods used in the preparation of the Company’s consolidated financial statements. Management bases its estimates on
+historical experience and on various other assumptions it believes to be reasonable under the circumstances, the results of which form the basis for making judgments about the carrying values of assets and liabilities. Actual results may differ from
+these estimates, and such differences may be material.  Management believes the Company’s critical accounting policies and estimates are those
+related to revenue recognition, valuation and impairment of marketable securities, inventory valuation and valuation of manufacturing-related assets and estimated purchase commitment cancellation fees, warranty costs, income taxes, and legal and
+other contingencies. Management considers these policies critical because they are both important to the portrayal of the Company’s financial condition and operating results, and they require management to make judgments and estimates about
+inherently uncertain matters. The Company’s senior management has reviewed these critical accounting policies and related disclosures with the Audit and Finance Committee of the Company’s Board of Directors.
+Revenue Recognition  Net sales consist primarily of revenue
+from the sale of hardware, software, digital content and applications, accessories, and service and support contracts. The Company recognizes revenue when persuasive evidence of an arrangement exists, delivery has occurred, the sales price is fixed
+or determinable and collection is probable. Product is considered delivered to the customer once it has been shipped and title, risk of loss and rewards of ownership have been transferred. For most of the Company’s product sales, these criteria
+are met at the time the product is shipped. For online sales to individuals, for some sales to education customers in the U.S., and for certain other sales, the Company defers revenue until the customer receives the product because the Company
+retains a portion of the risk of loss on these sales during transit. For payment terms in excess of the Company’s standard payment terms, revenue is recognized as payments become due unless the Company has positive evidence that the sales price
+is fixed or determinable, such as a successful history of collection, without concession, on comparable arrangements. The Company recognizes revenue from the sale of hardware products, software bundled with hardware that is essential to the
+functionality of the hardware and third-party digital content sold on the iTunes Store in accordance with general revenue recognition accounting guidance. The Company recognizes revenue in accordance with industry-specific software accounting
+guidance for the following types of sales transactions: (i) standalone sales of software products, (ii) sales of software upgrades and (iii) sales of software bundled with hardware not essential to the functionality of the hardware.
+ For multi-element arrangements that include hardware products containing software essential to the hardware product’s functionality,
+undelivered software elements that relate to the hardware product’s essential software and/or undelivered non-software services, the Company allocates revenue to all deliverables based on their relative selling prices. In such circumstances,
+the Company uses a hierarchy to determine the selling price to be used for allocating revenue to deliverables: (i) vendor-specific objective evidence of fair value (“VSOE”), (ii) third-party evidence of selling price
+(“TPE”) and (iii) best estimate of selling price (“ESP”). VSOE generally exists only when the Company sells the deliverable separately and is the price actually charged by the Company for that deliverable. ESPs reflect the
+Company’s best estimates of what the selling prices of elements would be if they were sold regularly on a stand-alone basis.
+
+
+## Response Object ##
+{
+    "status": "OK",
+    "totalTransactions": "4",
+    "language": "english",
+    "entities": [
+        {
+            "relevance": "0.750971",
+            "count": "7",
+            "type": "Technology",
+            "text": "iPhone"
+        },
+        {
+            "relevance": "0.48754",
+            "count": "3",
+            "type": "Country",
+            "disambiguated": {
+                "website": "http://www.usa.gov/",
+                "yago": "http://yago-knowledge.org/resource/United_States",
+                "name": "United States",
+                "freebase": "http://rdf.freebase.com/ns/m.09c7w0",
+                "opencyc": "http://sw.opencyc.org/concept/Mx4rvVikKpwpEbGdrcN5Y29ycA",
+                "subType": [
+                    "Location",
+                    "Region",
+                    "AdministrativeDivision",
+                    "GovernmentalJurisdiction",
+                    "FilmEditor"
+                ],
+                "dbpedia": "http://dbpedia.org/resource/United_States",
+                "ciaFactbook": "http://www4.wiwiss.fu-berlin.de/factbook/resource/United_States"
+            },
+            "text": "U.S."
+        },
+        {
+            "relevance": "0.321884",
+            "count": "1",
+            "type": "FieldTerminology",
+            "text": "retail stores"
+        },
+        {
+            "relevance": "0.31233",
+            "count": "1",
+            "type": "JobTitle",
+            "text": "Audit and Finance Committee"
+        },
+        {
+            "relevance": "0.310874",
+            "count": "1",
+            "type": "JobTitle",
+            "text": "executive"
+        },
+        {
+            "relevance": "0.307725",
+            "count": "1",
+            "type": "FieldTerminology",
+            "text": "insurance coverage"
+        },
+        {
+            "relevance": "0.306521",
+            "count": "1",
+            "type": "FieldTerminology",
+            "text": "software products"
+        },
+        {
+            "relevance": "0.302136",
+            "count": "1",
+            "type": "Facility",
+            "text": "iTunes Store"
+        },
+        {
+            "relevance": "0.293313",
+            "count": "1",
+            "type": "FieldTerminology",
+            "text": "software upgrades"
+        },
+        {
+            "relevance": "0.293313",
+            "count": "1",
+            "type": "Quantity",
+            "text": "10-K"
+        }
+    ],
+    "taxonomy": [
+        {
+            "confident": "no",
+            "score": "0.360249",
+            "label": "/technology and computing/hardware"
+        },
+        {
+            "confident": "no",
+            "score": "0.336016",
+            "label": "/shopping/resources/warranties and service contracts"
+        },
+        {
+            "confident": "no",
+            "score": "0.335001",
+            "label": "/business and industrial"
+        }
+    ],
+    "keywords": [
+        {
+            "relevance": "0.934376",
+            "text": "Company"
+        },
+        {
+            "relevance": "0.81189",
+            "text": "critical accounting policies"
+        },
+        {
+            "relevance": "0.775544",
+            "text": "consolidated financial statements"
+        },
+        {
+            "relevance": "0.668279",
+            "text": "iPhone Upgrade Program"
+        },
+        {
+            "relevance": "0.611531",
+            "text": "significant accounting policies"
+        },
+        {
+            "relevance": "0.607869",
+            "text": "revenue recognition"
+        },
+        {
+            "relevance": "0.508091",
+            "text": "new iPhone"
+        },
+        {
+            "relevance": "0.496645",
+            "text": "Revenue Recognition Net"
+        },
+        {
+            "relevance": "0.483694",
+            "text": "general revenue recognition"
+        },
+        {
+            "relevance": "0.457783",
+            "text": "third-party lender"
+        },
+        {
+            "relevance": "0.450506",
+            "text": "initial purchase price"
+        },
+        {
+            "relevance": "0.437587",
+            "text": "physical retail stores"
+        },
+        {
+            "relevance": "0.434822",
+            "text": "related disclosures"
+        },
+        {
+            "relevance": "0.427499",
+            "text": "prior indemnification claims"
+        },
+        {
+            "relevance": "0.42588",
+            "text": "financial condition"
+        },
+        {
+            "relevance": "0.425858",
+            "text": "operating results"
+        },
+        {
+            "relevance": "0.425039",
+            "text": "fair value"
+        },
+        {
+            "relevance": "0.424628",
+            "text": "sales"
+        },
+        {
+            "relevance": "0.423664",
+            "text": "industry-specific software accounting"
+        },
+        {
+            "relevance": "0.42296",
+            "text": "revenue net"
+        },
+        {
+            "relevance": "0.420036",
+            "text": "undelivered software elements"
+        },
+        {
+            "relevance": "0.419835",
+            "text": "liability insurance coverage"
+        },
+        {
+            "relevance": "0.419403",
+            "text": "digital content"
+        },
+        {
+            "relevance": "0.417831",
+            "text": "related legal proceedings"
+        },
+        {
+            "relevance": "0.41657",
+            "text": "sales price"
+        },
+        {
+            "relevance": "0.416191",
+            "text": "guarantee liability"
+        },
+        {
+            "relevance": "0.407692",
+            "text": "purchase commitment cancellation"
+        },
+        {
+            "relevance": "0.406781",
+            "text": "undelivered non-software services"
+        },
+        {
+            "relevance": "0.405844",
+            "text": "hardware products"
+        },
+        {
+            "relevance": "0.40453",
+            "text": "third-party digital content"
+        }
+    ],
+    "concepts": [
+        {
+            "relevance": "0.957196",
+            "text": "Generally Accepted Accounting Principles",
+            "dbpedia": "http://dbpedia.org/resource/Generally_Accepted_Accounting_Principles"
+        },
+        {
+            "relevance": "0.760949",
+            "text": "Balance sheet",
+            "opencyc": "http://sw.opencyc.org/concept/Mx4rvVjQg5wpEbGdrcN5Y29ycA",
+            "dbpedia": "http://dbpedia.org/resource/Balance_sheet",
+            "freebase": "http://rdf.freebase.com/ns/m.0pkp2"
+        },
+        {
+            "relevance": "0.759706",
+            "text": "Sales",
+            "opencyc": "http://sw.opencyc.org/concept/Mx4rwQwl6JwpEbGdrcN5Y29ycA",
+            "dbpedia": "http://dbpedia.org/resource/Sales",
+            "freebase": "http://rdf.freebase.com/ns/m.014dgf"
+        },
+        {
+            "relevance": "0.603616",
+            "text": "Consultative selling",
+            "yago": "http://yago-knowledge.org/resource/Consultative_selling",
+            "dbpedia": "http://dbpedia.org/resource/Consultative_selling"
+        },
+        {
+            "relevance": "0.566455",
+            "text": "Insurance",
+            "opencyc": "http://sw.opencyc.org/concept/Mx4rvWNwLZwpEbGdrcN5Y29ycA",
+            "dbpedia": "http://dbpedia.org/resource/Insurance",
+            "freebase": "http://rdf.freebase.com/ns/m.03xks"
+        },
+        {
+            "relevance": "0.548919",
+            "text": "Marketing",
+            "dbpedia": "http://dbpedia.org/resource/Marketing",
+            "freebase": "http://rdf.freebase.com/ns/m.0g4gr"
+        },
+        {
+            "relevance": "0.535309",
+            "text": "Asset",
+            "opencyc": "http://sw.opencyc.org/concept/Mx4rvldq0ZwpEbGdrcN5Y29ycA",
+            "dbpedia": "http://dbpedia.org/resource/Asset",
+            "freebase": "http://rdf.freebase.com/ns/m.0z1j"
+        },
+        {
+            "relevance": "0.528755",
+            "text": "IPhone",
+            "yago": "http://yago-knowledge.org/resource/IPhone",
+            "dbpedia": "http://dbpedia.org/resource/IPhone",
+            "freebase": "http://rdf.freebase.com/ns/m.027lnzs"
+        }
+    ],
+    "usage": "By accessing AlchemyAPI or using information generated by AlchemyAPI, you are agreeing to be bound by the AlchemyAPI Terms of Use: http://www.alchemyapi.com/company/terms.html"
+}
+
+## Keywords ##
+Company  :  0.934376
+critical accounting policies  :  0.81189
+consolidated financial statements  :  0.775544
+iPhone Upgrade Program  :  0.668279
+significant accounting policies  :  0.611531
+revenue recognition  :  0.607869
+new iPhone  :  0.508091
+Revenue Recognition Net  :  0.496645
+general revenue recognition  :  0.483694
+third-party lender  :  0.457783
+initial purchase price  :  0.450506
+physical retail stores  :  0.437587
+related disclosures  :  0.434822
+prior indemnification claims  :  0.427499
+financial condition  :  0.42588
+operating results  :  0.425858
+fair value  :  0.425039
+sales  :  0.424628
+industry-specific software accounting  :  0.423664
+revenue net  :  0.42296
+undelivered software elements  :  0.420036
+liability insurance coverage  :  0.419835
+digital content  :  0.419403
+related legal proceedings  :  0.417831
+sales price  :  0.41657
+guarantee liability  :  0.416191
+purchase commitment cancellation  :  0.407692
+undelivered non-software services  :  0.406781
+hardware products  :  0.405844
+third-party digital content  :  0.40453
+
+## Concepts ##
+Generally Accepted Accounting Principles  :  0.957196
+Balance sheet  :  0.760949
+Sales  :  0.759706
+Consultative selling  :  0.603616
+Insurance  :  0.566455
+Marketing  :  0.548919
+Asset  :  0.535309
+IPhone  :  0.528755
+
+## Entities ##
+Technology  :  iPhone ,  0.750971
+Country  :  U.S. ,  0.48754
+FieldTerminology  :  retail stores ,  0.321884
+JobTitle  :  Audit and Finance Committee ,  0.31233
+JobTitle  :  executive ,  0.310874
+FieldTerminology  :  insurance coverage ,  0.307725
+FieldTerminology  :  software products ,  0.306521
+Facility  :  iTunes Store ,  0.302136
+FieldTerminology  :  software upgrades ,  0.293313
+Quantity  :  10-K ,  0.293313
+
+
+
+
+Process finished with exit code 0
