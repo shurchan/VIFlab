@@ -1,6 +1,6 @@
-import re, os, sys, math, time, datetime, shutil, thread
+import re, os, sys, math, time, datetime, shutil, thread, urllib2
 import pandas
-from pattern.web import URL, DOM, plaintext, extension, Element, find_urls
+#from pattern.web import URL, DOM, plaintext, extension, Element, find_urls
 import json
 
 class MS_StatsExtract(object):
@@ -42,13 +42,13 @@ class MS_StatsExtract(object):
         self.__print_url = 0
 
         ## temp csv storage path
-        #self.ms_stats_extract_temp_csv = r'/Users/misc/code/data/temp/ms_stats.csv'
-        self.com_kr_data_folder = r'/Users/misc/code/data/temp/kr/'
-        self.com_is_data_folder = r'/Users/misc/code/data/temp/is/'
-        self.com_bs_data_folder = r'/Users/misc/code/data/temp/bs/'
-        self.com_cf_data_folder = r'/Users/misc/code/data/temp/cf/'
-        self.com_json_data_folder = r'/Users/misc/code/data/temp/json/'
-        self.com_jsonchild_data_folder= r'/Users/misc/code/data/temp/jsonchild/'
+        #self.ms_stats_extract_temp_csv = r'/Users/jeren/code/data/temp/ms_stats.csv'
+        self.com_kr_data_folder = r'/Users/jeren/code/data/temp/kr/'
+        self.com_is_data_folder = r'/Users/jeren/code/data/temp/is/'
+        self.com_bs_data_folder = r'/Users/jeren/code/data/temp/bs/'
+        self.com_cf_data_folder = r'/Users/jeren/code/data/temp/cf/'
+        self.com_json_data_folder = r'/Users/jeren/code/data/temp/json/'
+        self.com_jsonchild_data_folder= r'/Users/jeren/code/data/temp/jsonchild/'
 
         #finance statement csv file name
         self.ms_kr_stats_extract_temp_csv = ''

@@ -1,6 +1,6 @@
 import urllib
 import csv
-import MySQLdb
+#import MySQLdb
 import pandas as pd
 import json
 #import jsonpickle
@@ -100,13 +100,13 @@ def csvfiles2mysql():
     LINES TERMINATED BY '\\n'
     IGNORE 1 LINES"""
 
-    csvfilefolder = os.listdir(r'/Users/misc/code/viflab/data/temp')
+    csvfilefolder = os.listdir(r'/Users/jeren/code/viflab/data/temp')
     for file_name in csvfilefolder:
         print file_name
         if file_name.endswith('_t.csv'):
             try:
                 cursor = db.cursor()
-                sqlcmd = sql.format(r'/Users/misc/code/data/temp/'+file_name)
+                sqlcmd = sql.format(r'/Users/jeren/code/data/temp/'+file_name)
                 print sqlcmd
                 cursor.execute(sqlcmd)
 #                cursor.execute(sql.format(file_name))

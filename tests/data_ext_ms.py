@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import sys
-sys.path.insert(0, r'/Users/misc/code/viflab/utils')
+sys.path.insert(0, r'/Users/jeren/code/viflab/utils')
 
 from utils.morningstar_stats_extractor import MS_StatsExtract
 #from utils.VIFToolsUtil import VIFToolsUtil
@@ -18,13 +18,14 @@ data_ext = MS_StatsExtract()
 
 #data_ext.stock_list = 'AAPL' #special character need to be converted
 #data_ext.com_data_stock_portion_url = 'AAPL'
-#data_ext.set_target_stock_url('AAPL')
-data_ext.stock_list = ['NAS:AAPL','NAS:GOOG','NAS:MU','NYS:BRK.A','NAS:yhoo','NYS:BAC.WS.B','NAS:msft','NYS:gm','NYS:unp','NAS:LBTYA','NYS:WFC','NYS:SAN','NAS:ARMH','NAS:ZINC','NYS:BP','NYS:CHK','NYS:NOV','NYS:CL','NYS:MMM']
+#data_ext.set_target_stock_url('NAS:TROW')
+#data_ext.stock_list = ['NAS:AAPL','NAS:GOOG','NAS:MU','NYS:BRK.A','NAS:yhoo','NYS:BAC.WS.B','NAS:msft','NYS:gm','NYS:unp','NAS:LBTYA','NYS:WFC','NYS:SAN','NAS:ARMH','NAS:ZINC','NYS:BP','NYS:CHK','NYS:NOV','NYS:CL','NYS:MMM']
 #data_ext.stock_list = ['NAS:AAPL','NYS:BRK.A','NYS:BAC.WS.B','NYS:WFC']
 #data_ext.stock_list = ['NYS:KING', 'NYS:PAH','NYS:BAM','NAS:GLUU','NYS:MKL','NAS:COST']
 
 #data_ext.stock_list = ['NAS:AAPL','NAS:ARMH','NYS:SAN','NAS:ZINC','NYS:BP','NYS:CHK','NYS:NOV','NYS:CL','NYS:MMM']
 #data_ext.stock_list = ['NAS:AAPL']
+data_ext.stock_list = ['NAS:TROW']
 #data_ext.stock_list = ['NYS:BAC.WS.A','NAS:AAPL']
 #data_ext.stock_list =['NAS:AAPL','NYS:CL','NYS:BRK.A','NYS:BRK.B']
 
@@ -42,7 +43,7 @@ data_ext.get_com_data_fr_all_stocks()
 #VIFToolsUtil.csvfiles2mysql()
 
 
-VIFToolsUtil.jsonfiles2counchbase('/Users/misc/code/data/temp/jsonchild/','10.141.100.101','vif-finance')
+#VIFToolsUtil.jsonfiles2counchbase('/Users/jeren/code/data/temp/jsonchild/','10.141.100.101','vif-finance')
 
 #data_ext.target_stock_data_df.info()
 #data_ext.get_trend_data()
