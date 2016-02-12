@@ -3,7 +3,7 @@
 import sys
 sys.path.insert(0, r'/Users/jeren/code/viflab/utils')
 
-from utils.morningstar_stats_extractor import MS_StatsExtract
+from morningstar_stats_extractor import MS_StatsExtract
 #from utils.VIFToolsUtil import VIFToolsUtil
 
 import VIFToolsUtil
