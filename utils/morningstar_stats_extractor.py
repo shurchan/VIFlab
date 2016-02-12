@@ -1,6 +1,6 @@
-import re, os, sys, math, time, datetime, shutil, thread, urllib2
+import re, os, sys, math, time, datetime, shutil, thread
 import pandas
-#from pattern.web import URL, DOM, plaintext, extension, Element, find_urls
+from pattern.web import URL, DOM, plaintext, extension, Element, find_urls
 import json
 
 class MS_StatsExtract(object):
