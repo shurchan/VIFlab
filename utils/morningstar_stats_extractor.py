@@ -168,6 +168,40 @@ class MS_StatsExtract(object):
 
         f.close()
 
+    #replace non-ascii chars in column name in data frame
+    def procee_rename_df_column_chars(self):
+
+        #replace column char space with "_"
+        cols = self.target_stock_data_df.columns
+        cols = cols.map(lambda x: x.replace(' ', '_') if isinstance(x, (str, unicode)) else x)
+        self.target_stock_data_df.columns = cols
+
+        #replace column char "%" with "Percent"
+        cols = self.target_stock_data_df.columns
+        cols = cols.map(lambda x: x.replace('%', 'Percent') if isinstance(x, (str, unicode)) else x)
+        self.target_stock_data_df.columns = cols
+
+        #replace column char "(Average)" with "Average"
+        cols = self.target_stock_data_df.columns
+        cols = cols.map(lambda x: x.replace('(Average)', 'Average') if isinstance(x, (str, unicode)) else x)
+        self.target_stock_data_df.columns = cols
+
+        #replace column char "/" with "Per"
+        cols = self.target_stock_data_df.columns
+        cols = cols.map(lambda x: x.replace('/', 'Per') if isinstance(x, (str, unicode)) else x)
+        self.target_stock_data_df.columns = cols
+
+        #replace column char "'" with ""
+        cols = self.target_stock_data_df.columns
+        cols = cols.map(lambda x: x.replace('Stockholders\'', 'Stockholders') if isinstance(x, (str, unicode)) else x)
+        self.target_stock_data_df.columns = cols
+
+        #replace column char "&" with "append_str"
+        cols = self.target_stock_data_df.columns
+        cols = cols.map(lambda x: x.replace('&', 'and') if isinstance(x, (str, unicode)) else x)
+        self.target_stock_data_df.columns = cols
+
+
     def process_krdataset(self):
         """ Processed the data set by converting the csv to dataframe and attached the information for various stocks.
 
@@ -205,6 +239,8 @@ class MS_StatsExtract(object):
                                                 'Year over Year.3':'EPS yoy','3-Year Average.3':'EPS 3yr avg',
                                                 '5-Year Average.3':'EPS 5yr avg','10-Year Average.3':'EPS 10yr avg','index':'Date',},
                                        inplace =True)
+        #replace non-ascii chars in column name in data frame
+        self.procee_rename_df_column_chars()
 
         jsonfile = self.com_json_data_folder+self.stockexchange_symbol+'_kr_t.json'
         self.target_stock_data_df.to_json(jsonfile,orient='index')
@@ -257,6 +293,8 @@ class MS_StatsExtract(object):
         self.target_stock_data_df.rename(columns={'Basic':'EPS Basic','Diluted':'EPS Diluted',
                                                 'Basic.1':'Weighted_avg_shares Basic','Diluted.1':'Weighted_avg_shares Diluted','index':'Date',},
                                       inplace =True)
+        #replace non-ascii chars in column name in data frame
+        self.procee_rename_df_column_chars()
 
         jsonfile = self.com_json_data_folder+self.stockexchange_symbol+'_is_t.json'
         self.target_stock_data_df.to_json(jsonfile,orient='index')
@@ -312,6 +350,9 @@ class MS_StatsExtract(object):
         self.target_stock_data_df.rename(columns={'index':'Date',},
                                       inplace =True)
 
+        #replace non-ascii chars in column name in data frame
+        self.procee_rename_df_column_chars()
+
         jsonfile = self.com_json_data_folder+self.stockexchange_symbol+'_bs_t.json'
         self.target_stock_data_df.to_json(jsonfile,orient='index')
 
@@ -365,6 +406,9 @@ class MS_StatsExtract(object):
         #TODO: There is a bug here. CSV and DF columns do not match.
         self.target_stock_data_df.rename(columns={'index':'Date',},
                                       inplace =True)
+
+        #replace non-ascii chars in column name in data frame
+        self.procee_rename_df_column_chars()
 
         jsonfile = self.com_json_data_folder+self.stockexchange_symbol+'_cf_t.json'
         self.target_stock_data_df.to_json(jsonfile,orient='index')
